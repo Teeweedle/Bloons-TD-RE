@@ -17,7 +17,14 @@ public class Waypoint : MonoBehaviour
         {
             _creator = GameObject.FindAnyObjectByType<BloonPathCreator>();
             for(int i = -1 ; i < 1; i++) {
-                _creator.CreateNewPoint(new Vector2(this.transform.position.x + i, this.transform.position.y + 0.5f));
+                _creator.CreateNewPoint(this.gameObject, new Vector2(this.transform.position.x + i, this.transform.position.y + 0.5f));
+            }
+        }
+        else
+        {
+            for(int i = this.gameObject.transform.childCount - 1; i >= 0; i--)
+            {
+                DestroyImmediate(this.gameObject.transform.GetChild(i).gameObject);
             }
         }
     }

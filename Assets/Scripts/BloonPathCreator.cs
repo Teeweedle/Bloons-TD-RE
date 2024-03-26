@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -10,8 +11,6 @@ public class BloonPathCreator : MonoBehaviour
     [SerializeField] private GameObject _waypointPrefab;
     [SerializeField] private List<GameObject> _pathList;
 
-    private Vector2 _gizmoPosition;
-
     public void CreateNewPoint()
     {
         GameObject lTempObj = Instantiate(_waypointPrefab, _bloonPath.transform);
@@ -20,10 +19,10 @@ public class BloonPathCreator : MonoBehaviour
                 .IconContent("Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey.png").image);
         _pathList.Add(lTempObj);
     }    
-    public void CreateNewPoint(Vector2 aPostion)
+    public void CreateNewPoint(GameObject aGameObject, Vector2 aPostion)
     {
-        GameObject lTempObj = Instantiate(_waypointPrefab, _bloonPath.transform);
-        lTempObj.name = ("Anchor " + (_pathList.Count + 1).ToString());
+        GameObject lTempObj = Instantiate(_waypointPrefab, aGameObject.transform);
+        lTempObj.name = (aGameObject.name + " " + "anchor");
         lTempObj.transform.position = aPostion;
         EditorGUIUtility.SetIconForObject(_waypointPrefab, (Texture2D)EditorGUIUtility
                 .IconContent("Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey.png").image);
@@ -44,27 +43,45 @@ public class BloonPathCreator : MonoBehaviour
         {
             for (int i = 0; i < _pathList.Count - 1; i++)
             {
-                if (!_pathList[i].GetComponent<Waypoint>()._isBezier)
+                if (_pathList[i].transform.childCount > 0)//draw lines to anchor
                 {
-                    if (_pathList[i + 1] != null)
-                        Gizmos.DrawLine(_pathList[i].transform.position, _pathList[i + 1].transform.position);
+                    for (int j = _pathList[i].transform.childCount - 1; j >= 0; j--)
+                        DrawLine(_pathList[i].transform, _pathList[i].transform.GetChild(j));
                 }
-                else//if point is turned into a bezier curve
-                {                    
-                    _gizmoPosition = Mathf.Pow(1 - i, 3) * _pathList[i].transform.position +
-                    3 * Mathf.Pow(1 - i, 2) * i * _pathList[i+1].transform.position;
+                if (_pathList[i].GetComponent<Waypoint>()._isBezier && _pathList[i + 1].GetComponent<Waypoint>()._isBezier)
+                {
+                    //draw curve
+                    DrawBezierCurve(_pathList[i].transform, _pathList[i + 1].transform);
+                }
+                else
+                {
+                    //draw line
+                    DrawLine(_pathList[i].transform, _pathList[i + 1].transform);
                 }
             }
-
         }
+    }
+    private void DrawBezierCurve(Transform aWaypointA, Transform aWaypointB)
+    {
+        Vector2 lGizmoPosition;
+        for(float i = 0; i <= 1; i += 0.1f)
+        {
+            lGizmoPosition = CalculateBezierPoint(i, aWaypointA, aWaypointB);
+            Gizmos.DrawSphere(lGizmoPosition, 0.05f);
+        }
+    }
+    private void DrawLine(Transform aWaypointA, Transform aWaypointB)
+    {
+        if (aWaypointB != null)
+            Gizmos.DrawLine(aWaypointA.position, aWaypointB.position);
+    }
 
-
-
-        //Gizmos.DrawLine(_pathList[0].transform.position, _pathList[1].transform.position);
-        //for(float i = 0; i<= 1; i += 0.05f)
-        //{
-        //    _gizmoPosition = Mathf.Pow(1 - i, 3) * _pathList[0].transform.position +
-        //        3 * Mathf.Pow(1 - i, 2) * i * _pathList[1].transform.position;
-        //}
+    private Vector2 CalculateBezierPoint(float aStep, Transform aWaypointA, Transform aWaypointB)
+    {
+        Vector2 lGizmoPosition = Mathf.Pow(1 - aStep, 3) * aWaypointA.position + 
+            3 * Mathf.Pow(1 - aStep, 2) * aStep * aWaypointA.GetChild(0).transform.position + 
+            3 * (1 - aStep) * Mathf.Pow(aStep, 2) * aWaypointB.GetChild(1).transform.position + 
+            Mathf.Pow(aStep, 3) * aWaypointB.position;
+        return lGizmoPosition;
     }
 }
