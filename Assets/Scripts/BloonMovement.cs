@@ -10,10 +10,7 @@ public class BloonMovement : MonoBehaviour
     
     private void Start()
     {
-        //TODO: Change so path is passed during instantiation rather than searched for
-        _path = GameObject.Find("Bloon Path").GetComponent<BloonPathCreator>().GetPathVectors();
         _currentPosition = 0;
-        this.transform.position = _path[_currentPosition];
     }
     void Update()
     {
@@ -34,5 +31,9 @@ public class BloonMovement : MonoBehaviour
     private void Move(Vector2 aTarget, float aSpeed)
     {
         transform.position = Vector2.MoveTowards(transform.position, aTarget, Time.deltaTime * aSpeed);
+    }
+    public void SetPath(List<Vector2> aPath)
+    {
+        _path = aPath;
     }
 }

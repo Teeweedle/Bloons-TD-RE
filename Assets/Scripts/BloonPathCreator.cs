@@ -12,7 +12,7 @@ public class BloonPathCreator : MonoBehaviour
     [SerializeField] private List<GameObject> _pathList;
     [SerializeField] private List<Vector2> _pathVectors;
 
-    private void Start()
+    private void Awake()
     {
         _pathVectors = GeneratePathVectors();
     }
@@ -63,8 +63,8 @@ public class BloonPathCreator : MonoBehaviour
                 }
             }
             //checks the last item in a list for children(anchors)
-            if (_pathList[_pathList.Count - 1].transform.childCount > 0)
-                ConnectAnchors(_pathList[_pathList.Count - 1].transform);
+            if (_pathList[^1].transform.childCount > 0)
+                ConnectAnchors(_pathList[^1].transform);
         }
     }
     private void DrawBezierCurve(Transform aStartPoint, Transform aEndPoint)
