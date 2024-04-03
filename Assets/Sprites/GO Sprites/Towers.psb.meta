@@ -1,0 +1,989 @@
+fileFormatVersion: 2
+guid: 3eeca2667ee5d61468cc32ffb661bfb6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: Towers_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 4193
+      height: 300
+    spriteID: 4148ec54fffe14948b5277b79e32d7c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: Alchemist
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1938
+      width: 4142
+      height: 270
+    spriteID: 6061101359bc35f4da1b075a898fd10a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 1938}
+    spritePosition: {x: 30, y: 24}
+  - name: Banana Farm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 2477
+      width: 4139
+      height: 268
+    spriteID: fd458b32a494d1b46a637c842c0f776c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 2477}
+    spritePosition: {x: 41, y: 24}
+  - name: Bomb Shooter
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 3535
+      width: 4137
+      height: 263
+    spriteID: 427bd55cd14cc0043816ceebea424773
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 3535}
+    spritePosition: {x: 60, y: 24}
+  - name: Bommerang Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 4063
+      width: 4114
+      height: 257
+    spriteID: 89ee9df65a6e0834da667cafa3e84600
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 4063}
+    spritePosition: {x: 55, y: 24}
+  - name: Dart Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 284
+      width: 4118
+      height: 284
+    spriteID: 2d47ac4ada1661044b02af03f96b5714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 284}
+    spritePosition: {x: 71, y: 30}
+  - name: Druid
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 846
+      width: 4148
+      height: 275
+    spriteID: 1e905ac1f1d69f24593f4d2c71712c2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 846}
+    spritePosition: {x: 49, y: 34}
+  - name: Glue Gunner
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1668
+      width: 4154
+      height: 270
+    spriteID: 0854893313fc60a40a8ad969511c03d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 1668}
+    spritePosition: {x: 25, y: 37}
+  - name: Heli Pilot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 3273
+      width: 4157
+      height: 262
+    spriteID: c5555b6aabf83a3458f97eb10e06882e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 3273}
+    spritePosition: {x: 38, y: 41}
+  - name: Ice Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1121
+      width: 4170
+      height: 273
+    spriteID: 523367b0700fc7d41944079c6ef16843
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 1121}
+    spritePosition: {x: 25, y: 32}
+  - name: Monkey Ace
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 4810
+      width: 4138
+      height: 243
+    spriteID: bfa21bdc80a7f6246ba2db513fb440f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 4810}
+    spritePosition: {x: 43, y: 51}
+  - name: Monkey Bucaneer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 3010
+      width: 4157
+      height: 263
+    spriteID: bc2b44f28a7bbc948b7820765470abb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 3010}
+    spritePosition: {x: 38, y: 41}
+  - name: Monkey Sub
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 3798
+      width: 4099
+      height: 265
+    spriteID: 7a92fabaeca83ec478951dd022ed6b38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 3798}
+    spritePosition: {x: 78, y: 40}
+  - name: Monkey Village
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 4165
+      height: 284
+    spriteID: 8e7e85ee7d8f77541a0d1f12e55bf189
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 38, y: 30}
+  - name: Ninja Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 4565
+      width: 4112
+      height: 245
+    spriteID: 66e4dc963a06d3f49beb38de327b4ea8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 4565}
+    spritePosition: {x: 66, y: 50}
+  - name: Sniper Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1394
+      width: 4100
+      height: 274
+    spriteID: 21aa334556415da499ea779d141b4e04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 1394}
+    spritePosition: {x: 65, y: 35}
+  - name: Spike Factory
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 4320
+      width: 4126
+      height: 245
+    spriteID: 597947a20dd212047b78a0e0edc39253
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 4320}
+    spritePosition: {x: 60, y: 50}
+  - name: Super Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 2745
+      width: 4128
+      height: 265
+    spriteID: e2bbd7ca0e741da4e919dbd43cf7c5bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 2745}
+    spritePosition: {x: 62, y: 40}
+  - name: Tack Shooter
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 2208
+      width: 4137
+      height: 269
+    spriteID: ce66523c4c64bf848a5ca8d2245620c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 2208}
+    spritePosition: {x: 42, y: 38}
+  - name: Wizard Monkey
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 568
+      width: 4137
+      height: 278
+    spriteID: c4defd1c6d197764f9fed6ecd19396f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 568}
+    spritePosition: {x: 70, y: 19}
+  rigSpriteImportData:
+  - name: Alchemist
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 4102
+      height: 230
+    spriteID: a1984f6ec7e7da140ba14826a50293ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 30, y: 24}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 0
+  spriteSizeExpand: 40
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Alchemist
+    spriteName: Alchemist
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6061101359bc35f4da1b075a898fd10a
+    layerID: 2
+    mosaicPosition: {x: 0, y: 1938}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Banana Farm
+    spriteName: Banana Farm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fd458b32a494d1b46a637c842c0f776c
+    layerID: 22
+    mosaicPosition: {x: 0, y: 2477}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bomb Shooter
+    spriteName: Bomb Shooter
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 427bd55cd14cc0043816ceebea424773
+    layerID: 21
+    mosaicPosition: {x: 0, y: 3535}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bommerang Monkey
+    spriteName: Bommerang Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 89ee9df65a6e0834da667cafa3e84600
+    layerID: 20
+    mosaicPosition: {x: 0, y: 4063}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Dart Monkey
+    spriteName: Dart Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2d47ac4ada1661044b02af03f96b5714
+    layerID: 19
+    mosaicPosition: {x: 0, y: 284}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Druid
+    spriteName: Druid
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1e905ac1f1d69f24593f4d2c71712c2b
+    layerID: 18
+    mosaicPosition: {x: 0, y: 846}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Glue Gunner
+    spriteName: Glue Gunner
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0854893313fc60a40a8ad969511c03d0
+    layerID: 16
+    mosaicPosition: {x: 0, y: 1668}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Heli Pilot
+    spriteName: Heli Pilot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c5555b6aabf83a3458f97eb10e06882e
+    layerID: 15
+    mosaicPosition: {x: 0, y: 3273}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Ice Monkey
+    spriteName: Ice Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 523367b0700fc7d41944079c6ef16843
+    layerID: 14
+    mosaicPosition: {x: 0, y: 1121}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Monkey Ace
+    spriteName: Monkey Ace
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bfa21bdc80a7f6246ba2db513fb440f2
+    layerID: 13
+    mosaicPosition: {x: 0, y: 4810}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Monkey Bucaneer
+    spriteName: Monkey Bucaneer
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bc2b44f28a7bbc948b7820765470abb0
+    layerID: 12
+    mosaicPosition: {x: 0, y: 3010}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Monkey Sub
+    spriteName: Monkey Sub
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7a92fabaeca83ec478951dd022ed6b38
+    layerID: 11
+    mosaicPosition: {x: 0, y: 3798}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Monkey Village
+    spriteName: Monkey Village
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8e7e85ee7d8f77541a0d1f12e55bf189
+    layerID: 10
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Ninja Monkey
+    spriteName: Ninja Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 66e4dc963a06d3f49beb38de327b4ea8
+    layerID: 8
+    mosaicPosition: {x: 0, y: 4565}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Sniper Monkey
+    spriteName: Sniper Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 21aa334556415da499ea779d141b4e04
+    layerID: 7
+    mosaicPosition: {x: 0, y: 1394}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Spike Factory
+    spriteName: Spike Factory
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 597947a20dd212047b78a0e0edc39253
+    layerID: 6
+    mosaicPosition: {x: 0, y: 4320}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Super Monkey
+    spriteName: Super Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e2bbd7ca0e741da4e919dbd43cf7c5bb
+    layerID: 5
+    mosaicPosition: {x: 0, y: 2745}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Tack Shooter
+    spriteName: Tack Shooter
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ce66523c4c64bf848a5ca8d2245620c0
+    layerID: 4
+    mosaicPosition: {x: 0, y: 2208}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Wizard Monkey
+    spriteName: Wizard Monkey
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c4defd1c6d197764f9fed6ecd19396f9
+    layerID: 3
+    mosaicPosition: {x: 0, y: 568}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Alchemist
+    spriteName: Alchemist
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a1984f6ec7e7da140ba14826a50293ac
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Banana Farm
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 02fd0cc905ff3524d871d4dcdfe93ee3
+    layerID: 22
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bomb Shooter
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 253c13095c7841440a2a6bfe1393eded
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bommerang Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fbb13da400ca3a149b31a468b7aa9ded
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Dart Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c2f62558a88459948b9051ce699c4d23
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Druid
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 94d357147cc742242838ba324c22c2ed
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Glue Gunner
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 693a9ef3698e84e44a54a3e6327b5a04
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Heli Pilot
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d8078c6b16212a44589084ffc713fef1
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Ice Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 31eaec7476d11c648a082a5efc357de2
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Monkey Ace
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b510c9fd89cec2744a6b462387a060c8
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Monkey Bucaneer
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4f58ca123f3f0124bb077d842c53779a
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Monkey Sub
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4c135df7e5e3591458ee244aff80c878
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Monkey Village
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 45004c027275eeb4f9cf597cdfc69701
+    layerID: 10
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Ninja Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ce48c23c0196b2f478de10eff2921a8e
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Sniper Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5291c9e578d78804a92d59a8f8194db2
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Spike Factory
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7269e296a5837e049a5e75e25b007f27
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Super Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b64c88c9294560e4bb9f0b7c78c718fd
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Tack Shooter
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8c4b7be0acb813647a6437164648df79
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Wizard Monkey
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4d8de4b7268db724eaa2d99cb790d8f3
+    layerID: 3
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638473179162992288
+  spriteSizeExpandChanged: 1
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

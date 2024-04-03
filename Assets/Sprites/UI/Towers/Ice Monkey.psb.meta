@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 3492a4d42080e5f4084ea9431fa0e46d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 935
+      y: 2916
+      width: 849
+      height: 968
+    spriteID: ac062d2222ee2cc46b1d709f3d636540
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 935, y: 2916}
+    spritePosition: {x: 47, y: 30}
+  - name: Super Brittle
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1876
+      y: 4
+      width: 944
+      height: 930
+    spriteID: 33760953dfe56b343bf3dfd7f9a1d57b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1876, y: 4}
+    spritePosition: {x: 0, y: 49}
+  - name: Embrittlement
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 935
+      y: 4
+      width: 933
+      height: 962
+    spriteID: e6170b971518ca149a0d9a140eb880e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 935, y: 4}
+    spritePosition: {x: 6, y: 33}
+  - name: Ice Shards
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3019
+      width: 888
+      height: 978
+    spriteID: 607bc3a556d712241933af7389a365cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3019}
+    spritePosition: {x: 28, y: 25}
+  - name: Cold Snap
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1022
+      width: 873
+      height: 1013
+    spriteID: 9fe9ed05c9489c147afbb76f83d74cc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1022}
+    spritePosition: {x: 35, y: 8}
+  - name: Permafrost
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 935
+      y: 974
+      width: 873
+      height: 982
+    spriteID: 2b8f21c3c57cd7f479468ba59d06af4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 935, y: 974}
+    spritePosition: {x: 35, y: 23}
+  - name: Absolute Zero
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2043
+      width: 907
+      height: 968
+    spriteID: c2f0a9d1b81150043851aa7d361b3556
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2043}
+    spritePosition: {x: 18, y: 30}
+  - name: Snowstorm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 923
+      height: 1010
+    spriteID: 13b753079649ceb439d5dd40754f24e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 10, y: 9}
+  - name: Arctic Wind
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 935
+      y: 1964
+      width: 907
+      height: 944
+    spriteID: 837b98c8f59227a4b8e3e88adcbb1e1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 935, y: 1964}
+    spritePosition: {x: 18, y: 42}
+  - name: Deep Freeze
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2828
+      y: 2974
+      width: 714
+      height: 963
+    spriteID: 540fe6ba91ec0334da92870083a804f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2828, y: 2974}
+    spritePosition: {x: 115, y: 33}
+  - name: Enhanced Freeze
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2828
+      y: 1984
+      width: 711
+      height: 982
+    spriteID: 2f0b51160bf53a941a0d4610190b3078
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2828, y: 1984}
+    spritePosition: {x: 116, y: 23}
+  - name: Icicle Impale
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1876
+      y: 942
+      width: 944
+      height: 889
+    spriteID: 522a3b7ac736ae74d8d66682a0c5333c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1876, y: 942}
+    spritePosition: {x: 0, y: 70}
+  - name: Icicles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1876
+      y: 1839
+      width: 944
+      height: 860
+    spriteID: 56cd35abfe426644faa75b5a1cdd9187
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1876, y: 1839}
+    spritePosition: {x: 0, y: 84}
+  - name: Cryo Cannon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1876
+      y: 2707
+      width: 893
+      height: 909
+    spriteID: 188536bc83a14be4381c9ad1db867558
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1876, y: 2707}
+    spritePosition: {x: 25, y: 60}
+  - name: Re-Freeze
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2828
+      y: 4
+      width: 713
+      height: 982
+    spriteID: 7855f4bf3cff33b448e5d7d9bcae97ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2828, y: 4}
+    spritePosition: {x: 115, y: 23}
+  - name: Larger Radius
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2828
+      y: 994
+      width: 713
+      height: 982
+    spriteID: 9358dd71a582cde44a40d921d0b07780
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2828, y: 994}
+    spritePosition: {x: 115, y: 23}
+  rigSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 849
+      height: 968
+    spriteID: 5bc4d229df0d2c34382aa096c7dc4931
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 47, y: 30}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Ice Monkey
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 9f6bc08ffbb0bbf4aa56907f147e80e6
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ac062d2222ee2cc46b1d709f3d636540
+    layerID: 24
+    mosaicPosition: {x: 935, y: 2916}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 6efa33fbac1ac5147ad1f34800699a1e
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Super Brittle
+    spriteName: Super Brittle
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 33760953dfe56b343bf3dfd7f9a1d57b
+    layerID: 22
+    mosaicPosition: {x: 1876, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Embrittlement
+    spriteName: Embrittlement
+    isGroup: 0
+    parentIndex: 2
+    spriteID: e6170b971518ca149a0d9a140eb880e2
+    layerID: 21
+    mosaicPosition: {x: 935, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Ice Shards
+    spriteName: Ice Shards
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 607bc3a556d712241933af7389a365cf
+    layerID: 20
+    mosaicPosition: {x: 4, y: 3019}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Cold Snap
+    spriteName: Cold Snap
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 9fe9ed05c9489c147afbb76f83d74cc2
+    layerID: 19
+    mosaicPosition: {x: 4, y: 1022}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Permafrost
+    spriteName: Permafrost
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 2b8f21c3c57cd7f479468ba59d06af4d
+    layerID: 18
+    mosaicPosition: {x: 935, y: 974}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 1274721130dbe5c4588f40f9729d9805
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Absolute Zero
+    spriteName: Absolute Zero
+    isGroup: 0
+    parentIndex: 8
+    spriteID: c2f0a9d1b81150043851aa7d361b3556
+    layerID: 15
+    mosaicPosition: {x: 4, y: 2043}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Snowstorm
+    spriteName: Snowstorm
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 13b753079649ceb439d5dd40754f24e2
+    layerID: 14
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Arctic Wind
+    spriteName: Arctic Wind
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 837b98c8f59227a4b8e3e88adcbb1e1a
+    layerID: 13
+    mosaicPosition: {x: 935, y: 1964}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Deep Freeze
+    spriteName: Deep Freeze
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 540fe6ba91ec0334da92870083a804f6
+    layerID: 12
+    mosaicPosition: {x: 2828, y: 2974}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Enhanced Freeze
+    spriteName: Enhanced Freeze
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 2f0b51160bf53a941a0d4610190b3078
+    layerID: 11
+    mosaicPosition: {x: 2828, y: 1984}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: d2bc35eeee0a7d24aba3d1bdd55d84b1
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Icicle Impale
+    spriteName: Icicle Impale
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 522a3b7ac736ae74d8d66682a0c5333c
+    layerID: 8
+    mosaicPosition: {x: 1876, y: 942}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Icicles
+    spriteName: Icicles
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 56cd35abfe426644faa75b5a1cdd9187
+    layerID: 7
+    mosaicPosition: {x: 1876, y: 1839}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Cryo Cannon
+    spriteName: Cryo Cannon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 188536bc83a14be4381c9ad1db867558
+    layerID: 6
+    mosaicPosition: {x: 1876, y: 2707}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Re-Freeze
+    spriteName: Re-Freeze
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 7855f4bf3cff33b448e5d7d9bcae97ac
+    layerID: 5
+    mosaicPosition: {x: 2828, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Larger Radius
+    spriteName: Larger Radius
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 9358dd71a582cde44a40d921d0b07780
+    layerID: 4
+    mosaicPosition: {x: 2828, y: 994}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Ice Monkey
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: a68d0bf39ef09f643b2eb345ed4053ba
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5bc4d229df0d2c34382aa096c7dc4931
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 68a5be0a5d40da8459695ecd1bcb0990
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Super Brittle
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: c855a43e59b490d42aba62d550a15434
+    layerID: 22
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Embrittlement
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 595f68bfad9c2314890e6c09ee2be7a3
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Ice Shards
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: f05a2a80664f09a4ca67c48548b143a1
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Cold Snap
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 40d43186e41ea3441a13c074132e4b09
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Permafrost
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 2d3fdfb103ea77449ada64d5e0260d89
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 981d272084f3f4a4790a89c0f610ab4f
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Absolute Zero
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: ad53eeda52bd20a4c8319d1fdc316281
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Snowstorm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 9f10b0c04f68f1b4ca9202fe5fbcaa8c
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Arctic Wind
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 80281cd167a9aa9448188cfa5fdcc4af
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Deep Freeze
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 0c2afee858c1c3a488760c332cccf172
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Enhanced Freeze
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 44bfda55f939c4e428188051b62e7790
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: ad8fef41d72174740a64deadceed2be7
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Icicle Impale
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 38bac77de80f5aa4b89c660001de3f6d
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Icicles
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 42acb33628cd6f4469bfddf633a558ed
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Cryo Cannon
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: b1fa3533ac42b7244b1117d6645053bc
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Re-Freeze
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 690eeed718dfe524897a4eb6dd109fe1
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Larger Radius
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 13b45c3f93123d14b9b8eed3314990c0
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

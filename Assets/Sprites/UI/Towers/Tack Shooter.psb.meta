@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 16a2e2b8fd680f047b3579d4757036ab
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2575
+      y: 824
+      width: 728
+      height: 784
+    spriteID: 770ac654c8ee5164489021a2c9e16969
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2575, y: 824}
+    spritePosition: {x: 108, y: 122}
+  - name: Inferno Ring
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 985
+      width: 944
+      height: 940
+    spriteID: 8e036cb651a3afd4bb8c899bfbdff46b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 985}
+    spritePosition: {x: 0, y: 44}
+  - name: Ring of Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 4
+      width: 833
+      height: 943
+    spriteID: b8c0e77636243404db367371975685e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 4}
+    spritePosition: {x: 55, y: 43}
+  - name: Hot Shots
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1797
+      y: 4
+      width: 770
+      height: 840
+    spriteID: 4c7cc1bcde6ac504db9efbdd0104ec59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1797, y: 4}
+    spritePosition: {x: 87, y: 94}
+  - name: Even Faster Shooting
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2575
+      y: 1616
+      width: 728
+      height: 784
+    spriteID: 4f5d308e92a876d4baa8dd8d986c4912
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2575, y: 1616}
+    spritePosition: {x: 108, y: 122}
+  - name: Faster Shooting
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2575
+      y: 2408
+      width: 728
+      height: 784
+    spriteID: 1dac958ebee1ffe499613ed7887c0fc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2575, y: 2408}
+    spritePosition: {x: 108, y: 122}
+  - name: Super Maelstrom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1933
+      width: 936
+      height: 936
+    spriteID: da21a96264050584497404fb459c0440
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1933}
+    spritePosition: {x: 4, y: 46}
+  - name: Blade Maelstrom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 955
+      width: 827
+      height: 913
+    spriteID: b1b330d95650fbd48b85c0d92272aee8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 955}
+    spritePosition: {x: 58, y: 58}
+  - name: Blade Shooter
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 1876
+      width: 822
+      height: 847
+    spriteID: 6c547d6e27d405346b53e9d58cddc7da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 1876}
+    spritePosition: {x: 61, y: 91}
+  - name: Super Range
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1797
+      y: 852
+      width: 728
+      height: 852
+    spriteID: 72eaf6de6c458ea4cad3e3eee0635952
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1797, y: 852}
+    spritePosition: {x: 108, y: 88}
+  - name: Long Range Tacks
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1797
+      y: 2504
+      width: 728
+      height: 800
+    spriteID: d79168b75f15f61489f4195604e16e95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1797, y: 2504}
+    spritePosition: {x: 108, y: 114}
+  - name: The Tack Zone
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 944
+      height: 973
+    spriteID: fa152fafd9b828c43b8968cd95793118
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 28}
+  - name: Overdrive
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2877
+      width: 942
+      height: 883
+    spriteID: 3945625a2c3becd408f45f8ca6f501db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2877}
+    spritePosition: {x: 0, y: 104}
+  - name: Tack Sprayer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2575
+      y: 4
+      width: 783
+      height: 812
+    spriteID: d6720d3383cc74e4fa3e3b492ec834d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2575, y: 4}
+    spritePosition: {x: 80, y: 108}
+  - name: Even More Tacks
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 2731
+      width: 808
+      height: 811
+    spriteID: b19dce3ed6ae7dd459cb7f33ab2249be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 2731}
+    spritePosition: {x: 68, y: 109}
+  - name: More Tacks
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1797
+      y: 1712
+      width: 754
+      height: 784
+    spriteID: ed9e312de9654d147af4177a43eb2a02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1797, y: 1712}
+    spritePosition: {x: 95, y: 122}
+  rigSpriteImportData:
+  - name: Inferno Ring
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 944
+      height: 940
+    spriteID: 3277dea43c313f3438f7fd3467e61f89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 44}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Tack Shooter
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e025c9c6c96ba7448a0d703c35947070
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 770ac654c8ee5164489021a2c9e16969
+    layerID: 24
+    mosaicPosition: {x: 2575, y: 824}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: ea3596547e8e42d45978fd5d34568a55
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Inferno Ring
+    spriteName: Inferno Ring
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 8e036cb651a3afd4bb8c899bfbdff46b
+    layerID: 22
+    mosaicPosition: {x: 4, y: 985}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ring of Fire
+    spriteName: Ring of Fire
+    isGroup: 0
+    parentIndex: 2
+    spriteID: b8c0e77636243404db367371975685e7
+    layerID: 21
+    mosaicPosition: {x: 956, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Hot Shots
+    spriteName: Hot Shots
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 4c7cc1bcde6ac504db9efbdd0104ec59
+    layerID: 20
+    mosaicPosition: {x: 1797, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Even Faster Shooting
+    spriteName: Even Faster Shooting
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 4f5d308e92a876d4baa8dd8d986c4912
+    layerID: 19
+    mosaicPosition: {x: 2575, y: 1616}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Faster Shooting
+    spriteName: Faster Shooting
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 1dac958ebee1ffe499613ed7887c0fc2
+    layerID: 18
+    mosaicPosition: {x: 2575, y: 2408}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 7acd01e926ed7a449b3a1a907a52ce21
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Super Maelstrom
+    spriteName: Super Maelstrom
+    isGroup: 0
+    parentIndex: 8
+    spriteID: da21a96264050584497404fb459c0440
+    layerID: 15
+    mosaicPosition: {x: 4, y: 1933}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blade Maelstrom
+    spriteName: Blade Maelstrom
+    isGroup: 0
+    parentIndex: 8
+    spriteID: b1b330d95650fbd48b85c0d92272aee8
+    layerID: 14
+    mosaicPosition: {x: 956, y: 955}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Blade Shooter
+    spriteName: Blade Shooter
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 6c547d6e27d405346b53e9d58cddc7da
+    layerID: 13
+    mosaicPosition: {x: 956, y: 1876}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Super Range
+    spriteName: Super Range
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 72eaf6de6c458ea4cad3e3eee0635952
+    layerID: 12
+    mosaicPosition: {x: 1797, y: 852}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Long Range Tacks
+    spriteName: Long Range Tacks
+    isGroup: 0
+    parentIndex: 8
+    spriteID: d79168b75f15f61489f4195604e16e95
+    layerID: 11
+    mosaicPosition: {x: 1797, y: 2504}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 8ceed5ead74ad4045ad8dce9790f521e
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: The Tack Zone
+    spriteName: The Tack Zone
+    isGroup: 0
+    parentIndex: 14
+    spriteID: fa152fafd9b828c43b8968cd95793118
+    layerID: 8
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Overdrive
+    spriteName: Overdrive
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 3945625a2c3becd408f45f8ca6f501db
+    layerID: 7
+    mosaicPosition: {x: 4, y: 2877}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Tack Sprayer
+    spriteName: Tack Sprayer
+    isGroup: 0
+    parentIndex: 14
+    spriteID: d6720d3383cc74e4fa3e3b492ec834d8
+    layerID: 6
+    mosaicPosition: {x: 2575, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Even More Tacks
+    spriteName: Even More Tacks
+    isGroup: 0
+    parentIndex: 14
+    spriteID: b19dce3ed6ae7dd459cb7f33ab2249be
+    layerID: 5
+    mosaicPosition: {x: 956, y: 2731}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: More Tacks
+    spriteName: More Tacks
+    isGroup: 0
+    parentIndex: 14
+    spriteID: ed9e312de9654d147af4177a43eb2a02
+    layerID: 4
+    mosaicPosition: {x: 1797, y: 1712}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Tack Shooter
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d39d263e8177f4c418856971d85aa7c0
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cd286e2a302f8684793aa2e624652601
+    layerID: 24
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: c0c912f5419386d4aab99ce9fadbf97f
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Inferno Ring
+    spriteName: Inferno Ring
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 3277dea43c313f3438f7fd3467e61f89
+    layerID: 22
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ring of Fire
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 336dd5f9460e05444851340240b67939
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Hot Shots
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: e0ce2f5ef9a630045ab4465296eeec69
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Even Faster Shooting
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 80351d3745a512e45b9b7cc487b8e6a7
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Faster Shooting
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 8104ac1bfc7d7f64d936b496e4a305c3
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 6afc89411f769654fa4d5eb25d3a50b9
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Super Maelstrom
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 8568461d9fb79724993dd1999299b7ef
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Blade Maelstrom
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: ae02e89f9f000de41908e1454d40ab27
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Blade Shooter
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: b0335c2ad52637643ba13ad47e3e5a32
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Super Range
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 09944439dfb28ab4bb4aa9f4dee322ac
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Long Range Tacks
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: e91b5b8cba933254c8227334e9384c80
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: a6785e9465d708c46badb9937ce0cd10
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: The Tack Zone
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 0666b898e65f17b4fb996a913d5b04ba
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Overdrive
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: d53ea1230108a8e4ba33f4fbba797106
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Tack Sprayer
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 2a5ce5ac5b620324f95d40af79f2cb91
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Even More Tacks
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 82c5856435b57444ab83f931b312d6ad
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: More Tacks
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: e78936915c0b26c4da7814310b014b4a
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
