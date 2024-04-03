@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 298648c8fc0f9be43b7f81b9df664bff
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1895
+      y: 4
+      width: 943
+      height: 957
+    spriteID: af93192a8bc21894f917db9888be44ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1895, y: 4}
+    spritePosition: {x: 0, y: 36}
+  - name: Ray of Doom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 937
+      height: 971
+    spriteID: 6af82ebe3224a3643b856784f6905e38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 4, y: 28}
+  - name: Plasme Accelerator
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1895
+      y: 1916
+      width: 939
+      height: 833
+    spriteID: 5b9631e8629cb4b418e745aeb6482550
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1895, y: 1916}
+    spritePosition: {x: 3, y: 97}
+  - name: Lasrer Cannon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 949
+      y: 1925
+      width: 722
+      height: 968
+    spriteID: 4748896fb157f8c4f987b0246d9ebebd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 949, y: 1925}
+    spritePosition: {x: 111, y: 30}
+  - name: Laster Shock
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2846
+      y: 1808
+      width: 694
+      height: 894
+    spriteID: 4869e3416e8310f47a31e1f5883d1ecb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2846, y: 1808}
+    spritePosition: {x: 125, y: 67}
+  - name: Focused Firing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2846
+      y: 2710
+      width: 690
+      height: 894
+    spriteID: b3e168516428a604ea4a902a02d42597
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2846, y: 2710}
+    spritePosition: {x: 127, y: 67}
+  - name: M.A.D.
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1895
+      y: 969
+      width: 939
+      height: 939
+    spriteID: ef4d0bdd2ff87e446b826d9757c464ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1895, y: 969}
+    spritePosition: {x: 3, y: 44}
+  - name: Rocket Storm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 983
+      width: 936
+      height: 946
+    spriteID: a054acfa323836c418566a71a75fbde4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 983}
+    spritePosition: {x: 4, y: 41}
+  - name: Hyrda Rocket Pods
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 949
+      y: 4
+      width: 938
+      height: 963
+    spriteID: 3152de68249301344aa7ec18040f506b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 949, y: 4}
+    spritePosition: {x: 3, y: 32}
+  - name: Faster Barrel Spin
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2846
+      y: 4
+      width: 733
+      height: 894
+    spriteID: 631c2cb0c9e6c1a4192415ca66360a58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2846, y: 4}
+    spritePosition: {x: 105, y: 67}
+  - name: Advanced Targeting
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2846
+      y: 906
+      width: 733
+      height: 894
+    spriteID: 6d87f5605992bd34e83e0c8f5c9d82ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2846, y: 906}
+    spritePosition: {x: 105, y: 18}
+  - name: Bloon Exclusion Zone
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 949
+      y: 975
+      width: 938
+      height: 942
+    spriteID: 3f544ca473b5957479a55ee3ebf3194e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 949, y: 975}
+    spritePosition: {x: 3, y: 43}
+  - name: Bloon Area Denial System
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 949
+      y: 2901
+      width: 659
+      height: 997
+    spriteID: c16edf53741ece5458887e8541aeb9ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 949, y: 2901}
+    spritePosition: {x: 142, y: 16}
+  - name: Buckshot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1895
+      y: 2757
+      width: 904
+      height: 844
+    spriteID: 65b376e0e3c79b34a89b71875dee0fba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1895, y: 2757}
+    spritePosition: {x: 20, y: 92}
+  - name: Powerful Darts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2832
+      width: 809
+      height: 887
+    spriteID: 871bd6ecf16cbf547b105cd2532364e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2832}
+    spritePosition: {x: 67, y: 71}
+  - name: Faster Swivel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1937
+      width: 815
+      height: 887
+    spriteID: f0569bf1cfa85a643981530abe94a1db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1937}
+    spritePosition: {x: 64, y: 71}
+  rigSpriteImportData:
+  - name: Ray of Doom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 937
+      height: 971
+    spriteID: e4638391a1f3b27478cf764556c311a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 4, y: 28}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Dartling Gunner
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 8058678053a63314384b770d44645261
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: af93192a8bc21894f917db9888be44ac
+    layerID: 24
+    mosaicPosition: {x: 1895, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: a7b74d5a960161b42b0c9853d3801fd8
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Ray of Doom
+    spriteName: Ray of Doom
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 6af82ebe3224a3643b856784f6905e38
+    layerID: 22
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Plasme Accelerator
+    spriteName: Plasme Accelerator
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 5b9631e8629cb4b418e745aeb6482550
+    layerID: 21
+    mosaicPosition: {x: 1895, y: 1916}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Lasrer Cannon
+    spriteName: Lasrer Cannon
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 4748896fb157f8c4f987b0246d9ebebd
+    layerID: 20
+    mosaicPosition: {x: 949, y: 1925}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Laster Shock
+    spriteName: Laster Shock
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 4869e3416e8310f47a31e1f5883d1ecb
+    layerID: 19
+    mosaicPosition: {x: 2846, y: 1808}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Focused Firing
+    spriteName: Focused Firing
+    isGroup: 0
+    parentIndex: 2
+    spriteID: b3e168516428a604ea4a902a02d42597
+    layerID: 18
+    mosaicPosition: {x: 2846, y: 2710}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 81e6e7d1ae3d5b04683793979dd94aa7
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: M.A.D.
+    spriteName: M.A.D.
+    isGroup: 0
+    parentIndex: 8
+    spriteID: ef4d0bdd2ff87e446b826d9757c464ef
+    layerID: 15
+    mosaicPosition: {x: 1895, y: 969}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Rocket Storm
+    spriteName: Rocket Storm
+    isGroup: 0
+    parentIndex: 8
+    spriteID: a054acfa323836c418566a71a75fbde4
+    layerID: 14
+    mosaicPosition: {x: 4, y: 983}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Hyrda Rocket Pods
+    spriteName: Hyrda Rocket Pods
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 3152de68249301344aa7ec18040f506b
+    layerID: 13
+    mosaicPosition: {x: 949, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Faster Barrel Spin
+    spriteName: Faster Barrel Spin
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 631c2cb0c9e6c1a4192415ca66360a58
+    layerID: 12
+    mosaicPosition: {x: 2846, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Advanced Targeting
+    spriteName: Advanced Targeting
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 6d87f5605992bd34e83e0c8f5c9d82ea
+    layerID: 11
+    mosaicPosition: {x: 2846, y: 906}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 09567f73f9b6e3040be920e342c9fa4e
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Bloon Exclusion Zone
+    spriteName: Bloon Exclusion Zone
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 3f544ca473b5957479a55ee3ebf3194e
+    layerID: 8
+    mosaicPosition: {x: 949, y: 975}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bloon Area Denial System
+    spriteName: Bloon Area Denial System
+    isGroup: 0
+    parentIndex: 14
+    spriteID: c16edf53741ece5458887e8541aeb9ce
+    layerID: 7
+    mosaicPosition: {x: 949, y: 2901}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Buckshot
+    spriteName: Buckshot
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 65b376e0e3c79b34a89b71875dee0fba
+    layerID: 6
+    mosaicPosition: {x: 1895, y: 2757}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Powerful Darts
+    spriteName: Powerful Darts
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 871bd6ecf16cbf547b105cd2532364e2
+    layerID: 5
+    mosaicPosition: {x: 4, y: 2832}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Faster Swivel
+    spriteName: Faster Swivel
+    isGroup: 0
+    parentIndex: 14
+    spriteID: f0569bf1cfa85a643981530abe94a1db
+    layerID: 4
+    mosaicPosition: {x: 4, y: 1937}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Dartling Gunner
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e7ec935143c8b614e82037227175fa62
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5fb09f04e387d5b4abbb11069651fcd1
+    layerID: 24
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: e5dc2acf5105fcd458b3389f1957b70b
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Ray of Doom
+    spriteName: Ray of Doom
+    isGroup: 0
+    parentIndex: 2
+    spriteID: e4638391a1f3b27478cf764556c311a0
+    layerID: 22
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Plasme Accelerator
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 38af2dba1bf76624fb50cd387dba2820
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Lasrer Cannon
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: e5d61c7cb6947ec4294ac0917642ef99
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Laster Shock
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: df7f19c44e5de6e41b63662126638ea4
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Focused Firing
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 01e199ab82e65c34f9f062c071dc3765
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 60df66f8273604649b972b4fa5610dde
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: M.A.D.
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 4de905fcd09eede4b9f6b330e2e20c8c
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Rocket Storm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: f828233fdf796614ea4051060f5a438e
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Hyrda Rocket Pods
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: f37a035f678d405459025bf211e70722
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Faster Barrel Spin
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 728d1f5236809014eafaf3ab8bac9d52
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Advanced Targeting
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: f42ff3261d7284a44935a52132f8a075
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 36b7e3e635fd3e84bb526c9dadc575d0
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Bloon Exclusion Zone
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 8dc49bcb309cc414d92b85b234939b47
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bloon Area Denial System
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 7bf23aa7b9c9eab4f9fdaabe542788dc
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Buckshot
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: bed23943209df2043bb0db059c2649c7
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Powerful Darts
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 7a646e06a1a44044c9d806dd4b1cb299
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Faster Swivel
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 5fd5cf780ae3fc849a65d378a8fce827
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

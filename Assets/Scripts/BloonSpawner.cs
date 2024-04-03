@@ -8,7 +8,6 @@ public class BloonSpawner : MonoBehaviour
     [SerializeField] private GameObject _gOPath;
     [SerializeField] private GameObject _bloon;
     private List<Vector2> _bloonPath;
-    // Start is called before the first frame update
     void Start()
     {
         _bloonPath = _gOPath.GetComponent<BloonPathCreator>().GetPathVectors();

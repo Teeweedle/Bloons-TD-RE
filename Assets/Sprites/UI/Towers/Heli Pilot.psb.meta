@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 3a1b0337f7c37514ba323ff86097de3f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 4
+      width: 878
+      height: 994
+    spriteID: c52e0de0f640b7d48a8c1f333bb13724
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 4}
+    spritePosition: {x: 33, y: 17}
+  - name: Apache Prime
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1842
+      y: 1834
+      width: 936
+      height: 906
+    spriteID: 6ae6512bd117640429ea1c306299b1d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1842, y: 1834}
+    spritePosition: {x: 4, y: 61}
+  - name: Apache Dartship
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1842
+      y: 921
+      width: 940
+      height: 905
+    spriteID: 24679bc4cf38d5a40a54b032316f7cda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1842, y: 921}
+    spritePosition: {x: 2, y: 61}
+  - name: Razor Rotors
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 944
+      height: 961
+    spriteID: f5bb9d5df7a2e4c4a98a74bd908a14e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 34}
+  - name: Pursuit
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2794
+      y: 2674
+      width: 868
+      height: 879
+    spriteID: 2ddb9cc906a2f724a8ec1259f79a2bc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2794, y: 2674}
+    spritePosition: {x: 38, y: 75}
+  - name: Quad Darts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 1006
+      width: 868
+      height: 875
+    spriteID: 241c7a362fae8c542a431feeb1308c21
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 1006}
+    spritePosition: {x: 38, y: 77}
+  - name: Special Poperations
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 973
+      width: 942
+      height: 955
+    spriteID: b02603a1c1aa7264c8c96494051d03ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 973}
+    spritePosition: {x: 1, y: 37}
+  - name: Support Chinook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2794
+      y: 1763
+      width: 850
+      height: 903
+    spriteID: 5a839abea4c0cc44ba025019bf6b84e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2794, y: 1763}
+    spritePosition: {x: 47, y: 63}
+  - name: Down Draft
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1842
+      y: 4
+      width: 944
+      height: 909
+    spriteID: ab0e218deccb7d74cbbb4c35220ddb6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1842, y: 4}
+    spritePosition: {x: 0, y: 60}
+  - name: IFR
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 1889
+      width: 868
+      height: 875
+    spriteID: 4ea03be8190879b4fb3baa85bae20312
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 1889}
+    spritePosition: {x: 38, y: 77}
+  - name: Bigger Jets
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 2772
+      width: 868
+      height: 875
+    spriteID: 2c55e7fd71922cd4d92de99cab98bbd4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 2772}
+    spritePosition: {x: 38, y: 77}
+  - name: Comanche Commander
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2890
+      width: 934
+      height: 954
+    spriteID: cc37ad64f079a4b45a353ec608fd4f7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2890}
+    spritePosition: {x: 5, y: 37}
+  - name: Comanche Defense
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1936
+      width: 942
+      height: 946
+    spriteID: 80bca9f363e0c084f84fd4b2f384675e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1936}
+    spritePosition: {x: 0, y: 41}
+  - name: MOAB Shove
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2794
+      y: 921
+      width: 941
+      height: 834
+    spriteID: aa8a7c3893f9748418abd38707edef64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2794, y: 921}
+    spritePosition: {x: 2, y: 97}
+  - name: Faster Firing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2794
+      y: 4
+      width: 902
+      height: 909
+    spriteID: 546808b3180562f46a5f96db0889c887
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2794, y: 4}
+    spritePosition: {x: 21, y: 59}
+  - name: Faster Darts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1842
+      y: 2748
+      width: 912
+      height: 919
+    spriteID: 79726779b15090540973280b09cf91de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1842, y: 2748}
+    spritePosition: {x: 16, y: 54}
+  rigSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 878
+      height: 994
+    spriteID: 2fe16dd934d715541826b494424db6ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 33, y: 17}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Heli Pilot
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 6d18e28a958389e48ba7b9f3c5b847eb
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c52e0de0f640b7d48a8c1f333bb13724
+    layerID: 24
+    mosaicPosition: {x: 956, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 040e9a92eed85fa40ad713f637596fdf
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Apache Prime
+    spriteName: Apache Prime
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 6ae6512bd117640429ea1c306299b1d5
+    layerID: 22
+    mosaicPosition: {x: 1842, y: 1834}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Apache Dartship
+    spriteName: Apache Dartship
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 24679bc4cf38d5a40a54b032316f7cda
+    layerID: 21
+    mosaicPosition: {x: 1842, y: 921}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Razor Rotors
+    spriteName: Razor Rotors
+    isGroup: 0
+    parentIndex: 2
+    spriteID: f5bb9d5df7a2e4c4a98a74bd908a14e8
+    layerID: 20
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Pursuit
+    spriteName: Pursuit
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 2ddb9cc906a2f724a8ec1259f79a2bc4
+    layerID: 19
+    mosaicPosition: {x: 2794, y: 2674}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Quad Darts
+    spriteName: Quad Darts
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 241c7a362fae8c542a431feeb1308c21
+    layerID: 18
+    mosaicPosition: {x: 956, y: 1006}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: bb77ad08e9c586045bc62bd145707ef3
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Special Poperations
+    spriteName: Special Poperations
+    isGroup: 0
+    parentIndex: 8
+    spriteID: b02603a1c1aa7264c8c96494051d03ce
+    layerID: 15
+    mosaicPosition: {x: 4, y: 973}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Support Chinook
+    spriteName: Support Chinook
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 5a839abea4c0cc44ba025019bf6b84e7
+    layerID: 14
+    mosaicPosition: {x: 2794, y: 1763}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Down Draft
+    spriteName: Down Draft
+    isGroup: 0
+    parentIndex: 8
+    spriteID: ab0e218deccb7d74cbbb4c35220ddb6f
+    layerID: 13
+    mosaicPosition: {x: 1842, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: IFR
+    spriteName: IFR
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 4ea03be8190879b4fb3baa85bae20312
+    layerID: 12
+    mosaicPosition: {x: 956, y: 1889}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bigger Jets
+    spriteName: Bigger Jets
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 2c55e7fd71922cd4d92de99cab98bbd4
+    layerID: 11
+    mosaicPosition: {x: 956, y: 2772}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: c9eb63a0b51190a40aced2cca37c12cf
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Comanche Commander
+    spriteName: Comanche Commander
+    isGroup: 0
+    parentIndex: 14
+    spriteID: cc37ad64f079a4b45a353ec608fd4f7d
+    layerID: 8
+    mosaicPosition: {x: 4, y: 2890}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Comanche Defense
+    spriteName: Comanche Defense
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 80bca9f363e0c084f84fd4b2f384675e
+    layerID: 7
+    mosaicPosition: {x: 4, y: 1936}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: MOAB Shove
+    spriteName: MOAB Shove
+    isGroup: 0
+    parentIndex: 14
+    spriteID: aa8a7c3893f9748418abd38707edef64
+    layerID: 6
+    mosaicPosition: {x: 2794, y: 921}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Faster Firing
+    spriteName: Faster Firing
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 546808b3180562f46a5f96db0889c887
+    layerID: 5
+    mosaicPosition: {x: 2794, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Faster Darts
+    spriteName: Faster Darts
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 79726779b15090540973280b09cf91de
+    layerID: 4
+    mosaicPosition: {x: 1842, y: 2748}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Heli Pilot
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 31b913ef916d2044d9afd8d7202f44d4
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2fe16dd934d715541826b494424db6ff
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 9b5715e7253135f4aabe3755963bd4a5
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Apache Prime
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: cd217b70b6ba31e4d972ae2deaf05c3f
+    layerID: 22
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Apache Dartship
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: bb34e0f4d829a22458e4a944a2f77f07
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Razor Rotors
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: ff53e2a5a48070d459adb487ed45e07c
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Pursuit
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: fbc56508d24d4a34ca8cd9500e1b3974
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Quad Darts
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: a4dbbe98e5e50e84e940a7374c850106
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 86f210334fac831449e378674ed92516
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Special Poperations
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: d5e98697cf007c143b13b96c9fcfc032
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Support Chinook
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: e3d82f79add321b45ab10bdee7178514
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Down Draft
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 99c24273a0520af4095995492f708225
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: IFR
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 717a042fb05846946923b1c88033aea4
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bigger Jets
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: c5bbc40b94532a844b1be555756554eb
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: ab39115c5e123a240b96fff3c0442573
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Comanche Commander
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: ebe61a89d7c1d3248a05dd10d5343550
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Comanche Defense
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: a906ebe13a4d41d4eb63854e4c3e9db1
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: MOAB Shove
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: b30e9921e71dd1b47b404069a116a0cb
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Faster Firing
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 61c8786884a0f28478937175e3e7beed
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Faster Darts
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: ea444124bfb5fba489ed4ed73d0c3e7d
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

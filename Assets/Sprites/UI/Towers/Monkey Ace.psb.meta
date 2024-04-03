@@ -1,0 +1,987 @@
+fileFormatVersion: 2
+guid: ac8f668bedcf6114782c444cfb402ba7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: ??
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1878
+      width: 934
+      height: 866
+    spriteID: 33a4134de6b210a43806c620f5691289
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1878}
+    spritePosition: {x: 5, y: 81}
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 5234
+      width: 880
+      height: 850
+    spriteID: 84f61558e8e706c4da3bbdf474fc8f7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 5234}
+    spritePosition: {x: 32, y: 89}
+  - name: Sky Shredder
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 936
+      height: 933
+    spriteID: 8edab45b6412ccc4b9465657e6a0ace0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 4, y: 47}
+  - name: 'Operation: Dart Storm'
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4519
+      width: 895
+      height: 876
+    spriteID: 6deb963e6264f4649a373862331b73f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4519}
+    spritePosition: {x: 24, y: 76}
+  - name: Fighter Plane
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2752
+      width: 898
+      height: 898
+    spriteID: 104e672ed984ef640a462b2b717e72c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2752}
+    spritePosition: {x: 23, y: 65}
+  - name: Lots More Darts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7102
+      width: 887
+      height: 853
+    spriteID: cbc16d64370e0504caf4ce0ba384363f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7102}
+    spritePosition: {x: 28, y: 88}
+  - name: Rapid Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 1790
+      width: 887
+      height: 853
+    spriteID: 9018886bc1886b24fa87f032642f267b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 1790}
+    spritePosition: {x: 28, y: 88}
+  - name: Tsar Bomba
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 933
+      width: 938
+      height: 849
+    spriteID: 93dd43f6adf77de40b8ecb574ea4611c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 933}
+    spritePosition: {x: 3, y: 89}
+  - name: Ground Zero
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 945
+      width: 903
+      height: 925
+    spriteID: 82e99bc4daf2763448111a8ac7ad129a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 945}
+    spritePosition: {x: 21, y: 51}
+  - name: Bomber Ace
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3658
+      width: 936
+      height: 853
+    spriteID: 8403546b64c2b41439e387ff2c3a8957
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3658}
+    spritePosition: {x: 4, y: 87}
+  - name: Spy Plane
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6240
+      width: 887
+      height: 854
+    spriteID: 7c55060507448134d9fb7aee3a9203e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6240}
+    spritePosition: {x: 28, y: 87}
+  - name: Exploding Pineapple
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 2651
+      width: 887
+      height: 853
+    spriteID: 2fd0deec21788114597ca8cf0eb0561f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 2651}
+    spritePosition: {x: 28, y: 88}
+  - name: Flying Fortress
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 4
+      width: 940
+      height: 921
+    spriteID: 5bf6c83987bd3cb489aae64a33b7a5db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 4}
+    spritePosition: {x: 2, y: 53}
+  - name: Spectre
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 6092
+      width: 836
+      height: 871
+    spriteID: b170945758865184fb8e0a0174a425a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 6092}
+    spritePosition: {x: 54, y: 79}
+  - name: Neva-Miss Targeting
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5403
+      width: 915
+      height: 829
+    spriteID: 7501d46ba6ff22b498567b61a88bf24e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5403}
+    spritePosition: {x: 14, y: 100}
+  - name: Centered Path
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 3512
+      width: 887
+      height: 853
+    spriteID: 6ef589ca7310cf44d96404542e3d466d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 3512}
+    spritePosition: {x: 28, y: 88}
+  - name: Sniper Darts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 948
+      y: 4373
+      width: 887
+      height: 853
+    spriteID: 7859665a86a05aa4d892e99e87ea9c6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 948, y: 4373}
+    spritePosition: {x: 28, y: 88}
+  rigSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 880
+      height: 850
+    spriteID: fe1b2e965a669bc4d846a31a00bcd3e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 32, y: 89}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Monkey Ace
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 680c45d98b0a5f447a51de106310bd91
+    layerID: 26
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ??
+    spriteName: ??
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 33a4134de6b210a43806c620f5691289
+    layerID: 25
+    mosaicPosition: {x: 4, y: 1878}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 84f61558e8e706c4da3bbdf474fc8f7c
+    layerID: 24
+    mosaicPosition: {x: 948, y: 5234}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 96d09d0f0c5b0e149ba2a3d1141a9856
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Sky Shredder
+    spriteName: Sky Shredder
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 8edab45b6412ccc4b9465657e6a0ace0
+    layerID: 22
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: 'Operation: Dart Storm'
+    spriteName: 'Operation: Dart Storm'
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 6deb963e6264f4649a373862331b73f1
+    layerID: 21
+    mosaicPosition: {x: 4, y: 4519}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Fighter Plane
+    spriteName: Fighter Plane
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 104e672ed984ef640a462b2b717e72c8
+    layerID: 20
+    mosaicPosition: {x: 4, y: 2752}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Lots More Darts
+    spriteName: Lots More Darts
+    isGroup: 0
+    parentIndex: 3
+    spriteID: cbc16d64370e0504caf4ce0ba384363f
+    layerID: 19
+    mosaicPosition: {x: 4, y: 7102}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Rapid Fire
+    spriteName: Rapid Fire
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 9018886bc1886b24fa87f032642f267b
+    layerID: 18
+    mosaicPosition: {x: 948, y: 1790}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 6a78d8b4f04f6d540a5269ff6966b45c
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Tsar Bomba
+    spriteName: Tsar Bomba
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 93dd43f6adf77de40b8ecb574ea4611c
+    layerID: 15
+    mosaicPosition: {x: 948, y: 933}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Ground Zero
+    spriteName: Ground Zero
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 82e99bc4daf2763448111a8ac7ad129a
+    layerID: 14
+    mosaicPosition: {x: 4, y: 945}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bomber Ace
+    spriteName: Bomber Ace
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 8403546b64c2b41439e387ff2c3a8957
+    layerID: 13
+    mosaicPosition: {x: 4, y: 3658}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Spy Plane
+    spriteName: Spy Plane
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 7c55060507448134d9fb7aee3a9203e8
+    layerID: 12
+    mosaicPosition: {x: 4, y: 6240}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Exploding Pineapple
+    spriteName: Exploding Pineapple
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 2fd0deec21788114597ca8cf0eb0561f
+    layerID: 11
+    mosaicPosition: {x: 948, y: 2651}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: a13901d8163d2ed40bea22552ecefb9d
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Flying Fortress
+    spriteName: Flying Fortress
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 5bf6c83987bd3cb489aae64a33b7a5db
+    layerID: 8
+    mosaicPosition: {x: 948, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Spectre
+    spriteName: Spectre
+    isGroup: 0
+    parentIndex: 15
+    spriteID: b170945758865184fb8e0a0174a425a3
+    layerID: 7
+    mosaicPosition: {x: 948, y: 6092}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Neva-Miss Targeting
+    spriteName: Neva-Miss Targeting
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 7501d46ba6ff22b498567b61a88bf24e
+    layerID: 6
+    mosaicPosition: {x: 4, y: 5403}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Centered Path
+    spriteName: Centered Path
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 6ef589ca7310cf44d96404542e3d466d
+    layerID: 5
+    mosaicPosition: {x: 948, y: 3512}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Sniper Darts
+    spriteName: Sniper Darts
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 7859665a86a05aa4d892e99e87ea9c6e
+    layerID: 4
+    mosaicPosition: {x: 948, y: 4373}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Monkey Ace
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d57257a76a7689247a338bf28fa0673e
+    layerID: 26
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ??
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2528fb73545d47a41934903d018a862a
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: fe1b2e965a669bc4d846a31a00bcd3e7
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: aefe5e99d5df07d4ab1cb3602c252c5f
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Sky Shredder
+    spriteName: 
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 4f855aeaf688afc46b0e8a4539003a9a
+    layerID: 22
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: 'Operation: Dart Storm'
+    spriteName: 
+    isGroup: 0
+    parentIndex: 3
+    spriteID: a729a27cbb0519043b97eecceafda51d
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Fighter Plane
+    spriteName: 
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 4588ac728d14fb24c9651ddb0cba67a7
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Lots More Darts
+    spriteName: 
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 61463b183b403c14dad38a169acb2657
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Rapid Fire
+    spriteName: 
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 7eb805e97b8f23f4e9f707233b38e295
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 73dd273f4266fa248b255c972b41dd57
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Tsar Bomba
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 28683b2b6ec6d33419ecbb2c05bf531b
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Ground Zero
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 8c194e3bc6ebf2340bd53935ab87718e
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bomber Ace
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 78c9564c832011c44937fd89a3101296
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Spy Plane
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 7342c5f12d74d664c8a0a1eff84cfc26
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Exploding Pineapple
+    spriteName: 
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 9550fd604b2e9314f8063f919ab78a52
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 88d100b0ca0c99843b9424aa6dd66111
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Flying Fortress
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: f4f609d38e49b3847a8720a8a52d1446
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Spectre
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 6ef025e7e40e88146bccfd4d8bf5dcea
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Neva-Miss Targeting
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 6d4b5f6615bbb2649a851038c060d600
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Centered Path
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: c7fbe77ebcf1ee94389b6a11a887ea1b
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Sniper Darts
+    spriteName: 
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 25d9847690f94ad40aac94143ec985b6
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

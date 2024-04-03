@@ -1,0 +1,925 @@
+fileFormatVersion: 2
+guid: d296442a06e82654fa637d851a1df145
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2820
+      y: 2648
+      width: 665
+      height: 936
+    spriteID: 059af952bc215e342b05b9a6bf9db44d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2820, y: 2648}
+    spritePosition: {x: 139, y: 46}
+  - name: Cripple MOAB
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 944
+      height: 960
+    spriteID: 8fba2ed99361eb3488d53b03b4697be6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 34}
+  - name: Maim MOAB
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2820
+      y: 4
+      width: 942
+      height: 798
+    spriteID: d8917e4b4f4eceb4d992c7e81ecbfb16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2820, y: 4}
+    spritePosition: {x: 1, y: 115}
+  - name: Deadly Precision
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2820
+      y: 1745
+      width: 815
+      height: 895
+    spriteID: fb2a6ed31011dc14e93b812cd4747cb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2820, y: 1745}
+    spritePosition: {x: 64, y: 67}
+  - name: Large Calibre
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 1726
+      width: 904
+      height: 842
+    spriteID: 2a6a01a7c6e72cd4ba64c73a5e7e5fca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 1726}
+    spritePosition: {x: 20, y: 93}
+  - name: Full Metal Jacket
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 2576
+      width: 904
+      height: 842
+    spriteID: 3fed9e3a40ab89e40b7e334453656cdd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 2576}
+    spritePosition: {x: 20, y: 93}
+  - name: Elite Sniper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 972
+      width: 944
+      height: 896
+    spriteID: 81b9a8afb581c5649860665dc216c8f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 972}
+    spritePosition: {x: 0, y: 66}
+  - name: Supply Drop
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 834
+      width: 873
+      height: 884
+    spriteID: 9ce51839f1c839c408054ae13ded9091
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 834}
+    spritePosition: {x: 35, y: 72}
+  - name: Bouncing Bullet
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2761
+      width: 939
+      height: 854
+    spriteID: 90634c219efbdaf4dbc3b5c8d3c28d55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2761}
+    spritePosition: {x: 2, y: 87}
+  - name: Shrapnel Shots
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1908
+      y: 4
+      width: 904
+      height: 842
+    spriteID: aab47d79af8471a409921bd7b2fa0357
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1908, y: 4}
+    spritePosition: {x: 20, y: 93}
+  - name: Night Vision Goggles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1908
+      y: 854
+      width: 904
+      height: 842
+    spriteID: 6c0a4d5d71f8fa14a86a878b417c4ad7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1908, y: 854}
+    spritePosition: {x: 20, y: 93}
+  - name: Elite Defender
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1876
+      width: 944
+      height: 877
+    spriteID: 7be7e0ffa8d25774ab904e993cddd200
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1876}
+    spritePosition: {x: 0, y: 76}
+  - name: Full Auto Rifle
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2820
+      y: 810
+      width: 797
+      height: 927
+    spriteID: b654720e579dcb54fb3a184325c34a58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2820, y: 810}
+    spritePosition: {x: 73, y: 51}
+  - name: Semi-Automatic
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 956
+      y: 4
+      width: 944
+      height: 822
+    spriteID: 4956a13384e207a42b646c864d03fe25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 956, y: 4}
+    spritePosition: {x: 0, y: 103}
+  - name: Even Faster Firing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1908
+      y: 1704
+      width: 904
+      height: 842
+    spriteID: ac632c7a63b379445b427534700e78ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1908, y: 1704}
+    spritePosition: {x: 20, y: 93}
+  - name: Fast Firing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1908
+      y: 2554
+      width: 904
+      height: 842
+    spriteID: 2ed0481a0786c3b448b9dbde9e1f6652
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1908, y: 2554}
+    spritePosition: {x: 20, y: 93}
+  rigSpriteImportData: []
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Sniper Monkey
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: a43c6bcc197d4ed47a0d7ca2a2fbf491
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 059af952bc215e342b05b9a6bf9db44d
+    layerID: 24
+    mosaicPosition: {x: 2820, y: 2648}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: dcd6bfdcb80734d48a865b52a52757a9
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Cripple MOAB
+    spriteName: Cripple MOAB
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 8fba2ed99361eb3488d53b03b4697be6
+    layerID: 22
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Maim MOAB
+    spriteName: Maim MOAB
+    isGroup: 0
+    parentIndex: 2
+    spriteID: d8917e4b4f4eceb4d992c7e81ecbfb16
+    layerID: 21
+    mosaicPosition: {x: 2820, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Deadly Precision
+    spriteName: Deadly Precision
+    isGroup: 0
+    parentIndex: 2
+    spriteID: fb2a6ed31011dc14e93b812cd4747cb7
+    layerID: 20
+    mosaicPosition: {x: 2820, y: 1745}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Large Calibre
+    spriteName: Large Calibre
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 2a6a01a7c6e72cd4ba64c73a5e7e5fca
+    layerID: 19
+    mosaicPosition: {x: 956, y: 1726}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Full Metal Jacket
+    spriteName: Full Metal Jacket
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 3fed9e3a40ab89e40b7e334453656cdd
+    layerID: 18
+    mosaicPosition: {x: 956, y: 2576}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 7cac14c88842d7848a772d5a6d632aab
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Elite Sniper
+    spriteName: Elite Sniper
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 81b9a8afb581c5649860665dc216c8f0
+    layerID: 15
+    mosaicPosition: {x: 4, y: 972}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Supply Drop
+    spriteName: Supply Drop
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 9ce51839f1c839c408054ae13ded9091
+    layerID: 14
+    mosaicPosition: {x: 956, y: 834}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bouncing Bullet
+    spriteName: Bouncing Bullet
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 90634c219efbdaf4dbc3b5c8d3c28d55
+    layerID: 13
+    mosaicPosition: {x: 4, y: 2761}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Shrapnel Shots
+    spriteName: Shrapnel Shots
+    isGroup: 0
+    parentIndex: 8
+    spriteID: aab47d79af8471a409921bd7b2fa0357
+    layerID: 12
+    mosaicPosition: {x: 1908, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Night Vision Goggles
+    spriteName: Night Vision Goggles
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 6c0a4d5d71f8fa14a86a878b417c4ad7
+    layerID: 11
+    mosaicPosition: {x: 1908, y: 854}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: db75c55e5d6bf83408b7e62ff09189d1
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Elite Defender
+    spriteName: Elite Defender
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 7be7e0ffa8d25774ab904e993cddd200
+    layerID: 8
+    mosaicPosition: {x: 4, y: 1876}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Full Auto Rifle
+    spriteName: Full Auto Rifle
+    isGroup: 0
+    parentIndex: 14
+    spriteID: b654720e579dcb54fb3a184325c34a58
+    layerID: 7
+    mosaicPosition: {x: 2820, y: 810}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Semi-Automatic
+    spriteName: Semi-Automatic
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 4956a13384e207a42b646c864d03fe25
+    layerID: 6
+    mosaicPosition: {x: 956, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Even Faster Firing
+    spriteName: Even Faster Firing
+    isGroup: 0
+    parentIndex: 14
+    spriteID: ac632c7a63b379445b427534700e78ae
+    layerID: 5
+    mosaicPosition: {x: 1908, y: 1704}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Fast Firing
+    spriteName: Fast Firing
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 2ed0481a0786c3b448b9dbde9e1f6652
+    layerID: 4
+    mosaicPosition: {x: 1908, y: 2554}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Sniper Monkey
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d41250f9bffcb7f4293236c6c5a9f903
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8e8ea3c8a3a11f047a1d25f05510b103
+    layerID: 24
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 1eaf6134d8f7f774eb8ab8bbe55b15ea
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Cripple MOAB
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 15383c89ae8ecc441ae43fbbf226f1d9
+    layerID: 22
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Maim MOAB
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: d059f6135f46f8846871fb7494256b00
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Deadly Precision
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: c8d96409c3c1a67418e551a0bf6aa18b
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Large Calibre
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 52d5bdd898d6c9348b36f21767f944f3
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Full Metal Jacket
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 714ff815119bbc4479138382b1df5c03
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: a42785088ab09f9449640a6dd98e7ddc
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Elite Sniper
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 87e53df26633f294d8256e276435fd57
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Supply Drop
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: b89bec4318caee94eae65deea897137e
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bouncing Bullet
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 44560759b39c0724794ebd362ca3f443
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Shrapnel Shots
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: de949e582ed90744a888b96816a4e74d
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Night Vision Goggles
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 7fee6fc362748454b8f33f4e049e9a4a
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 65cc5be86afd76f4497044061bd92733
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Elite Defender
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 57fd715b6c6d8484ba65be06cccc01e8
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Full Auto Rifle
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: a5cac0f8cfa324b44a305d4c53aa653b
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Semi-Automatic
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: a0957bd89e1a5f541868ea23411c53cf
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Even Faster Firing
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 78afce36f991dbd4a929a57128297f1e
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Fast Firing
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: e5853fb43c6d7f647a85b0ec668e9a1d
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

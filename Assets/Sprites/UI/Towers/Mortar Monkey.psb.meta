@@ -1,0 +1,946 @@
+fileFormatVersion: 2
+guid: 4ee2162b1525cd94e81b366e2ad8163f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 951
+      y: 2974
+      width: 932
+      height: 890
+    spriteID: 2a9bdb75354de844295aa4cd68129463
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 951, y: 2974}
+    spritePosition: {x: 6, y: 69}
+  - name: The Biggest One
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1900
+      y: 4
+      width: 944
+      height: 926
+    spriteID: 9d07a0b141692fa45bc4e8308bd0c38c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1900, y: 4}
+    spritePosition: {x: 0, y: 51}
+  - name: The Big One
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1018
+      width: 938
+      height: 979
+    spriteID: 29dd4ab2db2c66546b4cbc5debba48cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1018}
+    spritePosition: {x: 3, y: 24}
+  - name: Shell Shock
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 951
+      y: 4
+      width: 941
+      height: 989
+    spriteID: 43681faa0e62ce04f910e348461325b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 951, y: 4}
+    spritePosition: {x: 1, y: 20}
+  - name: Bloon Buster
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1900
+      y: 2708
+      width: 931
+      height: 875
+    spriteID: 0d36cfad4d46f5b4a82e948b2b845efa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1900, y: 2708}
+    spritePosition: {x: 6, y: 77}
+  - name: Bigger Blast
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2852
+      y: 4
+      width: 931
+      height: 875
+    spriteID: 8170c9755c3a38742afb0293ef4ed780
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2852, y: 4}
+    spritePosition: {x: 6, y: 23}
+  - name: Pop and Awe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2005
+      width: 939
+      height: 965
+    spriteID: 473fa3f39a54caa43b28219fdc5023f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2005}
+    spritePosition: {x: 3, y: 31}
+  - name: Artillery Battery
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 939
+      height: 1006
+    spriteID: f5f5e43866c5b684e958c89c99761877
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 3, y: 11}
+  - name: Heavy Shells
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2852
+      y: 2653
+      width: 940
+      height: 780
+    spriteID: c10d1a4c4c37da34fabb00ef93f42d9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2852, y: 2653}
+    spritePosition: {x: 2, y: 124}
+  - name: Rapid Reload
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2852
+      y: 887
+      width: 930
+      height: 875
+    spriteID: 46388834b4e803c4a852b12100caa57d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2852, y: 887}
+    spritePosition: {x: 7, y: 77}
+  - name: Faster Reload
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1900
+      y: 938
+      width: 932
+      height: 879
+    spriteID: cfe0637aef9fd45418ec0bdb30f983e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1900, y: 938}
+    spritePosition: {x: 6, y: 75}
+  - name: Blooncineration
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2978
+      width: 896
+      height: 995
+    spriteID: 0c8140f5c761da2498b528d6b95bbdf3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2978}
+    spritePosition: {x: 24, y: 17}
+  - name: Shattering Shells
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 951
+      y: 1957
+      width: 876
+      height: 1009
+    spriteID: 81ce42ef0aaae334387e96fd3e41b922
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 951, y: 1957}
+    spritePosition: {x: 34, y: 10}
+  - name: Signal Flare
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 951
+      y: 1001
+      width: 937
+      height: 948
+    spriteID: 88e91af7b7e1d954e8feef8a0ca45bb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 951, y: 1001}
+    spritePosition: {x: 4, y: 40}
+  - name: Burny Stuff
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1900
+      y: 1825
+      width: 934
+      height: 875
+    spriteID: e1b14a524c8f0574fa0dd47259966e8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1900, y: 1825}
+    spritePosition: {x: 5, y: 77}
+  - name: Increased Accuracy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2852
+      y: 1770
+      width: 928
+      height: 875
+    spriteID: bbb15dc23560ec145ab4f4aefeee42f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2852, y: 1770}
+    spritePosition: {x: 8, y: 77}
+  rigSpriteImportData:
+  - name: No Upgrades
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 932
+      height: 890
+    spriteID: 1cb954c2f453f3a48895cc1c69fbc083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 6, y: 69}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 0
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Mortar Monkey
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: a0be07e1c9583fc4cbed66cb7e4735f4
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2a9bdb75354de844295aa4cd68129463
+    layerID: 24
+    mosaicPosition: {x: 951, y: 2974}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 8f67d64190224d2469594f61220c926a
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: The Biggest One
+    spriteName: The Biggest One
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 9d07a0b141692fa45bc4e8308bd0c38c
+    layerID: 22
+    mosaicPosition: {x: 1900, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: The Big One
+    spriteName: The Big One
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 29dd4ab2db2c66546b4cbc5debba48cb
+    layerID: 21
+    mosaicPosition: {x: 4, y: 1018}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Shell Shock
+    spriteName: Shell Shock
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 43681faa0e62ce04f910e348461325b4
+    layerID: 20
+    mosaicPosition: {x: 951, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bloon Buster
+    spriteName: Bloon Buster
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 0d36cfad4d46f5b4a82e948b2b845efa
+    layerID: 19
+    mosaicPosition: {x: 1900, y: 2708}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Bigger Blast
+    spriteName: Bigger Blast
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 8170c9755c3a38742afb0293ef4ed780
+    layerID: 18
+    mosaicPosition: {x: 2852, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 96e5ef4cd10e2bf41b53fa0bbb2b8014
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pop and Awe
+    spriteName: Pop and Awe
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 473fa3f39a54caa43b28219fdc5023f6
+    layerID: 15
+    mosaicPosition: {x: 4, y: 2005}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Artillery Battery
+    spriteName: Artillery Battery
+    isGroup: 0
+    parentIndex: 8
+    spriteID: f5f5e43866c5b684e958c89c99761877
+    layerID: 14
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Heavy Shells
+    spriteName: Heavy Shells
+    isGroup: 0
+    parentIndex: 8
+    spriteID: c10d1a4c4c37da34fabb00ef93f42d9f
+    layerID: 13
+    mosaicPosition: {x: 2852, y: 2653}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Rapid Reload
+    spriteName: Rapid Reload
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 46388834b4e803c4a852b12100caa57d
+    layerID: 12
+    mosaicPosition: {x: 2852, y: 887}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Faster Reload
+    spriteName: Faster Reload
+    isGroup: 0
+    parentIndex: 8
+    spriteID: cfe0637aef9fd45418ec0bdb30f983e9
+    layerID: 11
+    mosaicPosition: {x: 1900, y: 938}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 08f155b56e5347b4c9a7553e44ae2163
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blooncineration
+    spriteName: Blooncineration
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 0c8140f5c761da2498b528d6b95bbdf3
+    layerID: 8
+    mosaicPosition: {x: 4, y: 2978}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Shattering Shells
+    spriteName: Shattering Shells
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 81ce42ef0aaae334387e96fd3e41b922
+    layerID: 7
+    mosaicPosition: {x: 951, y: 1957}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Signal Flare
+    spriteName: Signal Flare
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 88e91af7b7e1d954e8feef8a0ca45bb0
+    layerID: 6
+    mosaicPosition: {x: 951, y: 1001}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Burny Stuff
+    spriteName: Burny Stuff
+    isGroup: 0
+    parentIndex: 14
+    spriteID: e1b14a524c8f0574fa0dd47259966e8e
+    layerID: 5
+    mosaicPosition: {x: 1900, y: 1825}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  - name: Increased Accuracy
+    spriteName: Increased Accuracy
+    isGroup: 0
+    parentIndex: 14
+    spriteID: bbb15dc23560ec145ab4f4aefeee42f5
+    layerID: 4
+    mosaicPosition: {x: 2852, y: 1770}
+    flatten: 0
+    isImported: 1
+    isVisible: 0
+  rigPSDLayers:
+  - name: Mortar Monkey
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 4d7f8559d7c5889409a63e73f207ae38
+    layerID: 25
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: No Upgrades
+    spriteName: No Upgrades
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1cb954c2f453f3a48895cc1c69fbc083
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Path 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: b96653bb40e7242498c2036f642ce9c2
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: The Biggest One
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: cfaa544c8327c9045bc131b366a47336
+    layerID: 22
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: The Big One
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 81625187172e2494b850ed544f81a6d7
+    layerID: 21
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Shell Shock
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 05fdddda528a78242a5e22db49e98a03
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bloon Buster
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: d3b049f5b5ffaf14b9ce6db2b970ce97
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Bigger Blast
+    spriteName: 
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 00a95d0f788c44f40b5c155c1d44475a
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: d6bdb7049a413cb459e9acc1997250cf
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pop and Awe
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 6442b6a04ecd27642b9334e9aaee170d
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Artillery Battery
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 3523cca409062f941a2b1b5ea94806dc
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Heavy Shells
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: a50d509fd79110e4fb3564f4f593b99c
+    layerID: 13
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Rapid Reload
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: a846bc85b799dbf47991fadac38b8baa
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Faster Reload
+    spriteName: 
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 91217497f214a14408fa7e97a23a9b7e
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Path 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 1ac95417ee94f054c96d7c1e3eb0f5a5
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blooncineration
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 51281a569b4df1e43871fe65a676b3dc
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Shattering Shells
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: bbe529835c74f6949865ed097be5fa5e
+    layerID: 7
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Signal Flare
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 2b4d4c37e59f9414ca732858b62a9511
+    layerID: 6
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Burny Stuff
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: db739049c9871e8438e6c0010b4a5be5
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Increased Accuracy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: dbe6fcdec6b098c4dac51d67b200f99e
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
