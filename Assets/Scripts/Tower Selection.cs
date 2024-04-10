@@ -1,11 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class TowerSelected : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private GameObject _selectedGameObject;
+
     private static TowerSelected _instance;
 
     private void Start()
@@ -13,20 +12,31 @@ public class TowerSelected : MonoBehaviour, IPointerClickHandler
         DeselectImage();
     }
     /// <summary>
-    /// Hide item selected image
+    /// Hide item selected highlight image
     /// </summary>
     private void DeselectImage()
     {
         this.transform.GetChild(0).gameObject.SetActive(false);
     }
-
+    /// <summary>
+    /// Hide item selected highlight overlay
+    /// </summary>
+    /// <param name="aHighlight"></param>
+    private void SelectTower(GameObject aHighlight)
+    {
+        aHighlight.SetActive(true);
+        _instance = this;
+        Instantiate(_selectedGameObject, Input.mousePosition, Quaternion.identity);
+    }
+    /// <summary>
+    /// Checks if an image is selected, if so deselect
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerClick(PointerEventData eventData)
     {
         if(_instance != null)
             _instance.DeselectImage();
-        
-        this.transform.GetChild(0).gameObject.SetActive(true);
-        _instance = this;
-       
+
+        SelectTower(this.transform.GetChild(0).gameObject);       
     }
 }
