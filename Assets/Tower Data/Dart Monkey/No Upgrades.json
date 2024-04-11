@@ -1,0 +1,8 @@
+{
+  "type": "no upgrade",
+  "damage": 1,
+  "pierce": 2,
+  "range": 32,
+  "attackSpeed": 95,
+  "camo detection": false
+}

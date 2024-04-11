@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class PlaceTower : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {        
         FollowMousePosition();
         
         if(Input.GetMouseButtonDown(0))
         {
-            this.transform.position = Camera.main.ScreenToWorldPoint(GetMousePosition());
-            Destroy(GetComponent <PlaceTower>());
+            this.gameObject.AddComponent<BaseTower>();
+            Destroy(this);
         }
     }
 
