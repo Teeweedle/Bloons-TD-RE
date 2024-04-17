@@ -13,7 +13,22 @@ public class BloonSpawner : MonoBehaviour
         _bloonPath = _gOPath.GetComponent<BloonPathCreator>().GetPathVectors();
         StartCoroutine(SpawnBloons());
     }
-
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                Debug.Log("Hit object: " + hit.collider.gameObject.name);
+            }
+            else
+            {
+                // Log if no object is hit
+                Debug.Log("No object hit.");
+            }
+        }
+    }
     private IEnumerator SpawnBloons()
     {
         GameObject lBloon;

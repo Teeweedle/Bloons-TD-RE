@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50116066f9f7ab2479314abea9c90180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isBezier: 0
-  _myPostion: {x: 0, y: 0}
+  <_isBezier>k__BackingField: 0
+  <_myPostion>k__BackingField: {x: 0, y: 0}
