@@ -17,8 +17,8 @@ public class BloonSpawner : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.back);
+            if (hit.transform != null)
             {
                 Debug.Log("Hit object: " + hit.collider.gameObject.name);
             }
