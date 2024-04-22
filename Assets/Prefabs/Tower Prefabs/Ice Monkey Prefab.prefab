@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6690766764351286166}
   m_Layer: 0
   m_Name: Ice Monkey Prefab
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f89bd4c7327d34eb29c677d41bf6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _towerSpriteRenderer: {fileID: 0}
+  _rangeSpriteRenderer: {fileID: 0}
+  _towerRange: {fileID: 0}
+  _rangeCollider: {fileID: 0}

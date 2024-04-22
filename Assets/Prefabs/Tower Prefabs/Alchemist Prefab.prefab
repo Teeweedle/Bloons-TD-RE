@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1746092762435826176}
   m_Layer: 0
   m_Name: Alchemist Prefab
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f89bd4c7327d34eb29c677d41bf6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: -5526594261903093188}
+  _towerSpriteRenderer: {fileID: 0}
+  _rangeSpriteRenderer: {fileID: 0}
   _towerRange: {fileID: 1124201319869802365, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
+  _rangeCollider: {fileID: 0}
 --- !u!58 &-7557738901587853009
 CircleCollider2D:
   m_ObjectHideFlags: 0

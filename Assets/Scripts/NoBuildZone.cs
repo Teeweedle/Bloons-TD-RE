@@ -38,7 +38,7 @@ public class NoBuildZone : MonoBehaviour
 
         GameObject ltempNoBuild = Instantiate(_noBuildPrefab, this.transform);
         ltempNoBuild.transform.position = lCenter;
-        ltempNoBuild.transform.localScale = new Vector3(lDistance, 0.4f, 1f);
+        ltempNoBuild.transform.localScale = new Vector3(lDistance, 0.15f, 1f);
         ltempNoBuild.transform.rotation = Quaternion.Euler(0f, 0f, lAngle);
     }
 }

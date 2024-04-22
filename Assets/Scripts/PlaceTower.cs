@@ -1,38 +1,41 @@
 using System.IO;
+using Unity.Jobs;
 using UnityEngine;
 
 public class PlaceTower : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer _spriteRenderer;
-    [SerializeField] GameObject _towerRange;
+    [SerializeField] private SpriteRenderer _towerSpriteRenderer;
+    [SerializeField] private SpriteRenderer _rangeSpriteRenderer;
+    [SerializeField] private GameObject _towerRange;
+    [SerializeField] private Collider2D _rangeCollider;
 
-    private readonly string _DELIMITER = "Prefab";
-    private readonly string _TOWERTYPE = "No Upgrades";
+    private const string _DELIMITER = "Prefab";
+    private const string _TOWERTYPE = "No Upgrades";
+    private const string _NOBUILDTAG = "No Build";
+    private const string _TOWERTAG = "Tower";
 
     private bool _canPlace = true;
-    private GameObject _towerRangeGO;
-    private BaseTower _tower;
+    private BaseTower _baseTower;
     private TowerDataObject _towerData = new();
 
     private void Start()
     {
         _towerData = LoadTowerData(GetTowerName(this.gameObject.name, _DELIMITER), _TOWERTYPE);
-        _tower = GetComponent<BaseTower>();
+        _baseTower = GetComponent<BaseTower>();
         DisplayTowerRange();
     }
     void Update()
     {        
         FollowMousePosition();
 
-        if (_canPlace)
+        if (_canPlace && Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                _tower.AssignStats(_towerData);
-                Destroy(_towerRangeGO);
-                Destroy(this);
-            } 
-        }
+            _baseTower.AssignStats(_towerData);
+            TowerSelected._towerInstance = null;
+            _rangeSpriteRenderer.enabled = false;
+            _rangeCollider.enabled = true;
+            Destroy(this);
+        } 
     }
     private void FollowMousePosition()
     {
@@ -47,19 +50,31 @@ public class PlaceTower : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _canPlace = false;
-        _spriteRenderer.color = Color.red;
+        switch (collision.tag)
+        {
+            case _NOBUILDTAG:
+            case _TOWERTAG:
+                _canPlace = false;
+                _towerSpriteRenderer.color = Color.red;
+                break;
+            default: break;
+        }        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _canPlace = true;
-        _spriteRenderer.color = Color.white;
+        switch (collision.tag)
+        {
+            case _NOBUILDTAG:
+            case _TOWERTAG:
+                _canPlace = true;
+                _towerSpriteRenderer.color = Color.white;
+                break; 
+            default: break;
+        }
     }
     private void DisplayTowerRange()
     {
-        _towerRangeGO = Instantiate(_towerRange, this.transform);
-        _towerRangeGO.transform.position = this.transform.position;
-        _towerRangeGO.transform.localScale = _towerRangeGO.transform.localScale * _towerData.range;
+        _towerRange.transform.localScale *= _towerData.range;
     }
     private string GetTowerName(string aPrefabName, string aDelimiter)
     {

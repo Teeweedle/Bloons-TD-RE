@@ -6,7 +6,7 @@ public class TowerSelected : MonoBehaviour, IPointerClickHandler
     [SerializeField] private GameObject _selectedGameObject;
 
     private static TowerSelected _instance;
-
+    public static GameObject _towerInstance;
     private void Start()
     {
         DeselectImage();
@@ -26,7 +26,10 @@ public class TowerSelected : MonoBehaviour, IPointerClickHandler
     {
         aHighlight.SetActive(true);
         _instance = this;
-        Instantiate(_selectedGameObject, Input.mousePosition, Quaternion.identity);
+        if(_towerInstance != null)
+            Destroy(_towerInstance);
+
+        _towerInstance = Instantiate(_selectedGameObject, Input.mousePosition, Quaternion.identity);
     }
     /// <summary>
     /// Checks if an image is selected, if so deselect
