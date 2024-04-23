@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BaseTower : MonoBehaviour
 {
-    public string _type;
-    public int _dmg, _pierce, _range;
+    public string _type, _targetType;
+    public int _dmg, _pierce, _range, _xp;
     public float _attackSpeed;
     public bool _hasCamoDetection;
 
@@ -21,6 +21,14 @@ public class BaseTower : MonoBehaviour
         }
     }
     private void TargetBloon(string aTargetType)
+    {
+
+    }
+    public void HighLight()
+    {
+
+    }
+    public void UnHighLight()
     {
 
     }

@@ -1,0 +1,55 @@
+{
+  "upgradepath": [
+    {
+      "path": "100",
+      "cost": 120,
+      "xp": 100,
+      "damage": 0,
+      "pierce": 1,
+      "range": 0,
+      "attackspeed": 0,
+      "description": "Can pop 1 extra Bloon per shot."
+    },
+    {
+      "path": "200",
+      "cost": 185,
+      "xp": 500,
+      "damage": 0,
+      "pierce": 2,
+      "range": 0,
+      "attackspeed": 0,
+      "description": "Can pop 2 more bloons per shot."
+    },
+    {
+      "path": "300",
+      "cost": 255,
+      "xp": 2100,
+      "damage": 1,
+      "pierce": 17,
+      "range": 0,
+      "attackspeed": 1.15,
+      "description": "Converts the Dart Monkey into a slower attacking Spike-o-pult that hurls large spiked balls. Each ball can pop lots of Bloons and rebounds off obstacles."
+    },
+    {
+      "path": "400",
+      "cost": 1530,
+      "xp": 7500,
+      "damage": 0,
+      "pierce": 28,
+      "range": 4.8,
+      "attackspeed": 1,
+      "description": "Hurls a giant spiked ball that pops lead and excels at crushing Ceramic and Fortified Bloons."
+    },
+    {
+      "path": "500",
+      "cost": 12750,
+      "xp": 22000,
+      "damage": 5,
+      "pierce": 1,
+      "range": 32,
+      "attackspeed": 1.15,
+      "description": "Gigantic spiked ball splits twice into 6 Juggernaut balls for even more destructive power against Ceramic, Fortified and Lead Bloons."
+    }
+  ]
+ 
+}
