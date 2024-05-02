@@ -15,19 +15,7 @@ public class BloonSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.back);
-            if (hit.transform != null)
-            {
-                Debug.Log("Hit object: " + hit.collider.gameObject.name);
-            }
-            else
-            {
-                // Log if no object is hit
-                Debug.Log("No object hit.");
-            }
-        }
+
     }
     private IEnumerator SpawnBloons()
     {
