@@ -1,0 +1,10 @@
+{
+  "cost": 170,
+  "xp": 450,
+  "damage": 1,
+  "pierce": 2,
+  "range": 48,
+  "attackspeed": 0.95,
+  "camo detection": true,
+  "description": "Shoots even further and can detect Camo bloons."
+}

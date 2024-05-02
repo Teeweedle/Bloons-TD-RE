@@ -1,0 +1,10 @@
+{
+  "cost": 1700,
+  "xp": 12000,
+  "damage": 8,
+  "pierce": 2,
+  "range": 32,
+  "attackspeed": 0.6,
+  "camo detection": true,
+  "description": "Sharp Shooter attacks faster and does powerful Crit shots every few shots that do a lot more damage."
+}

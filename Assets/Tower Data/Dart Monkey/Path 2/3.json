@@ -1,0 +1,10 @@
+{
+  "cost": 340,
+  "xp": 2000,
+  "damage": 1,
+  "pierce": 1,
+  "range": 32,
+  "attackspeed": 0.67,
+  "camo detection": false,
+  "description": "Throws 3 darts at a time instead of 1."
+}

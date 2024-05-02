@@ -12,29 +12,12 @@ public class BaseTower : MonoBehaviour
     public bool _hasCamoDetection;
 
     private bool _isPlaced, _isSelected;
+
+    public delegate void TowerSelected(GameObject aTowerSelected);
+    public static event TowerSelected _onTowerSelected;
     private void Start()
     {
         _isPlaced = false;
-        _isSelected = false;
-    }
-
-    private void Update()
-    {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.back);
-        //    if (hit.transform != null)
-        //    {
-        //        Debug.Log("Hit object: " + hit.collider.gameObject.name);
-        //        HighLight();
-        //    }
-        //    else
-        //    {
-        //        // Log if no object is hit
-        //        Debug.Log("No object hit.");
-        //        UnHighLight();
-        //    }
-        //}
     }
     private void Fire(GameObject aProjectile, int aAmount)
     {
@@ -70,9 +53,10 @@ public class BaseTower : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if(_isPlaced)
+        if(_isPlaced && !_isSelected)
         {
             HighLight();
+            _onTowerSelected?.Invoke(this.gameObject);
         }
         _isPlaced = true;
     }

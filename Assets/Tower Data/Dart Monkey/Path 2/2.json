@@ -1,0 +1,10 @@
+{
+  "cost": 160,
+  "xp": 400,
+  "damage": 1,
+  "pierce": 1,
+  "range": 32,
+  "attackspeed": 0.67,
+  "camo detection": false,
+  "description": "Shoots 33% faster!"
+}

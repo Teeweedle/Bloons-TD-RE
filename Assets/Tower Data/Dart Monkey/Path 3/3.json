@@ -1,0 +1,10 @@
+{
+  "cost": 1700,
+  "xp": 1200,
+  "damage": 2,
+  "pierce": 2,
+  "range": 32,
+  "attackspeed": 0.95,
+  "camo detection": true,
+  "description": "Uses a long range Crossbow that can pop 3 layers of Bloon for every hit."
+}

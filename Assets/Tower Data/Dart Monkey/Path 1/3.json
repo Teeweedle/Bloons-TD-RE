@@ -1,0 +1,10 @@
+{
+  "cost": 255,
+  "xp": 2100,
+  "damage": 1,
+  "pierce": 17,
+  "range": 0,
+  "attackspeed": 1.15,
+  "camo detection": false,
+  "description": "Converts the Dart Monkey into a slower attacking Spike-o-pult that hurls large spiked balls. Each ball can pop lots of Bloons and rebounds off obstacles."
+}
