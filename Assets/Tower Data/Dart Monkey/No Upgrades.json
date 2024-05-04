@@ -1,10 +1,11 @@
 {
-  "cost": 0,
-  "xp":  0,
+  "name": "Dart Monkey",
+  "cost":  170,
   "damage": 1,
   "pierce": 2,
   "range": 32,
-  "attackSpeed": 95,
+  "attackSpeed": 0.95,
+  "upgradeLevel":  "000",
   "camo detection": false,
   "description": "Throws a single dart at nearby bloons. Short range and low pierce but cheap."
 }

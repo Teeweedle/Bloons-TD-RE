@@ -6,10 +6,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _upgradePanel;
     private GameObject _selectedTower;
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-    }
+    public delegate void UpdatePanel(TowerDataObject aTower);
+    public static event UpdatePanel _updatePanel;
+
     private void OnEnable()
     {
         BaseTower._onTowerSelected += TowerSelected;
@@ -23,10 +22,16 @@ public class GameManager : MonoBehaviour
     private void TowerSelected(GameObject aTowerSelected)
     {
         _selectedTower = aTowerSelected;
+        //show upgrade panel
         _upgradePanel.SetActive(true);
+        //load selected tower into Upgrade Panel UI
+        _updatePanel?.Invoke(aTowerSelected.GetComponent<BaseTower>().GetTowerData());
         //TODO: upgrade panel animation
-        //Update update panel based on passed object
     }
+    /// <summary>
+    /// Called from event (clicking the 'x') or pressing ESC
+    /// TODO: Implement calling when clicking anywhere but a tower
+    /// </summary>
     private void UnselectTower()
     {
         if (_selectedTower != null)

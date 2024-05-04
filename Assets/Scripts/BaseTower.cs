@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,12 +7,9 @@ public class BaseTower : MonoBehaviour
     [SerializeField] private Material _outlineShader, _defaultShader;
     [SerializeField] private SpriteRenderer _towerSpriteRenderer;
     
-    public string _type, _targetType;
-    public int _dmg, _pierce, _range, _xp;
-    public float _attackSpeed;
-    public bool _hasCamoDetection;
-
     private bool _isPlaced, _isSelected;
+
+    [SerializeField] private TowerDataObject _towerData = new();
 
     public delegate void TowerSelected(GameObject aTowerSelected);
     public static event TowerSelected _onTowerSelected;
@@ -43,12 +41,9 @@ public class BaseTower : MonoBehaviour
     }
     public void AssignStats(TowerDataObject aData)
     {
-        _type = aData.type;
-        _attackSpeed = aData.attackSpeed;
-        _dmg = aData.damage;
-        _pierce = aData.pierce;
-        _range = aData.range;
-        _hasCamoDetection = aData.hasCamoDetection;
+        _towerData = aData;
+
+        _towerData.upgradeLevelArray = _towerData.upgradeLevel.Select(c => int.Parse(c.ToString())).ToArray();
     }
 
     public void OnMouseDown()
@@ -59,5 +54,6 @@ public class BaseTower : MonoBehaviour
             _onTowerSelected?.Invoke(this.gameObject);
         }
         _isPlaced = true;
-    }
+    }    
+    public TowerDataObject GetTowerData() { return _towerData; }
 }

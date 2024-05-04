@@ -13,10 +13,6 @@ public class BloonSpawner : MonoBehaviour
         _bloonPath = _gOPath.GetComponent<BloonPathCreator>().GetPathVectors();
         StartCoroutine(SpawnBloons());
     }
-    private void Update()
-    {
-
-    }
     private IEnumerator SpawnBloons()
     {
         GameObject lBloon;

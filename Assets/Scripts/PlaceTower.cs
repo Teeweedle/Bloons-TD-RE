@@ -88,6 +88,12 @@ public class PlaceTower : MonoBehaviour
             return aPrefabName;
         }
     }
+    /// <summary>
+    /// Loads a base tower GO based on the tower name
+    /// </summary>
+    /// <param name="aTowerName"></param>
+    /// <param name="aTowerType"></param>
+    /// <returns></returns>
     private TowerDataObject LoadTowerData(string aTowerName, string aTowerType)
     {
         TowerDataObject lTowerObject = new();
