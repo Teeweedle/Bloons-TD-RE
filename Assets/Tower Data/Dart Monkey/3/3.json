@@ -1,5 +1,5 @@
 {
-  "upgradeName": "Crossbow",
+  "name": "Crossbow",
   "cost": 1700,
   "xp": 1200,
   "damage": 2,
