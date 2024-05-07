@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -11,13 +12,16 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI UpgradeDescription;
     [SerializeField] private GameObject UpgradeLevel;
     [SerializeField] private GameObject UpgradeContainer;
+    [SerializeField] private TextMeshProUGUI InfoPanelName, InfoPanelDescription;
 
     public delegate void UpdateBaseTower(TowerDataObject UpgradeData, int[] UpgradeLevel);
     public static event UpdateBaseTower UpdateTower;
 
     private string TowerName;
     private TowerDataObject UpgradeData = new TowerDataObject();
-    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";
+    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";    
+
+
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
         TowerName = aTowerName;
@@ -25,8 +29,10 @@ public class UpgradeButton : MonoBehaviour
         UpgradeImage.sprite = Resources.Load<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}/" +
             $"{aTowerUpgradeLevel + 1}_{UpgradeData.name}");
         UpgradeName.text = UpgradeData.name;
-        UpgradePrice.text = UpgradeData.cost.ToString();
-        UpgradeDescription.text = UpgradeData.description;
+        UpgradePrice.text = ($"${UpgradeData.cost.ToString()}");
+
+        InfoPanelName.text = UpgradeData.name;
+        InfoPanelDescription.text = UpgradeData.description;
     }
     /// <summary>
     /// When button pressed update to the next available upgrade
@@ -37,14 +43,14 @@ public class UpgradeButton : MonoBehaviour
         //TODO: Make sure you have enough money
         if (lUpgradeLevel < 5)
         {
+            //Update BaseTower with new stats and upgrade level
+            int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, lUpgradeLevel + 1);
+            UpdateTower?.Invoke(UpgradeData, lUpgradeArray);
             //Add one pip to tracker
             Instantiate(UpgradeLevel, UpgradeContainer.transform);
             //Change image/ description to next level
             //          Make sure it doesn't break the 2/3 rule
-            UpdateUpgradeSection(TowerName, UpgradeContainer.transform.childCount);
-            //Update BaseTower with new stats and upgrade level
-            int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, lUpgradeLevel + 1);
-            UpdateTower?.Invoke(UpgradeData, lUpgradeArray);
+            UpdateUpgradeSection(TowerName, UpgradeContainer.transform.childCount);          
         }
         //TODO: Update sell price
 

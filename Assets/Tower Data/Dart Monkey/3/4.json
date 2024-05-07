@@ -6,6 +6,6 @@
   "pierce": 2,
   "range": 32,
   "attackspeed": 0.6,
-  "camo detection": true,
+  "hasCamoDetection": true,
   "description": "Sharp Shooter attacks faster and does powerful Crit shots every few shots that do a lot more damage."
 }

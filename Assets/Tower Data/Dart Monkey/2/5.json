@@ -6,7 +6,7 @@
   "pierce": 1,
   "range": 32,
   "attackspeed": 0.67,
-  "camo detection": false,
+  "hasCamoDetection": false,
   "description": "Elite membership of this club grants the Dart Monkeys even more power."
 }
 

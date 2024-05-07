@@ -6,6 +6,6 @@
   "pierce": 2,
   "range": 48,
   "attackspeed": 0.95,
-  "camo detection": true,
+  "hasCamoDetection": true,
   "description": "Shoots even further and can detect Camo bloons."
 }

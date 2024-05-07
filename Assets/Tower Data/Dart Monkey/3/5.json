@@ -6,7 +6,7 @@
   "pierce": 1,
   "range": 32,
   "attackspeed": 0.16,
-  "camo detection": true,
+  "hasCamoDetection": true,
   "description": "Crossbow Master shoots really fast and devastates most Bloon types with ease."
 }
 

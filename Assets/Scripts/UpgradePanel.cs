@@ -49,7 +49,7 @@ public class UpgradePanel : MonoBehaviour
         _towerXP.text = aTower.xp.ToString();
         _towerImg.sprite = Resources.Load<Sprite>($"Sprites/UI/Towers/{aTower.name}/No upgrades");
         UpdateUpgradeGrid(_upgrade, aTower);
-        _sellPrice.text = GetSellPrice(aTower.cost);//TODO: Update to scale with difficulty
+        _sellPrice.text = ($"${GetSellPrice(aTower.cost)}");//TODO: Update to scale with difficulty
 
     }
 

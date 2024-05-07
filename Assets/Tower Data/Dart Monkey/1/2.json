@@ -6,6 +6,6 @@
   "pierce": 2,
   "range": 0,
   "attackspeed": 0,
-  "camo detection": false,
+  "hasCamoDetection": false,
   "description": "Can pop 2 more bloons per shot."
 }

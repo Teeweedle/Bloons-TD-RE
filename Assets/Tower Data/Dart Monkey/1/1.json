@@ -6,7 +6,7 @@
   "pierce": 1,
   "range": 0,
   "attackspeed": 0,
-  "camo detection": false,
+  "hasCamoDetection": false,
   "description": "Can pop 1 extra Bloon per shot."
 }
 

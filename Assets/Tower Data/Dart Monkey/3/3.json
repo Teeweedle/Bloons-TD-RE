@@ -6,6 +6,6 @@
   "pierce": 2,
   "range": 32,
   "attackspeed": 0.95,
-  "camo detection": true,
+  "hasCamoDetection": true,
   "description": "Uses a long range Crossbow that can pop 3 layers of Bloon for every hit."
 }

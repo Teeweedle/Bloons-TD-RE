@@ -14,6 +14,9 @@ public class BaseTower : MonoBehaviour
 
     public delegate void TowerSelected(GameObject aTowerSelected);
     public static event TowerSelected _onTowerSelected;
+
+    public delegate void UpdatePrice(int aPrice);
+    public static event UpdatePrice _onUpdatePrice;
     private void OnEnable()
     {
         UpgradeButton.UpdateTower += UpdateStats;
@@ -63,11 +66,15 @@ public class BaseTower : MonoBehaviour
         _towerData.damage += aData.damage;
         _towerData.range += aData.range;
         _towerData.attackSpeed += aData.attackSpeed;
-        _towerData.hasCamoDetection = aData.hasCamoDetection;
+        if (!_towerData.hasCamoDetection)
+        {
+            _towerData.hasCamoDetection = aData.hasCamoDetection;
+        }
         _towerData.upgradeLevelArray = UpdateUpgradeArray(_towerData.upgradeLevelArray, aUpgradeArray);
 
+        _towerData.cost += aData.cost;
+        _onUpdatePrice?.Invoke(_towerData.cost);
     }
-
     private int[] UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
     {
         int[] newArray = new int[aOriginalArray.Length];
@@ -81,7 +88,6 @@ public class BaseTower : MonoBehaviour
         
         return newArray;
     }
-
     public void OnMouseDown()
     {
         if(_isPlaced && !_isSelected)

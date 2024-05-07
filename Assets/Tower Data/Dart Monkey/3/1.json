@@ -6,6 +6,6 @@
   "pierce": 2,
   "range": 40,
   "attackspeed": 0.95,
-  "camo detection": false,
+  "hasCamoDetection": false,
   "description": "Makes the Dart Monkey shoot further than normal."
 }

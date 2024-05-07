@@ -6,6 +6,6 @@
   "pierce": 1,
   "range": 32,
   "attackspeed": 0.67,
-  "camo detection": false,
+  "hasCamoDetection": false,
   "description": "Super Monkey Fan Club Ability: Converts up to 10 nearby Dart Monkeys including itself into Super Monkeys for 15 seconds. Regular attack speed also increased."
 }
