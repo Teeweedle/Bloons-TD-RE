@@ -9,9 +9,11 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private Image UpgradeImage;
     [SerializeField] private TextMeshProUGUI UpgradeName;
     [SerializeField] private TextMeshProUGUI UpgradePrice;
-    [SerializeField] private TextMeshProUGUI UpgradeDescription;
     [SerializeField] private GameObject UpgradeLevel;
     [SerializeField] private GameObject UpgradeContainer;
+    [SerializeField] private GameObject OwnedUpgrade, NotUpgradedText;
+    [SerializeField] private TextMeshProUGUI OwnedUpgradeName;
+    [SerializeField] private Image OwnedUpgradeImage;
     [SerializeField] private TextMeshProUGUI InfoPanelName, InfoPanelDescription;
 
     public delegate void UpdateBaseTower(TowerDataObject UpgradeData, int[] UpgradeLevel);
@@ -26,14 +28,64 @@ public class UpgradeButton : MonoBehaviour
     {
         TowerName = aTowerName;
         UpgradeData = LoadUpgrade(aTowerName, this.gameObject.name, aTowerUpgradeLevel + 1);
-        UpgradeImage.sprite = Resources.Load<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}/" +
-            $"{aTowerUpgradeLevel + 1}_{UpgradeData.name}");
+        UpgradeImage.sprite = LoadUpgradeSprite(aTowerName, aTowerUpgradeLevel);
         UpgradeName.text = UpgradeData.name;
-        UpgradePrice.text = ($"${UpgradeData.cost.ToString()}");
+        UpgradePrice.text = ($"${UpgradeData.cost}");
 
         InfoPanelName.text = UpgradeData.name;
-        InfoPanelDescription.text = UpgradeData.description;
+        InfoPanelDescription.text = UpgradeData.description;        
     }
+    /// <summary>
+    /// Called from UpgradePanel to initialize all potentially owned upgrades in the UI.
+    /// </summary>
+    /// <param name="aTowerName"></param>
+    /// <param name="aTowerUpgradeLevel"></param>
+    public void InitializeOwnedUpgrades(string aTowerName, int aTowerUpgradeLevel)
+    {
+        NotUpgradedText.SetActive(true);
+        OwnedUpgrade.SetActive(false);
+        RemoveUpgradePips(UpgradeContainer);
+
+        if (aTowerUpgradeLevel > 0)
+        {
+            Sprite[] UpgradeSprites = Resources.LoadAll<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}");
+            foreach (Sprite sprite in UpgradeSprites)
+            {
+                if (sprite.name[0].ToString() == aTowerUpgradeLevel.ToString())
+                {
+                    int lDelimiterIndex = sprite.name.IndexOf('_');
+                    string lUpgradeName = sprite.name.Substring(lDelimiterIndex + 1);
+                    UpdateOwnedUpgrade(lUpgradeName, sprite);
+                    AddUpgradePips(UpgradeContainer, aTowerUpgradeLevel);
+                    break;
+                }
+            } 
+        }
+    }
+
+    private void AddUpgradePips(GameObject aUpgradeContainer, int aTowerUpgradeLevel)
+    {
+        for (int i = 0; i < aTowerUpgradeLevel; i++)
+        {
+            Instantiate(UpgradeLevel, UpgradeContainer.transform);
+        }
+    }
+
+    private void RemoveUpgradePips(GameObject aUpgradeContainer)
+    {
+        for (int i = 0; i < aUpgradeContainer.transform.childCount; i++)
+        {
+            Transform lChild = aUpgradeContainer.transform.GetChild(i);
+            Destroy(lChild.gameObject);
+        }
+    }
+
+    private Sprite LoadUpgradeSprite(string aTowerName, int aTowerUpgradeLevel)
+    {
+        return Resources.Load<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}/" +
+            $"{aTowerUpgradeLevel + 1}_{UpgradeData.name}");
+    }
+
     /// <summary>
     /// When button pressed update to the next available upgrade
     /// </summary>
@@ -43,6 +95,7 @@ public class UpgradeButton : MonoBehaviour
         //TODO: Make sure you have enough money
         if (lUpgradeLevel < 5)
         {
+            UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);
             //Update BaseTower with new stats and upgrade level
             int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, lUpgradeLevel + 1);
             UpdateTower?.Invoke(UpgradeData, lUpgradeArray);
@@ -55,6 +108,15 @@ public class UpgradeButton : MonoBehaviour
         //TODO: Update sell price
 
     }
+
+    private void UpdateOwnedUpgrade(string aUpgradeName, Sprite aUpgradeSprite)
+    {
+        NotUpgradedText.SetActive(false);
+        OwnedUpgrade.SetActive(true);
+        OwnedUpgradeName.text = aUpgradeName;
+        OwnedUpgradeImage.sprite = aUpgradeSprite;
+    }
+
     /// <summary>
     /// Creates the an upgrade array based on the objects name and current upgrade tier of the selected object.
     /// Ex. 0-2-0
@@ -71,12 +133,12 @@ public class UpgradeButton : MonoBehaviour
         lUpgradeArray[aSlotNumber - 1] = aUpgradeLevel;
         return lUpgradeArray;
     }
-    private TowerDataObject LoadUpgrade(string aTowerName, string aUpgradePath, int aCurretUpgrade)
+    private TowerDataObject LoadUpgrade(string aTowerName, string aUpgradePath, int aCurrentUpgrade)
     {
         TowerDataObject lTowerObject = new();
         try
         {
-            string lTowerPath = Path.Combine(Application.dataPath, $"Tower Data/{aTowerName}/{aUpgradePath}/{aCurretUpgrade}.json");
+            string lTowerPath = Path.Combine(Application.dataPath, $"Tower Data/{aTowerName}/{aUpgradePath}/{aCurrentUpgrade}.json");
             string lJsonString = File.ReadAllText(lTowerPath);
 
             lTowerObject = JsonUtility.FromJson<TowerDataObject>(lJsonString);

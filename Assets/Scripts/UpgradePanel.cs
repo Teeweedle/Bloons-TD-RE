@@ -50,17 +50,27 @@ public class UpgradePanel : MonoBehaviour
         _towerImg.sprite = Resources.Load<Sprite>($"Sprites/UI/Towers/{aTower.name}/No upgrades");
         UpdateUpgradeGrid(_upgrade, aTower);
         _sellPrice.text = ($"${GetSellPrice(aTower.cost)}");//TODO: Update to scale with difficulty
-
     }
-
+    /// <summary>
+    /// Iterates through an array of scripts (UpgradeButton) to update the UI based on the tower data
+    /// </summary>
+    /// <param name="aUpgrade"></param>
+    /// <param name="aTower"></param>
     private void UpdateUpgradeGrid(UpgradeButton[] aUpgrade, TowerDataObject aTower)
     {
         for(int i =  0; i < _upgrade.Length; i++)
         {
             aUpgrade[i].UpdateUpgradeSection(aTower.name, aTower.upgradeLevelArray[i]);
+            //if tower has an upgrade already update owned upgrade section
+            aUpgrade[i].InitializeOwnedUpgrades(aTower.name, aTower.upgradeLevelArray[i]);
+            //TODO: Tower upgrade levels aren't getting updated properly.
         }
     }
-
+    /// <summary>
+    /// Tower resale value is at 70% of the base cost (TODO: Changes based on difficulty)
+    /// </summary>
+    /// <param name="aCost"></param>
+    /// <returns></returns>
     private string GetSellPrice(int aCost)
     {
         return Mathf.Round((aCost * _SELLPRICEPERCENT)).ToString();

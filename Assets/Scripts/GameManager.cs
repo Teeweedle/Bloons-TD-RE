@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     }
     private void TowerSelected(GameObject aTowerSelected)
     {
+        //keeps track of current selected tower
         _selectedTower = aTowerSelected;
         //show upgrade panel
         _upgradePanel.SetActive(true);
