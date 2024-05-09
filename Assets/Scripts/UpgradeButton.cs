@@ -15,14 +15,11 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI OwnedUpgradeName;
     [SerializeField] private Image OwnedUpgradeImage;
     [SerializeField] private TextMeshProUGUI InfoPanelName, InfoPanelDescription;
-
-    public delegate void UpdateBaseTower(TowerDataObject UpgradeData, int[] UpgradeLevel);
-    public static event UpdateBaseTower UpdateTower;
+    [SerializeField] private UpgradePanel UpgradePanel;   
 
     private string TowerName;
     private TowerDataObject UpgradeData = new TowerDataObject();
-    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";    
-
+    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";   
 
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
@@ -67,7 +64,7 @@ public class UpgradeButton : MonoBehaviour
     {
         for (int i = 0; i < aTowerUpgradeLevel; i++)
         {
-            Instantiate(UpgradeLevel, UpgradeContainer.transform);
+            Instantiate(UpgradeLevel, aUpgradeContainer.transform);
         }
     }
 
@@ -94,11 +91,16 @@ public class UpgradeButton : MonoBehaviour
         int lUpgradeLevel = UpgradeContainer.transform.childCount;
         //TODO: Make sure you have enough money
         if (lUpgradeLevel < 5)
-        {
+        {            
             UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);
+            
+            //creates and array ex. 1-0-0 to add to the existing array (always a 1)
+            int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, 1);
+
             //Update BaseTower with new stats and upgrade level
-            int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, lUpgradeLevel + 1);
-            UpdateTower?.Invoke(UpgradeData, lUpgradeArray);
+            //pass data to the upgrade panel
+            UpgradePanel.UpgradeTower(UpgradeData, lUpgradeArray);
+
             //Add one pip to tracker
             Instantiate(UpgradeLevel, UpgradeContainer.transform);
             //Change image/ description to next level
@@ -108,7 +110,11 @@ public class UpgradeButton : MonoBehaviour
         //TODO: Update sell price
 
     }
-
+    /// <summary>
+    /// Updates the owned upgrade section of the UI with the name of the upgade and the image
+    /// </summary>
+    /// <param name="aUpgradeName"></param>
+    /// <param name="aUpgradeSprite"></param>
     private void UpdateOwnedUpgrade(string aUpgradeName, Sprite aUpgradeSprite)
     {
         NotUpgradedText.SetActive(false);

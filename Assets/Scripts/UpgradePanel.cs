@@ -15,6 +15,7 @@ public class UpgradePanel : MonoBehaviour
     public delegate void CloseWindowCallBack();
     public static event CloseWindowCallBack _onCloseWindow;
 
+    private GameObject _currentTower;
     private const float _SELLPRICEPERCENT = 0.7f;
         
     private void OnEnable()
@@ -25,7 +26,6 @@ public class UpgradePanel : MonoBehaviour
     {
         GameManager._updatePanel -= InitPanelData;
     }
-    // Start is called before the first frame update
     void Start()
     {
         this.gameObject.SetActive(false);
@@ -42,14 +42,24 @@ public class UpgradePanel : MonoBehaviour
     /// Initializes data for upgrade panel based on the tower clicked
     /// </summary>
     /// <param name="aTower"></param>
-    public void InitPanelData(TowerDataObject aTower)
+    public void InitPanelData(TowerDataObject aTower, GameObject aSelectedTower)
     {
         //TODO: Init data based on sprite name or GO name
+        _currentTower = aSelectedTower;
         _towerName.text = aTower.name;
         _towerXP.text = aTower.xp.ToString();
         _towerImg.sprite = Resources.Load<Sprite>($"Sprites/UI/Towers/{aTower.name}/No upgrades");
         UpdateUpgradeGrid(_upgrade, aTower);
         _sellPrice.text = ($"${GetSellPrice(aTower.cost)}");//TODO: Update to scale with difficulty
+    }
+    /// <summary>
+    /// Passes the selected upgrade data and the upgrade array to the currently selected tower to upgrade it.
+    /// </summary>
+    /// <param name="aUpgrade"></param>
+    /// <param name="aUpgradeArray"></param>
+    public void UpgradeTower(TowerDataObject aUpgrade, int[] aUpgradeArray)
+    {
+        _currentTower.GetComponent<BaseTower>().UpdateStats(aUpgrade, aUpgradeArray);
     }
     /// <summary>
     /// Iterates through an array of scripts (UpgradeButton) to update the UI based on the tower data
@@ -64,6 +74,7 @@ public class UpgradePanel : MonoBehaviour
             //if tower has an upgrade already update owned upgrade section
             aUpgrade[i].InitializeOwnedUpgrades(aTower.name, aTower.upgradeLevelArray[i]);
             //TODO: Tower upgrade levels aren't getting updated properly.
+            //first tower is getting the newest tower upgrades!
         }
     }
     /// <summary>

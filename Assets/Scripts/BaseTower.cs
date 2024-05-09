@@ -17,14 +17,7 @@ public class BaseTower : MonoBehaviour
 
     public delegate void UpdatePrice(int aPrice);
     public static event UpdatePrice _onUpdatePrice;
-    private void OnEnable()
-    {
-        UpgradeButton.UpdateTower += UpdateStats;
-    }
-    private void OnDisable()
-    {
-        UpgradeButton.UpdateTower -= UpdateStats;
-    }
+   
     private void Start()
     {
         _isPlaced = false;
@@ -60,33 +53,28 @@ public class BaseTower : MonoBehaviour
 
         _towerData.upgradeLevelArray = _towerData.upgradeLevel.Select(c => int.Parse(c.ToString())).ToArray();
     }
-    public void UpdateStats(TowerDataObject aData, int[] aUpgradeArray)
+    public void UpdateStats(TowerDataObject aUpgradeData, int[] aUpgradeArray)
     {
-        _towerData.pierce += aData.pierce;
-        _towerData.damage += aData.damage;
-        _towerData.range += aData.range;
-        _towerData.attackSpeed += aData.attackSpeed;
+        _towerData.pierce += aUpgradeData.pierce;
+        _towerData.damage += aUpgradeData.damage;
+        _towerData.range += aUpgradeData.range;
+        _towerData.attackSpeed += aUpgradeData.attackSpeed;
         if (!_towerData.hasCamoDetection)
         {
-            _towerData.hasCamoDetection = aData.hasCamoDetection;
+            _towerData.hasCamoDetection = aUpgradeData.hasCamoDetection;
         }
         _towerData.upgradeLevelArray = UpdateUpgradeArray(_towerData.upgradeLevelArray, aUpgradeArray);
 
-        _towerData.cost += aData.cost;
+        _towerData.cost += aUpgradeData.cost;
         _onUpdatePrice?.Invoke(_towerData.cost);
     }
     private int[] UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
     {
-        int[] newArray = new int[aOriginalArray.Length];
-        for (int i = 0; i < newArray.Length; i++ ) {
-            if (aUpdatedArray[i] > 0)
-                newArray[i] = aUpdatedArray[i];
-            else
-                newArray[i] = aOriginalArray[i];
+        for (int i = 0; i < aOriginalArray.Length; i++)
+        {
+            aOriginalArray[i] += aUpdatedArray[i];
         }
-
-        
-        return newArray;
+        return aOriginalArray;
     }
     public void OnMouseDown()
     {
