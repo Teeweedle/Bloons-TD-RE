@@ -19,7 +19,10 @@ public class UpgradeButton : MonoBehaviour
 
     private string TowerName;
     private TowerDataObject UpgradeData = new TowerDataObject();
-    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";   
+    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";
+
+    public delegate void UpgradePanelEvent();
+    public static event UpgradePanelEvent UpdatePanel;
 
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
@@ -30,7 +33,10 @@ public class UpgradeButton : MonoBehaviour
         UpgradePrice.text = ($"${UpgradeData.cost}");
 
         InfoPanelName.text = UpgradeData.name;
-        InfoPanelDescription.text = UpgradeData.description;        
+        InfoPanelDescription.text = UpgradeData.description;
+
+        //tell panel image to update
+        UpdatePanel?.Invoke();
     }
     /// <summary>
     /// Called from UpgradePanel to initialize all potentially owned upgrades in the UI.
@@ -107,8 +113,6 @@ public class UpgradeButton : MonoBehaviour
             //          Make sure it doesn't break the 2/3 rule
             UpdateUpgradeSection(TowerName, UpgradeContainer.transform.childCount);          
         }
-        //TODO: Update sell price
-
     }
     /// <summary>
     /// Updates the owned upgrade section of the UI with the name of the upgade and the image

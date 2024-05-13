@@ -1343,6 +1343,7 @@ MonoBehaviour:
   OwnedUpgradeImage: {fileID: 1162734120}
   InfoPanelName: {fileID: 1766068001}
   InfoPanelDescription: {fileID: 1897189322}
+  UpgradePanel: {fileID: 1095152371}
 --- !u!1 &126109477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,6 +7707,7 @@ MonoBehaviour:
   OwnedUpgradeImage: {fileID: 719921622}
   InfoPanelName: {fileID: 1505384647}
   InfoPanelDescription: {fileID: 243772500}
+  UpgradePanel: {fileID: 1095152371}
 --- !u!1 &896526071
 GameObject:
   m_ObjectHideFlags: 0
@@ -16505,6 +16507,7 @@ MonoBehaviour:
   OwnedUpgradeImage: {fileID: 2033830769}
   InfoPanelName: {fileID: 1299605953}
   InfoPanelDescription: {fileID: 1245098580}
+  UpgradePanel: {fileID: 1095152371}
 --- !u!1 &1729852388
 GameObject:
   m_ObjectHideFlags: 0
