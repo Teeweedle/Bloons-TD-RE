@@ -17,6 +17,9 @@ public class BaseTower : MonoBehaviour
 
     public delegate void UpdatePrice(int aPrice);
     public static event UpdatePrice _onUpdatePrice;
+
+    public delegate void MaxUpgrade();
+    public static event MaxUpgrade _onMaxUpgrade;
    
     private void Start()
     {
@@ -73,6 +76,8 @@ public class BaseTower : MonoBehaviour
         for (int i = 0; i < aOriginalArray.Length; i++)
         {
             aOriginalArray[i] += aUpdatedArray[i];
+            if (aOriginalArray[i] >= 3)
+                _onMaxUpgrade?.Invoke();
         }
         return aOriginalArray;
     }

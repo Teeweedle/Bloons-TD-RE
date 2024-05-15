@@ -1,12 +1,13 @@
 using System;
 using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
 {
-    [SerializeField] private Image UpgradeImage;
+    [SerializeField] private Image UpgradeImage, ButtonImage;
     [SerializeField] private TextMeshProUGUI UpgradeName;
     [SerializeField] private TextMeshProUGUI UpgradePrice;
     [SerializeField] private GameObject UpgradeLevel;
@@ -15,15 +16,22 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI OwnedUpgradeName;
     [SerializeField] private Image OwnedUpgradeImage;
     [SerializeField] private TextMeshProUGUI InfoPanelName, InfoPanelDescription;
-    [SerializeField] private UpgradePanel UpgradePanel;   
+    [SerializeField] private UpgradePanel UpgradePanel;
+    [SerializeField] private Image[] UpgradeTicks = new Image[3];
+    [SerializeField] private Sprite MaxUpgradeSprite;
 
     private string TowerName;
     private TowerDataObject UpgradeData = new TowerDataObject();
     private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";
+    private int MaxUpgradeLevel;
 
     public delegate void UpgradePanelEvent();
     public static event UpgradePanelEvent UpdatePanel;
 
+    private void Start()
+    {
+        MaxUpgradeLevel = 5;
+    }
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
         TowerName = aTowerName;
@@ -96,7 +104,7 @@ public class UpgradeButton : MonoBehaviour
     {
         int lUpgradeLevel = UpgradeContainer.transform.childCount;
         //TODO: Make sure you have enough money
-        if (lUpgradeLevel < 5)
+        if (lUpgradeLevel < MaxUpgradeLevel)
         {            
             UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);
             
@@ -112,6 +120,16 @@ public class UpgradeButton : MonoBehaviour
             //Change image/ description to next level
             //          Make sure it doesn't break the 2/3 rule
             UpdateUpgradeSection(TowerName, UpgradeContainer.transform.childCount);          
+        }
+        lUpgradeLevel = UpgradeContainer.transform.childCount;
+        if(lUpgradeLevel == MaxUpgradeLevel)
+        {
+            //Change button to max image
+            ButtonImage.sprite = MaxUpgradeSprite;
+            //Disable button
+            GetComponent<Button>().interactable = false;
+            //TODO: Disable 'left over upgrades'
+            //Initialize buttons to default state
         }
     }
     /// <summary>
@@ -158,5 +176,27 @@ public class UpgradeButton : MonoBehaviour
             Debug.LogError($"File not found: {ex.Message}");
         }
         return lTowerObject;
+    }
+    public void SetMaxUpgradeLimit(int aMaxUpgradeLimit) 
+    {
+        MaxUpgradeLevel = aMaxUpgradeLimit;
+    }
+    public void DisableUpgradeTicks()
+    {
+        foreach(Image tick in UpgradeTicks)
+        {
+            Color color = tick.color;
+            color.a = 0.5f;
+            tick.color = color;
+        }
+    }
+    public void EnableUpgradeTicks()
+    {
+        foreach (Image tick in UpgradeTicks)
+        {
+            Color color = tick.color;
+            color.a = 1f;
+            tick.color = color;
+        }
     }
 }

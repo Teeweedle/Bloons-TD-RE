@@ -7,5 +7,6 @@ public class TowerDataObject
     public int damage, pierce, range, cost, xp;
     public float attackSpeed;
     public bool hasCamoDetection;
-    public int[] upgradeLevelArray = new int[3];    
+    public int[] upgradeLevelArray = new int[3];
+    public bool maxTree;
 }
