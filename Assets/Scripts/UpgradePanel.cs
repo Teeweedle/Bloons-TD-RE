@@ -21,19 +21,20 @@ public class UpgradePanel : MonoBehaviour
     private GameObject _currentTower;
     private const float _SELLPRICEPERCENT = 0.7f;
     private const string _TOWERPATH = "Sprites/UI/Towers";
+    private const int _MAXUPGRADELIMIT = 5;
 
 
     private void OnEnable()
     {
-        GameManager._updatePanel += InitPanelData;
+        GameManager._updatePanel += InitUpgradePanel;
         UpgradeButton.UpdatePanel += UpdateImage;
-        BaseTower._onMaxUpgrade += MaxUpgradeReached;
+        UpgradeButton.SetUpgradeLimit += SetUpgradeLimit;
     }
     private void OnDisable()
     {
-        GameManager._updatePanel -= InitPanelData;
+        GameManager._updatePanel -= InitUpgradePanel;
         UpgradeButton.UpdatePanel -= UpdateImage;
-        BaseTower._onMaxUpgrade -= MaxUpgradeReached;
+        UpgradeButton.SetUpgradeLimit -= SetUpgradeLimit;
     }
     void Start()
     {
@@ -51,46 +52,67 @@ public class UpgradePanel : MonoBehaviour
     /// Initializes data for upgrade panel based on the tower clicked
     /// </summary>
     /// <param name="aTower"></param>
-    public void InitPanelData(TowerDataObject aTower, GameObject aSelectedTower)
+    public void InitUpgradePanel(TowerDataObject aTower, GameObject aSelectedTower)
     {
+        _currentTower = aSelectedTower;
+        _towerName.text = aTower.name;
+        _towerXP.text = aTower.xp.ToString();
+        _sellPrice.text = ($"${GetSellPrice(aTower.cost)}");//TODO: Update to scale with difficulty
+        SetTowerImage(aTower);
+
+        InitUpgradeGrid(_upgrade, aTower);
+
         if (!aTower.maxTree)
         {
             aTower.maxTree = CheckUpgradeLevel(aTower.upgradeLevelArray);
         }
         else
         {
-            DisableTree(aTower.upgradeLevelArray);
+            DisableUpgradeTree(aTower.upgradeLevelArray);
         }
-        _currentTower = aSelectedTower;
-        _towerName.text = aTower.name;
-        _towerXP.text = aTower.xp.ToString();
-        //TODO: Update based on current tower upgrade level (set to the image of the highest current upgrade)
-        SetTowerImage(aTower);
-        //_towerImg.sprite = Resources.Load<Sprite>($"Sprites/UI/Towers/{aTower.name}/No upgrades");
-        UpdateUpgradeGrid(_upgrade, aTower);
-        _sellPrice.text = ($"${GetSellPrice(aTower.cost)}");//TODO: Update to scale with difficulty
     }
     /// <summary>
     /// Passes the selected upgrade data and the upgrade array to the currently selected tower to upgrade it.
     /// </summary>
     /// <param name="aUpgrade"></param>
     /// <param name="aUpgradeArray"></param>
-    public void UpgradeTower(TowerDataObject aUpgrade, int[] aUpgradeArray)
+    public void UpgradeTowerStats(TowerDataObject aUpgrade, int[] aUpgradeArray)
     {
         _currentTower.GetComponent<BaseTower>().UpdateStats(aUpgrade, aUpgradeArray);
     }
     /// <summary>
     /// Iterates through an array of scripts (UpgradeButton) to update the UI based on the tower data
     /// </summary>
-    /// <param name="aUpgrade">Array of Upgrade buttons (3)</param>
+    /// <param name="aUpgradeButons">Array of Upgrade buttons (3)</param>
     /// <param name="aTower">The current tower</param>
-    private void UpdateUpgradeGrid(UpgradeButton[] aUpgrade, TowerDataObject aTower)
+    private void InitUpgradeGrid(UpgradeButton[] aUpgradeButons, TowerDataObject aTower)
     {
-        for(int i =  0; i < _upgrade.Length; i++)
+        var (lBiggestUpgade, lIndex) = GetUpgradeAndIndex(aTower.upgradeLevelArray);
+        bool lHasUpgradeLimit = lBiggestUpgade >= 3;
+
+        ResetUpgradeLimit(aUpgradeButons);
+
+        for (int i =  0; i < aUpgradeButons.Length; i++)
         {
-            aUpgrade[i].UpdateUpgradeSection(aTower.name, aTower.upgradeLevelArray[i]);
+            if (lHasUpgradeLimit && i != lIndex)
+                aUpgradeButons[i].MaxUpgradeLevelProp = 2;
+
+            aUpgradeButons[i].UpdateUpgradeSection(aTower.name, aTower.upgradeLevelArray[i]);
             //if tower has an upgrade already update owned upgrade section
-            aUpgrade[i].InitializeOwnedUpgrades(aTower.name, aTower.upgradeLevelArray[i]);
+            aUpgradeButons[i].InitializeOwnedUpgrades(aTower.name, aTower.upgradeLevelArray[i]);
+        }
+        CheckUpgradeLevel(aTower.upgradeLevelArray);//TODO: See if this needs to be here
+    }
+    /// <summary>
+    /// Resets all upgrade paths to allow for the maximum upgrade limit.
+    /// Only use on initialization
+    /// </summary>
+    /// <param name="aUpgradeButons">Array of the upgrade paths</param>
+    private void ResetUpgradeLimit(UpgradeButton[] aUpgradeButons)
+    {
+        foreach(var aUpgradeItem in aUpgradeButons)
+        {
+            aUpgradeItem.MaxUpgradeLevelProp = _MAXUPGRADELIMIT;
         }
     }
     /// <summary>
@@ -143,7 +165,7 @@ public class UpgradePanel : MonoBehaviour
         TowerDataObject lTowerData = _currentTower.GetComponent<BaseTower>().GetTowerData();
         if (lTowerData.maxTree)
         {
-            DisableTree(lTowerData.upgradeLevelArray);
+            DisableUpgradeTree(lTowerData.upgradeLevelArray);
         }else
             CheckUpgradeLevel(lTowerData.upgradeLevelArray);
         SetTowerImage(lTowerData);
@@ -161,7 +183,7 @@ public class UpgradePanel : MonoBehaviour
             if (aUpgradeLevelArray[i] > lBiggestUpgrade)
             {
                 lBiggestUpgrade = aUpgradeLevelArray[i];
-                lIndex = i + 1;
+                lIndex = i;
             }
         }
         return (lBiggestUpgrade, lIndex);
@@ -176,17 +198,19 @@ public class UpgradePanel : MonoBehaviour
             aUpgradeArray[0] > 0 && aUpgradeArray[2] > 0 ||
             aUpgradeArray[1] > 0 && aUpgradeArray[2] > 0) 
         {
-            DisableTree(aUpgradeArray);
+            DisableUpgradeTree(aUpgradeArray);
             return true; 
         }
         else
         {
-            ShowAllTrees();
+            EnableAllUpgradeTrees();
         }
         return false;
     }
-
-    private void ShowAllTrees()
+    /// <summary>
+    /// Hides all "Path Closed" images so you can see all upgrade trees.
+    /// </summary>
+    private void EnableAllUpgradeTrees()
     {
         foreach (Image aImg in _pathClosed)
         {
@@ -194,10 +218,13 @@ public class UpgradePanel : MonoBehaviour
             aImg.gameObject.SetActive(false);
         }
     }
-
-    private void DisableTree(int[] aUpgradeArray)
+    /// <summary>
+    /// Shows the "Path Closed" image over a given tree (with no upgrades) to follow the 2/3 rule.
+    /// </summary>
+    /// <param name="aUpgradeArray">Current tower upgrade array</param>
+    private void DisableUpgradeTree(int[] aUpgradeArray)
     {
-        ShowAllTrees();
+        EnableAllUpgradeTrees();
         for (int i = 0; i < aUpgradeArray.Length; i++)
         {
             if(aUpgradeArray[i] == 0)
@@ -208,15 +235,22 @@ public class UpgradePanel : MonoBehaviour
             }
         }             
     }
-    private void MaxUpgradeReached()
+    /// <summary>
+    /// Sets max upgrade limit for each upgrade tree.
+    /// </summary>
+    /// <param name="aUpgradePath">Tree with the maximum allowed upgrade path</param>
+    private void SetUpgradeLimit(int aUpgradePath)
     {
+        aUpgradePath -= 1;
         //Disable top 3 tick trackers for upgrade level for all other
         
         //Send max upgrade tracker to OTHER buttons to limit upgades
         for(int i = 0; i < _upgrade.Length; i++)
         {
-            _upgrade[i].DisableUpgradeTicks();
-            _upgrade[i].SetMaxUpgradeLimit(2);
+            if(i != aUpgradePath)
+            {
+                _upgrade[i].MaxUpgradeLevelProp = 2;
+            }
         }
     }
 }

@@ -1334,6 +1334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeImage: {fileID: 474618637}
+  ButtonImage: {fileID: 118735235}
   UpgradeName: {fileID: 2038149558}
   UpgradePrice: {fileID: 1007627739}
   UpgradeLevel: {fileID: 6353400721995272505, guid: f66ad9fb776233c4ea3d23719eb162f0, type: 3}
@@ -1349,6 +1350,8 @@ MonoBehaviour:
   - {fileID: 1882588844}
   - {fileID: 17440341}
   - {fileID: 1069247045}
+  MaxUpgradeSprite: {fileID: 21300000, guid: 1e40293dedb4f184bb6c26aa8f241123, type: 3}
+  UpgradeButtonSprite: {fileID: 21300000, guid: 353629821bd701f4d817badbc7ac1910, type: 3}
 --- !u!1 &126109477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7792,6 +7795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeImage: {fileID: 1548664462}
+  ButtonImage: {fileID: 895056373}
   UpgradeName: {fileID: 1508088392}
   UpgradePrice: {fileID: 673257629}
   UpgradeLevel: {fileID: 6353400721995272505, guid: f66ad9fb776233c4ea3d23719eb162f0, type: 3}
@@ -7807,6 +7811,8 @@ MonoBehaviour:
   - {fileID: 49789141}
   - {fileID: 128514032}
   - {fileID: 217278925}
+  MaxUpgradeSprite: {fileID: 21300000, guid: 1e40293dedb4f184bb6c26aa8f241123, type: 3}
+  UpgradeButtonSprite: {fileID: 21300000, guid: 353629821bd701f4d817badbc7ac1910, type: 3}
 --- !u!1 &896526071
 GameObject:
   m_ObjectHideFlags: 0
@@ -16690,6 +16696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeImage: {fileID: 1263337516}
+  ButtonImage: {fileID: 1721583530}
   UpgradeName: {fileID: 844487742}
   UpgradePrice: {fileID: 1132588910}
   UpgradeLevel: {fileID: 6353400721995272505, guid: f66ad9fb776233c4ea3d23719eb162f0, type: 3}
@@ -16705,6 +16712,8 @@ MonoBehaviour:
   - {fileID: 626316447}
   - {fileID: 204144802}
   - {fileID: 2136308238}
+  MaxUpgradeSprite: {fileID: 21300000, guid: 1e40293dedb4f184bb6c26aa8f241123, type: 3}
+  UpgradeButtonSprite: {fileID: 21300000, guid: 353629821bd701f4d817badbc7ac1910, type: 3}
 --- !u!1 &1729852388
 GameObject:
   m_ObjectHideFlags: 0

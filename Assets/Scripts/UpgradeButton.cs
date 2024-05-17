@@ -18,19 +18,38 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI InfoPanelName, InfoPanelDescription;
     [SerializeField] private UpgradePanel UpgradePanel;
     [SerializeField] private Image[] UpgradeTicks = new Image[3];
-    [SerializeField] private Sprite MaxUpgradeSprite;
+    [SerializeField] private Sprite MaxUpgradeSprite, UpgradeButtonSprite;
 
     private string TowerName;
     private TowerDataObject UpgradeData = new TowerDataObject();
     private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";
-    private int MaxUpgradeLevel;
+    private int MaxUpgradeLevel, Three = 3;
+
+    public int MaxUpgradeLevelProp 
+    { 
+        get => MaxUpgradeLevel; 
+        set { 
+            if(value !=  MaxUpgradeLevel)
+            {
+                MaxUpgradeLevel = value;
+                if (value < Three)
+                {
+                    DisableUpgradeTicks();
+                }else
+                    EnableUpgradeTicks();
+            }
+        } 
+    }
 
     public delegate void UpgradePanelEvent();
     public static event UpgradePanelEvent UpdatePanel;
 
+    public delegate void UpgradeLimit(int aUpgradePath);
+    public static event UpgradeLimit SetUpgradeLimit;
+
     private void Start()
     {
-        MaxUpgradeLevel = 5;
+        MaxUpgradeLevelProp = 5;
     }
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
@@ -43,7 +62,7 @@ public class UpgradeButton : MonoBehaviour
         InfoPanelName.text = UpgradeData.name;
         InfoPanelDescription.text = UpgradeData.description;
 
-        //tell panel image to update
+        //tell panel to update tower image to update
         UpdatePanel?.Invoke();
     }
     /// <summary>
@@ -52,14 +71,19 @@ public class UpgradeButton : MonoBehaviour
     /// <param name="aTowerName"></param>
     /// <param name="aTowerUpgradeLevel"></param>
     public void InitializeOwnedUpgrades(string aTowerName, int aTowerUpgradeLevel)
-    {
+    {       
         NotUpgradedText.SetActive(true);
         OwnedUpgrade.SetActive(false);
+        
         RemoveUpgradePips(UpgradeContainer);
 
         if (aTowerUpgradeLevel > 0)
         {
+            if (aTowerUpgradeLevel >= Three)
+                SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
+            //Loads tower upgrades for this tree (based on GO name)
             Sprite[] UpgradeSprites = Resources.LoadAll<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}");
+
             foreach (Sprite sprite in UpgradeSprites)
             {
                 if (sprite.name[0].ToString() == aTowerUpgradeLevel.ToString())
@@ -80,8 +104,15 @@ public class UpgradeButton : MonoBehaviour
         {
             Instantiate(UpgradeLevel, aUpgradeContainer.transform);
         }
+        if(aTowerUpgradeLevel == MaxUpgradeLevelProp)
+            DisableUpgradeButton();
+        else
+            EnableUpgradeButton();
     }
-
+    /// <summary>
+    /// Removes upgrade pips, used when resetting an upgrade tree (on loading a new tower).
+    /// </summary>
+    /// <param name="aUpgradeContainer"></param>
     private void RemoveUpgradePips(GameObject aUpgradeContainer)
     {
         for (int i = 0; i < aUpgradeContainer.transform.childCount; i++)
@@ -102,34 +133,30 @@ public class UpgradeButton : MonoBehaviour
     /// </summary>
     public void UpgradeSelected()
     {
-        int lUpgradeLevel = UpgradeContainer.transform.childCount;
+        int lUpgradeLevel = GetCurrentUpgradeLevel();
+        
         //TODO: Make sure you have enough money
-        if (lUpgradeLevel < MaxUpgradeLevel)
+        if (lUpgradeLevel < MaxUpgradeLevelProp)
         {            
-            UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);
-            
+            UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);            
             //creates and array ex. 1-0-0 to add to the existing array (always a 1)
             int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, 1);
-
-            //Update BaseTower with new stats and upgrade level
-            //pass data to the upgrade panel
-            UpgradePanel.UpgradeTower(UpgradeData, lUpgradeArray);
-
+            UpgradePanel.UpgradeTowerStats(UpgradeData, lUpgradeArray);
             //Add one pip to tracker
             Instantiate(UpgradeLevel, UpgradeContainer.transform);
             //Change image/ description to next level
-            //          Make sure it doesn't break the 2/3 rule
-            UpdateUpgradeSection(TowerName, UpgradeContainer.transform.childCount);          
+            if(lUpgradeLevel + 1 != MaxUpgradeLevelProp)
+                UpdateUpgradeSection(TowerName, lUpgradeLevel + 1);
+            
         }
-        lUpgradeLevel = UpgradeContainer.transform.childCount;
-        if(lUpgradeLevel == MaxUpgradeLevel)
+        if (lUpgradeLevel + 1 == Three)
         {
-            //Change button to max image
-            ButtonImage.sprite = MaxUpgradeSprite;
-            //Disable button
-            GetComponent<Button>().interactable = false;
-            //TODO: Disable 'left over upgrades'
-            //Initialize buttons to default state
+            SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
+        }
+        //Disable button at max level available
+        if (lUpgradeLevel + 1 == MaxUpgradeLevelProp)
+        {
+            DisableUpgradeButton();
         }
     }
     /// <summary>
@@ -152,7 +179,7 @@ public class UpgradeButton : MonoBehaviour
     /// </summary>
     /// <param name="aSlot"></param>
     /// <param name="aUpgradeLevel"></param>
-    /// <returns></returns>
+    /// <returns>An upgrade array based on the slot Ex. 1-0-0</returns>
     public int[] GetUpgradeArray(string aSlot, int aUpgradeLevel)
     {
         int aSlotNumber;
@@ -161,6 +188,13 @@ public class UpgradeButton : MonoBehaviour
         lUpgradeArray[aSlotNumber - 1] = aUpgradeLevel;
         return lUpgradeArray;
     }
+    /// <summary>
+    /// Loads an upgrade from a JSON file based on the name and the upgrade level.
+    /// </summary>
+    /// <param name="aTowerName"></param>
+    /// <param name="aUpgradePath"></param>
+    /// <param name="aCurrentUpgrade"></param>
+    /// <returns></returns>
     private TowerDataObject LoadUpgrade(string aTowerName, string aUpgradePath, int aCurrentUpgrade)
     {
         TowerDataObject lTowerObject = new();
@@ -176,11 +210,10 @@ public class UpgradeButton : MonoBehaviour
             Debug.LogError($"File not found: {ex.Message}");
         }
         return lTowerObject;
-    }
-    public void SetMaxUpgradeLimit(int aMaxUpgradeLimit) 
-    {
-        MaxUpgradeLevel = aMaxUpgradeLimit;
-    }
+    } 
+    /// <summary>
+    /// Disable upgrade ticks past a certain level, based on the 2/3 rule.
+    /// </summary>
     public void DisableUpgradeTicks()
     {
         foreach(Image tick in UpgradeTicks)
@@ -190,6 +223,9 @@ public class UpgradeButton : MonoBehaviour
             tick.color = color;
         }
     }
+    /// <summary>
+    /// Enables upgrade ticks, used for resetting when loading a new tower.
+    /// </summary>
     public void EnableUpgradeTicks()
     {
         foreach (Image tick in UpgradeTicks)
@@ -199,4 +235,35 @@ public class UpgradeButton : MonoBehaviour
             tick.color = color;
         }
     }
+    /// <summary>
+    /// Turns off the images and texts over an upgrade button, used when max upgrades are reached.
+    /// </summary>
+    public void DisableUpgradeButton()
+    {
+        if(GetCurrentUpgradeLevel() >= MaxUpgradeLevelProp)
+        {
+            UpgradeImage.enabled = false;
+            UpgradeName.enabled = false;
+            UpgradePrice.enabled = false;
+            //Change button to max image
+            ButtonImage.sprite = MaxUpgradeSprite;
+            //Disable button
+            GetComponent<Button>().interactable = false;
+        }
+    }
+    /// <summary>
+    /// Turns on the images and texts over and upgrade button, used to reset upgrade buttons when loading a new tower.
+    /// </summary>
+    private void EnableUpgradeButton()
+    {
+        UpgradeImage.enabled = true;
+        UpgradeName.enabled = true;
+        UpgradePrice.enabled = true;
+        ButtonImage.sprite = UpgradeButtonSprite;
+        GetComponent<Button>().interactable = true;
+    }
+    private int GetCurrentUpgradeLevel()
+    {
+        return UpgradeContainer.transform.childCount;
+    }     
 }
