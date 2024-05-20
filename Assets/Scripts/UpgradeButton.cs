@@ -72,36 +72,19 @@ public class UpgradeButton : MonoBehaviour
     /// <param name="aTowerName"></param>
     /// <param name="aTowerUpgradeLevel"></param>
     public void InitializeOwnedUpgrades(string aTowerName, int aTowerUpgradeLevel)
-    {       
-        NotUpgradedText.SetActive(true);
-        OwnedUpgrade.SetActive(false);
-        EnableUpgradeButton();
-        
-        RemoveUpgradePips(UpgradeContainer);
+    {
+        ResetUpgradeUI();
 
-        if (aTowerUpgradeLevel > 0)
-        {
-            if (aTowerUpgradeLevel >= Three)
-                SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
-            //Loads tower upgrades for this tree (based on GO name)
-            Sprite[] UpgradeSprites = Resources.LoadAll<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}");
+        if (aTowerUpgradeLevel <= 0) return;
 
-            foreach (Sprite sprite in UpgradeSprites)
-            {
-                if (sprite.name[0].ToString() == aTowerUpgradeLevel.ToString())
-                {
-                    int lDelimiterIndex = sprite.name.IndexOf('_');
-                    string lUpgradeName = sprite.name.Substring(lDelimiterIndex + 1);
-                    UpdateOwnedUpgrade(lUpgradeName, sprite);
-                    AddUpgradePips(UpgradeContainer, aTowerUpgradeLevel);
-                    break;
-                }
-            } 
-            if(aTowerUpgradeLevel == MaxUpgradeLevelProp)
-                DisableUpgradeButton();
-        }
+        if (aTowerUpgradeLevel >= Three)
+            SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
+
+        LoadAndSetUpgradeSprite(aTowerName, aTowerUpgradeLevel);
+
+        if (aTowerUpgradeLevel == MaxUpgradeLevelProp)
+            DisableUpgradeButton();
     }
-
     private void AddUpgradePips(GameObject aUpgradeContainer, int aTowerUpgradeLevel)
     {
         for (int i = 0; i < aTowerUpgradeLevel; i++)
@@ -133,34 +116,32 @@ public class UpgradeButton : MonoBehaviour
     }
 
     /// <summary>
-    /// When button pressed update to the next available upgrade
+    /// When button pressed update the towers stats and show the next available upgrade.
     /// </summary>
     public void UpgradeSelected()
     {
         int lUpgradeLevel = GetCurrentUpgradeLevel();
         
-        //TODO: Make sure you have enough money
-        if (lUpgradeLevel < MaxUpgradeLevelProp)
-        {            
-            UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);            
-            //creates and array ex. 1-0-0 to add to the existing array (always a 1)
-            int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, 1);
-            UpgradePanel.UpgradeTowerStats(UpgradeData, lUpgradeArray);
-            //Add one pip to tracker
-            Instantiate(UpgradeLevel, UpgradeContainer.transform);
-            //Change image/ description to next level
-            if (lUpgradeLevel + 1 != MaxUpgradeLevelProp)
-                UpdateUpgradeSection(TowerName, lUpgradeLevel + 1);
-            else if(lUpgradeLevel + 1 == MaxUpgradeLevelProp)
-                UpdatePanel?.Invoke();
+        //TODO: Make sure you have enough money                  
+        UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);            
+        //creates and array ex. 1-0-0 to add to the existing array (always a 1)
+        int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, 1);
+        UpgradePanel.UpgradeTowerStats(UpgradeData, lUpgradeArray);
+        //Add one pip to tracker
+        Instantiate(UpgradeLevel, UpgradeContainer.transform);
+        int lNewUpgradeLevel = lUpgradeLevel + 1;
+        //Change image/ description to next level
+        if (lNewUpgradeLevel != MaxUpgradeLevelProp)
+            UpdateUpgradeSection(TowerName, lNewUpgradeLevel);
+        else if(lNewUpgradeLevel == MaxUpgradeLevelProp)
+            UpdatePanel?.Invoke();
             
-        }
-        if (lUpgradeLevel + 1 == Three)
+        if (lNewUpgradeLevel == Three)
         {
             SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
         }
         //Disable button at max level available
-        if (lUpgradeLevel + 1 == MaxUpgradeLevelProp)
+        if (lNewUpgradeLevel == MaxUpgradeLevelProp)
         {
             DisableUpgradeButton();
         }
@@ -271,5 +252,29 @@ public class UpgradeButton : MonoBehaviour
     private int GetCurrentUpgradeLevel()
     {
         return UpgradeContainer.transform.childCount;
-    }     
+    }
+    private void ResetUpgradeUI()
+    {
+        NotUpgradedText.SetActive(true);
+        OwnedUpgrade.SetActive(false);
+        EnableUpgradeButton();
+        RemoveUpgradePips(UpgradeContainer);
+    }
+    private void LoadAndSetUpgradeSprite(string aTowerName, int aTowerUpgradeLevel)
+    {
+        //Loads tower upgrades for this tree (based on GO name)
+        Sprite[] UpgradeSprites = Resources.LoadAll<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}");
+
+        foreach (Sprite sprite in UpgradeSprites)
+        {
+            if (sprite.name[0].ToString() == aTowerUpgradeLevel.ToString())
+            {
+                int lDelimiterIndex = sprite.name.IndexOf('_');
+                string lUpgradeName = sprite.name.Substring(lDelimiterIndex + 1);
+                UpdateOwnedUpgrade(lUpgradeName, sprite);
+                AddUpgradePips(UpgradeContainer, aTowerUpgradeLevel);
+                break;
+            }
+        }
+    }
 }

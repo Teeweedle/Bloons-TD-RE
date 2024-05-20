@@ -61,11 +61,7 @@ public class UpgradePanel : MonoBehaviour
 
         InitUpgradeGrid(_upgrade, aTower);
 
-        if (!aTower.maxTree)
-        {
-            aTower.maxTree = CheckUpgradeLevel(aTower.upgradeLevelArray);
-        }
-        else
+        if (aTower.maxTree)
         {
             DisableUpgradeTree(aTower.upgradeLevelArray);
         }
@@ -100,7 +96,7 @@ public class UpgradePanel : MonoBehaviour
             //if tower has an upgrade already update owned upgrade section
             aUpgradeButons[i].InitializeOwnedUpgrades(aTower.name, aTower.upgradeLevelArray[i]);
         }
-        CheckUpgradeLevel(aTower.upgradeLevelArray);//TODO: See if this needs to be here
+        aTower.maxTree = CheckUpgradeLevel(aTower.upgradeLevelArray);//TODO: See if this needs to be here
     }
     /// <summary>
     /// Resets all upgrade paths to allow for the maximum upgrade limit.
