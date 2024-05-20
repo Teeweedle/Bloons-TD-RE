@@ -13,11 +13,13 @@ public class GameManager : MonoBehaviour
     {
         BaseTower._onTowerSelected += TowerSelected;
         UpgradePanel._onCloseWindow += UnselectTower;
+        UpgradePanel._changeSprite += ChangeTowerSprite;
     }
     private void OnDisable()
     {
         BaseTower._onTowerSelected -= TowerSelected;
         UpgradePanel._onCloseWindow -= UnselectTower;
+        UpgradePanel._changeSprite -= ChangeTowerSprite;
     }
     private void TowerSelected(GameObject aTowerSelected)
     {
@@ -42,5 +44,13 @@ public class GameManager : MonoBehaviour
         }
         _selectedTower = null;
         //TODO: Hide upgrade panel/ animation
+    }
+    /// <summary>
+    /// Event triggered from UpgadePanel to change the tower sprite to the highest upgrade level.
+    /// </summary>
+    /// <param name="aTowerSprite">Highest upgrade level sprite.</param>
+    private void ChangeTowerSprite(Sprite aTowerSprite)
+    {
+        _selectedTower.GetComponent<BaseTower>().SetTowerSprite(aTowerSprite);
     }
 }

@@ -54,7 +54,8 @@ public class UpgradeButton : MonoBehaviour
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
         TowerName = aTowerName;
-        UpgradeData = LoadUpgrade(aTowerName, this.gameObject.name, aTowerUpgradeLevel + 1);
+        if(aTowerUpgradeLevel < MaxUpgradeLevelProp)
+            UpgradeData = LoadUpgrade(aTowerName, this.gameObject.name, aTowerUpgradeLevel + 1);
         UpgradeImage.sprite = LoadUpgradeSprite(aTowerName, aTowerUpgradeLevel);
         UpgradeName.text = UpgradeData.name;
         UpgradePrice.text = ($"${UpgradeData.cost}");
@@ -74,6 +75,7 @@ public class UpgradeButton : MonoBehaviour
     {       
         NotUpgradedText.SetActive(true);
         OwnedUpgrade.SetActive(false);
+        EnableUpgradeButton();
         
         RemoveUpgradePips(UpgradeContainer);
 
@@ -95,6 +97,8 @@ public class UpgradeButton : MonoBehaviour
                     break;
                 }
             } 
+            if(aTowerUpgradeLevel == MaxUpgradeLevelProp)
+                DisableUpgradeButton();
         }
     }
 
@@ -145,8 +149,10 @@ public class UpgradeButton : MonoBehaviour
             //Add one pip to tracker
             Instantiate(UpgradeLevel, UpgradeContainer.transform);
             //Change image/ description to next level
-            if(lUpgradeLevel + 1 != MaxUpgradeLevelProp)
+            if (lUpgradeLevel + 1 != MaxUpgradeLevelProp)
                 UpdateUpgradeSection(TowerName, lUpgradeLevel + 1);
+            else if(lUpgradeLevel + 1 == MaxUpgradeLevelProp)
+                UpdatePanel?.Invoke();
             
         }
         if (lUpgradeLevel + 1 == Three)

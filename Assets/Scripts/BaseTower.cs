@@ -1,7 +1,5 @@
-using System;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class BaseTower : MonoBehaviour
 {
@@ -42,6 +40,10 @@ public class BaseTower : MonoBehaviour
     {
         _towerSpriteRenderer.material = _defaultShader;
         _isSelected = false;
+    }
+    public void SetTowerSprite(Sprite aSprite)
+    {
+        _towerSpriteRenderer.sprite = aSprite;
     }
     /// <summary>
     /// Assign loaded stats to this tower and make upgrade array an actual array

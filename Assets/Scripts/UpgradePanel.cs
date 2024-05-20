@@ -1,11 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static BaseTower;
 
 public class UpgradePanel : MonoBehaviour
 {
@@ -18,9 +13,13 @@ public class UpgradePanel : MonoBehaviour
     public delegate void CloseWindowCallBack();
     public static event CloseWindowCallBack _onCloseWindow;
 
+    public delegate void ChangeTowerSprite(Sprite aTowerSprite);
+    public static event ChangeTowerSprite _changeSprite;
+
     private GameObject _currentTower;
     private const float _SELLPRICEPERCENT = 0.7f;
     private const string _TOWERPATH = "Sprites/UI/Towers";
+    private const string _TOWERGOPATH = "Sprites/GO Sprites";
     private const int _MAXUPGRADELIMIT = 5;
 
 
@@ -139,20 +138,23 @@ public class UpgradePanel : MonoBehaviour
         }
     }
     /// <summary>
-    /// Loads all sprites in a given upgrade track. Then matches the current upgrade level with the first char of a sprite and loads it.
+    /// Loads all sprites for a given path. Finds a match based on the first char in the name.
+    /// Loads it into the upgrade panel on triggers an event to update the GO sprite.
     /// </summary>
     /// <param name="aTowerName">A tower name.</param>
     /// <param name="aUpgradeTrack">Highest currently upgraded track.</param>
     /// <param name="aUpgradeLevel">Current upgrade level for a given track.</param>
     private void LoadUpgradeSprite(string aTowerName, int aUpgradeTrack, int aUpgradeLevel)
     {
-        Sprite[] UpgradeSprites = Resources.LoadAll<Sprite>($"{_TOWERPATH}/{aTowerName}/{aUpgradeTrack}/");
-        foreach (Sprite sprite in UpgradeSprites)
+        Sprite[] lUpgradeSprites = Resources.LoadAll<Sprite>($"{_TOWERPATH}/{aTowerName}/{aUpgradeTrack}/");
+        Sprite[] lTowerSprites = Resources.LoadAll<Sprite>($"{_TOWERGOPATH}/{aTowerName}/{aUpgradeTrack}/");
+        for(int i = 0; i < lUpgradeSprites.Length; i++)
         {
-            if (sprite.name[0].ToString() == aUpgradeLevel.ToString())
+            if (lUpgradeSprites[i].name[0].ToString() == aUpgradeLevel.ToString())
             {
-                _towerImg.sprite = sprite;
-                return;//sprite found
+                _towerImg.sprite = lUpgradeSprites[i];
+                _changeSprite?.Invoke(lTowerSprites[i]);
+                return;
             }
         }
     }
@@ -208,7 +210,7 @@ public class UpgradePanel : MonoBehaviour
         return false;
     }
     /// <summary>
-    /// Hides all "Path Closed" images so you can see all upgrade trees.
+    /// Hides all **Path Closed** images so you can see all upgrade trees.
     /// </summary>
     private void EnableAllUpgradeTrees()
     {
@@ -219,7 +221,7 @@ public class UpgradePanel : MonoBehaviour
         }
     }
     /// <summary>
-    /// Shows the "Path Closed" image over a given tree (with no upgrades) to follow the 2/3 rule.
+    /// Shows the **Path Closed** image over a given tree (with no upgrades) to follow the 2/3 rule.
     /// </summary>
     /// <param name="aUpgradeArray">Current tower upgrade array</param>
     private void DisableUpgradeTree(int[] aUpgradeArray)
