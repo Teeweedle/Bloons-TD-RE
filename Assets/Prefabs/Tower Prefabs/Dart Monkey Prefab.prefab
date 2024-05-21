@@ -182,14 +182,19 @@ MonoBehaviour:
   _outlineShader: {fileID: -876546973899608171, guid: f72971dc2a784ac4d8c26f941a4c93df, type: 3}
   _defaultShader: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _towerSpriteRenderer: {fileID: 720116977426024739}
-  _type: 
-  _targetType: 
-  _dmg: 0
-  _pierce: 0
-  _range: 0
-  _xp: 0
-  _attackSpeed: 0
-  _hasCamoDetection: 0
+  _towerData:
+    name: 
+    description: 
+    upgradeLevel: 
+    damage: 0
+    pierce: 0
+    range: 0
+    cost: 0
+    xp: 0
+    attackSpeed: 0
+    hasCamoDetection: 0
+    upgradeLevelArray: 000000000000000000000000
+    maxTree: 0
 --- !u!1001 &2020447242855255697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +203,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5382416399202053763}
     m_Modifications:
+    - target: {fileID: -3507430534569969278, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
+      propertyPath: m_Radius
+      value: 1.045
+      objectReference: {fileID: 0}
+    - target: {fileID: -3507430534569969278, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3507430534569969278, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1124201319869802365, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
       propertyPath: m_Name
       value: Tower Range
@@ -245,7 +262,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1124201319869802365, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5528736202995906424}
+    - targetCorrespondingSourceObject: {fileID: 1124201319869802365, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1487317245723634169}
   m_SourcePrefab: {fileID: 100100000, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
 --- !u!212 &643443046247210981 stripped
 SpriteRenderer:
@@ -257,6 +280,46 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1124201319869802365, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}
   m_PrefabInstance: {fileID: 2020447242855255697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5528736202995906424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410723123607857644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff28825013fcb2741858a91c2a590552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseTower: {fileID: 0}
+--- !u!50 &1487317245723634169
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410723123607857644}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!4 &3777369243659082232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2909883087964280681, guid: 59a0efd3e0c0cb74c93a4e3647715d67, type: 3}

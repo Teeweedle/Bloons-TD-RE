@@ -7,6 +7,8 @@ TagManager:
   - No Build
   - Tower
   - Upgrade Panel
+  - Bloon
+  - Tower Range
   layers:
   - Default
   - TransparentFX

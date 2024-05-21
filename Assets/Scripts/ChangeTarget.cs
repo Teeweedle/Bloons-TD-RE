@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -29,12 +30,17 @@ public class ChangeTarget : MonoBehaviour
     }
     public void ChangeTargetBackward() 
     {
-        targetIndex = (targetIndex - 1 + targetPriorityList.Count) % targetPriorityList.Count;
+        targetIndex = (targetIndex - 1 + targetPriorityList.Count) % targetPriorityList.Count;        
         SetPriorityText();
     }
     private void SetPriorityText()
     {
-        setTargetPriority?.Invoke(targetPriorityList[targetIndex]);
+        SetTowerTargetPriority(targetPriorityList[targetIndex]);
         targetPriorityText.text = targetPriorityList[targetIndex];
+    }
+
+    private void SetTowerTargetPriority(string aPriority)
+    {
+        setTargetPriority?.Invoke(aPriority);
     }
 }

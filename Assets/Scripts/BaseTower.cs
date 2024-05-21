@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class BaseTower : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class BaseTower : MonoBehaviour
 
     [SerializeField] private TowerDataObject _towerData = new();
     private string _targetPriority;
+    [SerializeField] private Dictionary<GameObject, (float distance, bool isStrong)> _targetDictionary 
+        = new Dictionary<GameObject, (float distance, bool isStrong)>();
+    private GameObject _currentTarget;
 
     public delegate void TowerSelected(GameObject aTowerSelected);
     public static event TowerSelected _onTowerSelected;
@@ -29,6 +34,10 @@ public class BaseTower : MonoBehaviour
     {
         _isPlaced = false;
     }
+    private void Update()
+    {
+        GetTarget("test");
+    }
     private void Fire(GameObject aProjectile, int aAmount)
     {
         //TODO: Implement
@@ -37,9 +46,59 @@ public class BaseTower : MonoBehaviour
             Instantiate(aProjectile, this.transform.position, Quaternion.identity);
         }
     }
-    private void TargetBloon(string aTargetType)
+    private void GetTarget(string aTargetPriority)
     {
         //TODO: Implement
+        switch (aTargetPriority)
+        {
+            case "First":
+                GetFirst();
+                break;
+            case "Last":
+                GetLast();
+                break;
+            case "Close"://TODO: Implement close behaviour
+                break;
+            case "Strong"://TODO: Implement to check for strong bool
+                break;
+            default:
+                GetFirst();
+                break;
+
+        }
+    }
+    /// <summary>
+    /// Gets the element in the dictionary that has been around the longest.
+    /// </summary>
+    /// <returns></returns>
+    private GameObject GetFirst()
+    {
+        var lFirst = _targetDictionary.FirstOrDefault();
+        var lLast = _targetDictionary.LastOrDefault();
+
+        return lFirst.Value.distance < lLast.Value.distance ? lLast.Key : lFirst.Key;
+    }
+    /// <summary>
+    /// Gets the eleme in the dictionary that has been around the shortest.
+    /// </summary>
+    /// <returns></returns>
+    private GameObject GetLast()
+    {
+        var lFirst = _targetDictionary.FirstOrDefault();
+        var lLast = _targetDictionary.LastOrDefault();
+
+        return lFirst.Value.distance > lLast.Value.distance ? lLast.Key : lFirst.Key;
+    }
+    public void TargetAquired(Collider2D aTarget)
+    {
+        BaseBloon lBloon = aTarget.gameObject.GetComponent<BaseBloon>();
+        _targetDictionary.Add(aTarget.gameObject, (lBloon.GetBloonDistance(), lBloon.GetIsStrong()));
+        Debug.Log("Target found!");
+    }   
+    public void TargetLost(Collider2D aTarget)
+    {
+        _targetDictionary.Remove(aTarget.gameObject);
+        Debug.Log("Target lost");
     }
     private void SetTargetPriority(string aPriority)
     {
