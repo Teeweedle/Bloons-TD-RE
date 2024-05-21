@@ -5379,7 +5379,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 587228557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2019865533}
+        m_TargetAssemblyTypeName: ChangeTarget, Assembly-CSharp
+        m_MethodName: ChangeTargetBackward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &587228557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12712,7 +12724,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1376964367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2019865533}
+        m_TargetAssemblyTypeName: ChangeTarget, Assembly-CSharp
+        m_MethodName: ChangeTargetForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1376964367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19671,8 +19695,9 @@ GameObject:
   - component: {fileID: 2019865530}
   - component: {fileID: 2019865532}
   - component: {fileID: 2019865531}
+  - component: {fileID: 2019865533}
   m_Layer: 5
-  m_Name: Target Type
+  m_Name: Target Priority Type
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19794,6 +19819,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019865529}
   m_CullTransparentMesh: 1
+--- !u!114 &2019865533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019865529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18afdebac0518f84bbfd86b33c3693d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPriorityText: {fileID: 2019865531}
 --- !u!1 &2033830767
 GameObject:
   m_ObjectHideFlags: 0
@@ -21250,7 +21288,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2121147806}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1095152371}
+        m_TargetAssemblyTypeName: UpgradePanel, Assembly-CSharp
+        m_MethodName: SellTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2121147806
 MonoBehaviour:
   m_ObjectHideFlags: 0

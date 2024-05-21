@@ -45,7 +45,9 @@ public class UpgradePanel : MonoBehaviour
     }
     public void SellTower()
     {
-        //TODO: Sell tower logic
+        Destroy(_currentTower);
+        gameObject.SetActive(false);
+        //TODO: Return money/ update money UI
     }
     /// <summary>
     /// Initializes data for upgrade panel based on the tower clicked

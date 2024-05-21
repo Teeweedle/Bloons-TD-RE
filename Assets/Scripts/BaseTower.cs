@@ -9,19 +9,29 @@ public class BaseTower : MonoBehaviour
     private bool _isPlaced, _isSelected;
 
     [SerializeField] private TowerDataObject _towerData = new();
+    private string _targetPriority;
 
     public delegate void TowerSelected(GameObject aTowerSelected);
     public static event TowerSelected _onTowerSelected;
 
     public delegate void UpdatePrice(int aPrice);
-    public static event UpdatePrice _onUpdatePrice;    
-   
+    public static event UpdatePrice _onUpdatePrice;
+
+    private void OnEnable()
+    {
+        ChangeTarget.setTargetPriority += SetTargetPriority;
+    }
+    private void OnDisable()
+    {
+        ChangeTarget.setTargetPriority -= SetTargetPriority;
+    }
     private void Start()
     {
         _isPlaced = false;
     }
     private void Fire(GameObject aProjectile, int aAmount)
     {
+        //TODO: Implement
         for (int i = 0; i < aAmount; i++)
         {
             Instantiate(aProjectile, this.transform.position, Quaternion.identity);
@@ -29,6 +39,11 @@ public class BaseTower : MonoBehaviour
     }
     private void TargetBloon(string aTargetType)
     {
+        //TODO: Implement
+    }
+    private void SetTargetPriority(string aPriority)
+    {
+        _targetPriority = aPriority;
     }
 
     public void HighLight()
