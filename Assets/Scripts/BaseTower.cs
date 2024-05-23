@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,9 +13,14 @@ public class BaseTower : MonoBehaviour
 
     [SerializeField] private TowerDataObject _towerData = new();
     private string _targetPriority;
-    [SerializeField] private Dictionary<GameObject, (float distance, bool isStrong)> _targetDictionary 
-        = new Dictionary<GameObject, (float distance, bool isStrong)>();
+
+    [SerializeField] private SortedSet<BaseBloon> _targetSortedList = new SortedSet<BaseBloon>(new DistanceComparer());
+
     private GameObject _currentTarget;
+  
+    private Dictionary<string, Action> _getTargetAction;
+    private Action _cachedTargetAction;
+
 
     public delegate void TowerSelected(GameObject aTowerSelected);
     public static event TowerSelected _onTowerSelected;
@@ -33,10 +39,24 @@ public class BaseTower : MonoBehaviour
     private void Start()
     {
         _isPlaced = false;
+        _getTargetAction = new Dictionary<string, Action> {
+            { "First", () => _currentTarget = GetFirstTarget() },
+            { "Last", () => _currentTarget = GetLastTarget() },
+            { "Close", () => _currentTarget = GetCloseTarget() },//TODO: Implement close behaviour
+            { "Strong", () => _currentTarget = GetStrongTarget() }//TODO: Implement to check for strong bool
+
+        };
+        SetDefaultTargetPriority();
     }
     private void Update()
     {
-        GetTarget("test");
+        if (_isPlaced)
+        {
+            if (_currentTarget != null)
+            {
+                Fire(_currentTarget);
+            }
+        }
     }
     private void Fire(GameObject aProjectile, int aAmount)
     {
@@ -46,63 +66,73 @@ public class BaseTower : MonoBehaviour
             Instantiate(aProjectile, this.transform.position, Quaternion.identity);
         }
     }
-    private void GetTarget(string aTargetPriority)
+    private void Fire(GameObject aTarget)
     {
-        //TODO: Implement
-        switch (aTargetPriority)
-        {
-            case "First":
-                GetFirst();
-                break;
-            case "Last":
-                GetLast();
-                break;
-            case "Close"://TODO: Implement close behaviour
-                break;
-            case "Strong"://TODO: Implement to check for strong bool
-                break;
-            default:
-                GetFirst();
-                break;
-
-        }
+        Debug.DrawLine(transform.position, aTarget.transform.position);
     }
     /// <summary>
-    /// Gets the element in the dictionary that has been around the longest.
+    /// Gets the bloon at the end of the sorted list.
     /// </summary>
-    /// <returns></returns>
-    private GameObject GetFirst()
+    /// <returns>Bloon with the longest distance</returns>
+    private GameObject GetFirstTarget()
     {
-        var lFirst = _targetDictionary.FirstOrDefault();
-        var lLast = _targetDictionary.LastOrDefault();
-
-        return lFirst.Value.distance < lLast.Value.distance ? lLast.Key : lFirst.Key;
+        return _targetSortedList.LastOrDefault().gameObject;
     }
     /// <summary>
-    /// Gets the eleme in the dictionary that has been around the shortest.
-    /// </summary>
-    /// <returns></returns>
-    private GameObject GetLast()
+    /// Gets the bloon that is at the start of the sorted list.
+    /// <returns>Bloon with the shortest distance</returns>
+    private GameObject GetLastTarget()
     {
-        var lFirst = _targetDictionary.FirstOrDefault();
-        var lLast = _targetDictionary.LastOrDefault();
-
-        return lFirst.Value.distance > lLast.Value.distance ? lLast.Key : lFirst.Key;
+        return _targetSortedList.FirstOrDefault().gameObject;
     }
+    private GameObject GetStrongTarget()
+    {
+        return null;
+    }
+    private GameObject GetCloseTarget()
+    {
+        return null;
+    }
+    /// <summary>
+    /// Assigns the new target to the target dictionary
+    /// </summary>
+    /// <param name="aTarget">Newly in range bloon</param>
     public void TargetAquired(Collider2D aTarget)
     {
         BaseBloon lBloon = aTarget.gameObject.GetComponent<BaseBloon>();
-        _targetDictionary.Add(aTarget.gameObject, (lBloon.GetBloonDistance(), lBloon.GetIsStrong()));
-        Debug.Log("Target found!");
-    }   
+        _targetSortedList.Add(lBloon);
+        _cachedTargetAction?.Invoke();
+    }
+    /// <summary>
+    /// Removes the bloon from the target dictionary.
+    /// </summary>
+    /// <param name="aTarget">Bloon that moved out of range.</param>
     public void TargetLost(Collider2D aTarget)
     {
-        _targetDictionary.Remove(aTarget.gameObject);
-        Debug.Log("Target lost");
+        _targetSortedList.Remove(aTarget.GetComponent<BaseBloon>());
+        if(_targetSortedList.Count == 0)
+            _currentTarget = null;
+        else
+            _cachedTargetAction?.Invoke();
     }
+    /// <summary>
+    /// Invoked from an event in ChangeTarget based on the priority that is chosen in the upgrade panel.
+    /// </summary>
+    /// <param name="aPriority"></param>
     private void SetTargetPriority(string aPriority)
     {
         _targetPriority = aPriority;
+        UpdateCachedAction();
+    }
+
+    private void UpdateCachedAction()
+    {
+        if (_getTargetAction.TryGetValue(_targetPriority, out var action))
+        {
+            _cachedTargetAction = action;
+        }
+        else
+            _cachedTargetAction = null;
     }
 
     public void HighLight()
@@ -162,4 +192,8 @@ public class BaseTower : MonoBehaviour
         _isPlaced = true;
     }    
     public TowerDataObject GetTowerData() { return _towerData; }
+    private void SetDefaultTargetPriority()
+    {
+        SetTargetPriority("First");
+    }
 }

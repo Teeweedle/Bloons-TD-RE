@@ -16,11 +16,11 @@ public class BloonSpawner : MonoBehaviour
     private IEnumerator SpawnBloons()
     {
         GameObject lBloon;
-        for(int i = 0; i < 20;  i++)
+        for(int i = 0; i < 100;  i++)
         {
             lBloon = Instantiate(_bloon, _bloonPath[0], Quaternion.identity);
             lBloon.GetComponent<BloonMovement>().SetPath(_bloonPath);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

@@ -27,3 +27,16 @@ public class BaseBloon : MonoBehaviour
         return isStrong;
     }
 }
+/// <summary>
+/// Used for keeping bloon in order based on their distance. Used for tower targeting.
+/// </summary>
+public class DistanceComparer : IComparer<BaseBloon> 
+{
+    public int Compare(BaseBloon x, BaseBloon y)
+    {
+        if (x.GetBloonDistance() > y.GetBloonDistance()) return 1;
+        if (x.GetBloonDistance() < y.GetBloonDistance()) return -1;
+        return 0;
+    }
+}
+
