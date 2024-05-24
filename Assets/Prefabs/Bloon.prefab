@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2410198563425219422}
   - component: {fileID: 12247179463945813}
   - component: {fileID: 1856135089846601314}
-  - component: {fileID: 1920095714347695146}
   - component: {fileID: -9069371130852728148}
+  - component: {fileID: 7037211058024605022}
   m_Layer: 0
   m_Name: Bloon
   m_TagString: Bloon
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2716935421919642382, guid: 82368056c816f22429cb85a4a8d9fc02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f048fae9a98466d4eb61dc837b0b2fbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,20 +100,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1920095714347695146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5931565635144464614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0076e49625d8704e91061c726376565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 0
-  isStrong: 0
 --- !u!70 &-9069371130852728148
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +135,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.4, y: 0.52}
   m_Direction: 0
+--- !u!114 &7037211058024605022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5931565635144464614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d890a74e3c75e524ebb14884fb4c81cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0
+  isStrong: 0
+  isCamo: 0
+  isRegrow: 0
+  isFortified: 0
+  speed: 0
+  child: 
+  childCount: 0
+  health: 0
+  cash: 0
+  bloonSprite: {fileID: 0}

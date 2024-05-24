@@ -1,16 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseBloon : MonoBehaviour
+public abstract class BaseBloon : MonoBehaviour
 {
-    [SerializeField] private float distance;
-    [SerializeField] private bool isStrong;
+    [SerializeField] protected float distance;
+    [SerializeField] protected bool isStrong, isCamo, isRegrow, isFortified;
+    [SerializeField] protected float speed;
+    [SerializeField] protected string child;
+    [SerializeField] protected int childCount, health, cash;
+    [SerializeField] protected Sprite bloonSprite;
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<BloonMovement>().SetSpeed(speed);
         distance = 0.0f;
-        isStrong = false;
     }
 
     // Update is called once per frame
@@ -26,9 +29,17 @@ public class BaseBloon : MonoBehaviour
     {
         return isStrong;
     }
+    private void OnDestroy()
+    {
+        //TODO: Spawn child 
+        //Pass current position on the path
+        //Pass distance variable
+    }
+    public abstract void IntializeBloon();
+    public abstract void SetSprite();
 }
 /// <summary>
-/// Used for keeping bloon in order based on their distance. Used for tower targeting.
+/// Used for keeping bloon in order based on their distance. Used for tower priority targeting.
 /// </summary>
 public class DistanceComparer : IComparer<BaseBloon> 
 {
@@ -39,4 +50,5 @@ public class DistanceComparer : IComparer<BaseBloon>
         return 0;
     }
 }
+
 

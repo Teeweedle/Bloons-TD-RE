@@ -9,12 +9,19 @@ public class BloonInRange : MonoBehaviour
     {
         baseTower = GetComponentInParent<BaseTower>();
     }
-
+    /// <summary>
+    /// Sends BaseTower the gameObject that recently entered the towers range.
+    /// </summary>
+    /// <param name="collider">New bloon that entered the towers range.</param>
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag(BLOON))
             baseTower.TargetAquired(collider);
     }
+    /// <summary>
+    /// Tells tower a target moved out of range.
+    /// </summary>
+    /// <param name="collider">Target that moved out of range.</param>
     void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag(BLOON))

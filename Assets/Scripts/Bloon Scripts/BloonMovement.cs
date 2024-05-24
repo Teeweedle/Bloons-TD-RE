@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class BloonMovement : MonoBehaviour
 {
     [SerializeField] private List<Vector2> _path;
-    private float _speed = 5f;
+    private float _speed = 5f;//TODO: Change to get speed at run time based on the type of bloon
     private int _currentPosition;
     
     private void Start()
@@ -35,5 +36,9 @@ public class BloonMovement : MonoBehaviour
     public void SetPath(List<Vector2> aPath)
     {
         _path = aPath;
+    }
+    public void SetSpeed(float aSpeedModifier)
+    {
+        _speed *= aSpeedModifier;
     }
 }

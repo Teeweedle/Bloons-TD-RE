@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 
 public class BaseTower : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class BaseTower : MonoBehaviour
     [SerializeField] private SortedSet<BaseBloon> _targetSortedList = new SortedSet<BaseBloon>(new DistanceComparer());
 
     private GameObject _currentTarget;
+    private const float _angleOffset = 90f;
   
     private Dictionary<string, Action> _getTargetAction;
     private Action _cachedTargetAction;
@@ -68,7 +68,18 @@ public class BaseTower : MonoBehaviour
     }
     private void Fire(GameObject aTarget)
     {
+        LookAtTarget(aTarget.transform);
         Debug.DrawLine(transform.position, aTarget.transform.position);
+    }
+    /// <summary>
+    /// Rotates the current gameObject to "look at" the targeted bloon.
+    /// </summary>
+    /// <param name="aTarget">The target transform</param>
+    private void LookAtTarget(Transform aTarget)
+    {
+        Vector3 lDirection = aTarget.position - transform.position;
+        float lAngle = Mathf.Atan2(lDirection.y, lDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, lAngle + _angleOffset));
     }
     /// <summary>
     /// Gets the bloon at the end of the sorted list.
