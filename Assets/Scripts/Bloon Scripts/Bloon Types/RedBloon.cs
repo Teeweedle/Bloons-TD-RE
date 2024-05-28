@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RedBloon : BaseBloon
 {
     private Sprite redBloonSprite;
+    private const string REDBLOON = "Red Bloon";
     void Start()
     {
-        IntializeBloon();
-        bloonSprite = GetComponent<SpriteRenderer>().sprite;
+        InitializeBloon();
     }
-    public override void IntializeBloon()
+    public override void InitializeBloon()
     {
         speed = 1.0f;
         health = 1;
@@ -21,10 +19,11 @@ public class RedBloon : BaseBloon
     }
     public override void SetSprite()
     {
+        FindSprite();
         bloonSprite = redBloonSprite;
     }
     private void FindSprite()
     {
-        //redBloonSprite = Resources.Load("Bloon Types");
+        redBloonSprite = BloonSpawner._instance.GetSpriteByName(REDBLOON);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,9 @@ public class BloonMovement : MonoBehaviour
     [SerializeField] private List<Vector2> _path;
     private float _speed = 5f;//TODO: Change to get speed at run time based on the type of bloon
     private int _currentPosition;
-    
+
+    public delegate void BloonMovementDelegate(GameObject aGameObject);
+    public static event BloonMovementDelegate _endOfPath;
     private void Start()
     {
         _currentPosition = 0;
@@ -22,6 +25,9 @@ public class BloonMovement : MonoBehaviour
             {
                 GetNextTarget();
             }
+        }else
+        {
+            _endOfPath?.Invoke(gameObject);//tells BloonSpawner to deactive this bloon and add it to the pool
         }
     }
     private void GetNextTarget()
