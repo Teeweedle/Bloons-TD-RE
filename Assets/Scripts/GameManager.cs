@@ -1,10 +1,14 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _upgradePanel;
+    [SerializeField] private TextMeshProUGUI _playerHPText, _playerMoneyText;
+    
     private GameObject _selectedTower;
+    private int _playerHP, _playerMoney;
 
     public delegate void UpdatePanel(TowerDataObject aTower, GameObject aCurrentTower);
     public static event UpdatePanel _updatePanel;
@@ -20,6 +24,14 @@ public class GameManager : MonoBehaviour
         BaseTower._onTowerSelected -= TowerSelected;
         UpgradePanel._onCloseWindow -= UnselectTower;
         UpgradePanel._changeSprite -= ChangeTowerSprite;
+    }
+    private void Start()
+    {
+        _playerMoney = 100;
+        _playerHP = 100;
+
+        UpdatePlayerHPText();
+        UpdatePlayerMoneyText();
     }
     private void TowerSelected(GameObject aTowerSelected)
     {
@@ -52,5 +64,43 @@ public class GameManager : MonoBehaviour
     private void ChangeTowerSprite(Sprite aTowerSprite)
     {
         _selectedTower.GetComponent<BaseTower>().SetTowerSprite(aTowerSprite);
+    }
+    /// <summary>
+    /// Updates player health, ends game if HP if <= 0
+    /// </summary>
+    /// <param name="aHealthChange">Amnount to change the player health</param>
+    private void UpdatePlayerHP(int aHealthChange)
+    {
+        _playerHP += aHealthChange;
+        UpdatePlayerHPText();
+        if (_playerHP <= 0)
+        {
+            //TODO: End game
+        }
+    }
+    /// <summary>
+    /// Updates player HP on the UI
+    /// </summary>
+    /// <param name="aHealth">Current value of player HP</param>
+    private void UpdatePlayerHPText()
+    {
+        _playerHPText.text += _playerHP.ToString();
+    }
+    /// <summary>
+    /// Updates player money 
+    /// </summary>
+    /// <param name="aMoneyChange">Amount to change player money, can be negative</param>
+    private void UpdatePlayerMoney(int aMoneyChange)
+    {
+        _playerMoney += aMoneyChange;
+        UpdatePlayerMoneyText();
+    }
+    /// <summary>
+    /// Updates player money on the UI
+    /// </summary>
+    /// <param name="aMoney">Current value of player money</param>
+    private void UpdatePlayerMoneyText()
+    {
+        _playerMoneyText.text = ($"${_playerMoney}");
     }
 }

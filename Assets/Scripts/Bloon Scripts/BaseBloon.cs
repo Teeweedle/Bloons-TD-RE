@@ -1,5 +1,5 @@
+using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class BaseBloon : MonoBehaviour
@@ -10,7 +10,9 @@ public abstract class BaseBloon : MonoBehaviour
     [SerializeField] protected string child;
     [SerializeField] protected int childCount, health, cash;
     [SerializeField] protected Sprite bloonSprite;
-    
+
+    public delegate IEnumerator BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition);
+    public static event BaseBloonDelegate bloonDeath;
     void Start()
     {
         GetComponent<BloonMovement>().SetSpeed(speed);
@@ -26,22 +28,15 @@ public abstract class BaseBloon : MonoBehaviour
         health -= aDamage;
         if(health <= 0)
         {
-            if (childCount <= 0)
-            {
-                BloonSpawner._instance.ReturnObjectToPool(gameObject);
-            }
-            else//child count > 0
-            {
-                GameObject lNewBloon;
-                foreach(int aChild in child)
-                {
-                    lNewBloon = BloonSpawner._instance.GetBloon();
-                }
-                //TODO: Spawn child 
-                //Pass current position on the path
-                //Pass distance variable
-            }
+            //TODO: Bloon death animation
+            int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
+            bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position);
+            BloonSpawner._instance.ReturnObjectToPool(gameObject);           
         }
+    }
+    public void SetDistance (float aDistance)
+    {
+        distance = aDistance;
     }
     /// <summary>
     /// Initializes bloons default variables.
