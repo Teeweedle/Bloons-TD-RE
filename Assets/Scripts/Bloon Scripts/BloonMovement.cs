@@ -24,7 +24,7 @@ public class BloonMovement : MonoBehaviour
             }
         }else
         {
-            _endOfPath?.Invoke(gameObject);//tells BloonSpawner to deactive this bloon and add it to the pool
+            _endOfPath?.Invoke(this.gameObject);//tells BloonSpawner to deactive this bloon and add it to the pool
         }
     }
     private void GetNextTarget()

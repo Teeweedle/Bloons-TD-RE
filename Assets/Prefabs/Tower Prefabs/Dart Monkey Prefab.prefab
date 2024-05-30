@@ -182,6 +182,7 @@ MonoBehaviour:
   _outlineShader: {fileID: -876546973899608171, guid: f72971dc2a784ac4d8c26f941a4c93df, type: 3}
   _defaultShader: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _towerSpriteRenderer: {fileID: 720116977426024739}
+  _projectile: {fileID: 120590623112371894, guid: f1135add74b07e245a79b4303e30f685, type: 3}
   _towerData:
     name: 
     description: 

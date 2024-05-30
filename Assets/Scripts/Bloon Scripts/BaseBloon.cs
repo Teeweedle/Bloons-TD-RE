@@ -16,6 +16,7 @@ public abstract class BaseBloon : MonoBehaviour
     private void Awake()
     {
         bloonSpriteRender = GetComponent<SpriteRenderer>();
+        //this.gameObject.AddComponent<BloonMovement>();
     }
     void Start()
     {
@@ -34,7 +35,7 @@ public abstract class BaseBloon : MonoBehaviour
             //TODO: Bloon death animation
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
             bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position, childType);
-            BloonSpawner._instance.ReturnObjectToPool(gameObject);           
+            BloonSpawner._instance.ReturnObjectToPool(this.gameObject);           
         }
     }
     public void SetDistance (float aDistance)

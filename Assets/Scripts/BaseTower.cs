@@ -7,6 +7,7 @@ public class BaseTower : MonoBehaviour
 {
     [SerializeField] private Material _outlineShader, _defaultShader;
     [SerializeField] private SpriteRenderer _towerSpriteRenderer;
+    [SerializeField] private GameObject _projectile;
     
     private bool _isPlaced, _isSelected;
 
@@ -68,7 +69,14 @@ public class BaseTower : MonoBehaviour
     }
     private void Fire(GameObject aTarget)
     {
+        Debug.Log("Firing");
         LookAtTarget(aTarget.transform);
+        GameObject lProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
+        Rigidbody2D rigidbody = lProjectile.GetComponent<Rigidbody2D>();
+        if (rigidbody != null)
+        {
+            rigidbody.velocity = this.transform.forward * 5f;
+        }
         Debug.DrawLine(transform.position, aTarget.transform.position);
     }
     /// <summary>

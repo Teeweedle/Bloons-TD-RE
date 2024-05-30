@@ -37,10 +37,11 @@ public class BloonFactory : MonoBehaviour
     /// <param name="aBloon">A game object</param>
     public void RemoveBloonScript(GameObject aBloon)
     {
-        var lCurrentBloon = aBloon.GetComponent<BaseBloon>();
-        if(lCurrentBloon != null)
+        //Debug.Log(aBloon.gameObject.name);
+        BaseBloon lCurrentBloonScript = aBloon.GetComponent<BaseBloon>();
+        if(lCurrentBloonScript != null)
         {
-            Destroy(lCurrentBloon);
+            DestroyImmediate(lCurrentBloonScript, true);
         }
     }
 }

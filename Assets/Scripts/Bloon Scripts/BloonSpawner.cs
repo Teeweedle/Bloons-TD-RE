@@ -94,9 +94,9 @@ public class BloonSpawner : MonoBehaviour
     /// <param name="aBloon"></param>
     public void ReturnObjectToPool(GameObject aBloon)
     {
-        _factory.RemoveBloonScript(_bloon);
-        aBloon.SetActive(false);
+        _factory.RemoveBloonScript(aBloon);
         _bloonPool.Enqueue(aBloon);
+        aBloon.SetActive(false);
     }
 
     public Sprite GetSpriteByName(string aSpriteName)
@@ -121,11 +121,7 @@ public class BloonSpawner : MonoBehaviour
         for(int i = 0; i < aNumBloons;  i++)
         {
             lBloon = GetBloon(aBloonType);
-            lBloon.transform.position = _bloonPath[0];
-            lBloon.transform.rotation = Quaternion.identity;
-            lBloon.GetComponent<BloonMovement>().SetPath(_bloonPath);
-            lBloon.GetComponent<BloonMovement>().SetPathPosition(0);
-            lBloon.GetComponent<BaseBloon>().SetDistance(0);
+            InitializeBloon(lBloon, _bloonPath[0], Quaternion.identity, 0f, 0);
             yield return new WaitForSeconds(aSpawnDelay);
         }
     }
@@ -143,12 +139,29 @@ public class BloonSpawner : MonoBehaviour
         for (int i = 0; i < aChildCount; i++)
         {
             lBloon = GetBloon(aBloonType);
-            lBloon.transform.position = aPosition;
-            lBloon.transform.rotation = Quaternion.identity;
-            lBloon.GetComponent<BloonMovement>().SetPathPosition(aPathPosition);
-            lBloon.GetComponent<BaseBloon>().SetDistance(aDistance);
+            InitializeBloon(lBloon, aPosition, Quaternion.identity, aDistance, aPathPosition);
             yield return new WaitForSeconds(0.1f);
         }
+    }
+    /// <summary>
+    /// Initializes a newly spawned bloon.
+    /// </summary>
+    /// <param name="aBloon">The Game Object</param>
+    /// <param name="aBloonPosition">Game world coords</param>
+    /// <param name="aRotation">Rotation of Game Object</param>
+    /// <param name="aDistance">How far along the Game Object is on the path</param>
+    /// <param name="aPathPosition">What node is the Game Object traveling too next</param>
+    private void InitializeBloon(GameObject aBloon, Vector3 aBloonPosition, Quaternion aRotation, float aDistance, int aPathPosition)
+    {
+        aBloon.transform.position = aBloonPosition;
+        aBloon.transform.rotation = aRotation;
+
+        var lBloonMovement = aBloon.GetComponent<BloonMovement>();
+        lBloonMovement.SetPath(_bloonPath);
+        lBloonMovement.SetPathPosition(aPathPosition);
+
+        var lBaseBloon = aBloon.GetComponent<BaseBloon>();
+        lBaseBloon.SetDistance(aDistance);
     }
     private void LoadSprites()
     {
