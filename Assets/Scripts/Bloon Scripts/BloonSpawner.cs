@@ -10,6 +10,7 @@ public class BloonSpawner : MonoBehaviour
     [SerializeField] private GameObject _bloon;
     [SerializeField] private Sprite[] _sprites;
     [SerializeField] private List<GameObject> _bloonScripts;
+    [SerializeField] private BloonFactory _factory;
     
     public static BloonSpawner _instance;
     private int _numBloons;
@@ -21,12 +22,12 @@ public class BloonSpawner : MonoBehaviour
     private void OnEnable()
     {
         BloonMovement._endOfPath += ReturnObjectToPool;
-        BaseBloon.bloonDeath += SpawnBloons;
+        BaseBloon.bloonDeath += SpawnChildren;
     }
     private void OnDisable()
     {
         BloonMovement._endOfPath -= ReturnObjectToPool;
-        BaseBloon.bloonDeath -= SpawnBloons;
+        BaseBloon.bloonDeath -= SpawnChildren;
     }
     private void Awake()
     {
@@ -72,25 +73,28 @@ public class BloonSpawner : MonoBehaviour
     /// Gets a bloon from a queue of already instantiated bloons, if there isn't one available it instantiates a new one.
     /// </summary>
     /// <returns>A Bloon prefab</returns>
-    public GameObject GetBloon()
+    public GameObject GetBloon(string aBloonType)
     {
+        GameObject lBloon;
         if(_bloonPool.Count > 0)
         {
-            GameObject lBloon = _bloonPool.Dequeue();
-            lBloon.SetActive(true);
-            return lBloon;
+            lBloon = _bloonPool.Dequeue();
+            lBloon.SetActive(true);            
         }
         else
         {
-            return Instantiate(_bloon);
+            lBloon = Instantiate(_bloon);
         }
+        _factory.AssignBloonScirpt(lBloon, aBloonType);
+        return lBloon;
     }
     /// <summary>
-    /// Returns a bloon to the pool and deactivates it.
+    /// Returns a bloon to the pool, deactivates it, and removes behavior script.
     /// </summary>
     /// <param name="aBloon"></param>
     public void ReturnObjectToPool(GameObject aBloon)
     {
+        _factory.RemoveBloonScript(_bloon);
         aBloon.SetActive(false);
         _bloonPool.Enqueue(aBloon);
     }
@@ -111,12 +115,12 @@ public class BloonSpawner : MonoBehaviour
     /// Spawn bloons at the start of the path
     /// </summary>
     /// <returns></returns>
-    private IEnumerator SpawnBloons(int aNumBloons, float aSpawnDelay)
+    private IEnumerator SpawnBloons(int aNumBloons, float aSpawnDelay, string aBloonType)
     {
         GameObject lBloon;
         for(int i = 0; i < aNumBloons;  i++)
         {
-            lBloon = GetBloon();
+            lBloon = GetBloon(aBloonType);
             lBloon.transform.position = _bloonPath[0];
             lBloon.transform.rotation = Quaternion.identity;
             lBloon.GetComponent<BloonMovement>().SetPath(_bloonPath);
@@ -133,12 +137,12 @@ public class BloonSpawner : MonoBehaviour
     /// <param name="aPathPosition">What position on that path is the bloon</param>
     /// <param name="aPosition">Game world position</param>
     /// <returns></returns>
-    public IEnumerator SpawnBloons(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition)
+    public IEnumerator SpawnChildren(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType)
     {
         GameObject lBloon;
         for (int i = 0; i < aChildCount; i++)
         {
-            lBloon = GetBloon();
+            lBloon = GetBloon(aBloonType);
             lBloon.transform.position = aPosition;
             lBloon.transform.rotation = Quaternion.identity;
             lBloon.GetComponent<BloonMovement>().SetPathPosition(aPathPosition);
@@ -157,7 +161,8 @@ public class BloonSpawner : MonoBehaviour
     public void StartRound()
     {
         //TODO: Toggle button to increase game speed while round is active (not just bloons).
-        StartCoroutine(SpawnBloons(_numBloons, _spawnDelay));
+        //TODO: Change to get info passed from round info
+        StartCoroutine(SpawnBloons(_numBloons, _spawnDelay, "Blue Bloon"));
     }
     public void SetSpawnInfo(int aNumOfBloons, float aSpawnDelay)
     {

@@ -7,16 +7,19 @@ public abstract class BaseBloon : MonoBehaviour
     [SerializeField] protected float distance;
     [SerializeField] protected bool isStrong, isCamo, isRegrow, isFortified;
     [SerializeField] protected float speed;
-    [SerializeField] protected string child;
+    [SerializeField] protected string childType;
     [SerializeField] protected int childCount, health, cash;
-    [SerializeField] protected Sprite bloonSprite;
+    [SerializeField] protected SpriteRenderer bloonSpriteRender;
 
-    public delegate IEnumerator BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition);
+    public delegate IEnumerator BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType);
     public static event BaseBloonDelegate bloonDeath;
+    private void Awake()
+    {
+        bloonSpriteRender = GetComponent<SpriteRenderer>();
+    }
     void Start()
     {
         GetComponent<BloonMovement>().SetSpeed(speed);
-        bloonSprite = GetComponent<SpriteRenderer>().sprite;
         distance = 0.0f;
     }
     void Update()
@@ -30,7 +33,7 @@ public abstract class BaseBloon : MonoBehaviour
         {
             //TODO: Bloon death animation
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
-            bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position);
+            bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position, childType);
             BloonSpawner._instance.ReturnObjectToPool(gameObject);           
         }
     }

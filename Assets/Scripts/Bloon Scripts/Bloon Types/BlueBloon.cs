@@ -16,13 +16,13 @@ public class BlueBloon : BaseBloon
         health = 1;
         cash = 2;
         childCount = 1;
-        child = REDBLOON;
+        childType = REDBLOON;
         SetSprite();
     }
     public override void SetSprite()
     {
         FindSprite();
-        bloonSprite = blueBloonSprite;
+        bloonSpriteRender.sprite = blueBloonSprite;
     }
     private void FindSprite()
     {

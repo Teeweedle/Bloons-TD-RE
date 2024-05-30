@@ -14,13 +14,13 @@ public class RedBloon : BaseBloon
         health = 1;
         cash = 1;
         childCount = 0;
-        child = null;
+        childType = null;
         SetSprite();
     }
     public override void SetSprite()
     {
         FindSprite();
-        bloonSprite = redBloonSprite;
+        bloonSpriteRender.sprite = redBloonSprite;
     }
     private void FindSprite()
     {
