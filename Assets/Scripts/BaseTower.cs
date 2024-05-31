@@ -69,9 +69,9 @@ public class BaseTower : MonoBehaviour
     }
     private void Fire(GameObject aTarget)
     {
-        LookAtTarget(aTarget.transform);
         if (Time.time > _nextFireTime)
         {
+            LookAtTarget(aTarget.transform);
             GameObject lProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
             BaseProjectile lProjectileScript = lProjectile.GetComponent<BaseProjectile>();
             if (lProjectileScript != null)

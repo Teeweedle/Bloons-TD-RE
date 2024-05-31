@@ -18,6 +18,7 @@ public class BloonSpawner : MonoBehaviour
     private Dictionary<string, Sprite> _spritesDictionary;
     private Dictionary<string, GameObject> _bloonScriptDictionary = new Dictionary<string, GameObject>();
     private List<Vector2> _bloonPath;
+    private float _immunityDuration = 0.5f;
     [SerializeField] private Queue<GameObject> _bloonPool = new Queue<GameObject>();
     private void OnEnable()
     {
@@ -121,13 +122,15 @@ public class BloonSpawner : MonoBehaviour
         for(int i = 0; i < aNumBloons;  i++)
         {
             lBloon = GetBloon(aBloonType);
+            Debug.Log($"Parent {i} instance ID {lBloon.GetInstanceID()}");
             InitializeBloon(lBloon, _bloonPath[0], Quaternion.identity, 0f, 0);
             yield return new WaitForSeconds(aSpawnDelay);
         }
     }
-    private void SpawnChildrenHandler(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType)
+    private void SpawnChildrenHandler(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType,
+        int aProjectileID)
     {
-        StartCoroutine(SpawnChildren(aChildCount, aDistance, aPathPosition, aPosition, aBloonType));
+        StartCoroutine(SpawnChildren(aChildCount, aDistance, aPathPosition, aPosition, aBloonType, aProjectileID));
     }
     /// <summary>
     /// Spawns children bloons
@@ -137,14 +140,16 @@ public class BloonSpawner : MonoBehaviour
     /// <param name="aPathPosition">What position on that path is the bloon</param>
     /// <param name="aPosition">Game world position</param>
     /// <returns></returns>
-    public IEnumerator SpawnChildren(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType)
+    public IEnumerator SpawnChildren(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType, 
+        int aProjectileID)
     {
-        Debug.Log($"Spawning {aChildCount}");
         GameObject lBloon;
         for (int i = 0; i < aChildCount; i++)
         {
             lBloon = GetBloon(aBloonType);
+            Debug.Log($"Child instance ID {lBloon.GetInstanceID()}");
             InitializeBloon(lBloon, aPosition, Quaternion.identity, aDistance, aPathPosition);
+            lBloon.GetComponent<BaseBloon>().GrantImmunity(aProjectileID, _immunityDuration);
             yield return new WaitForSeconds(0.1f);
         }
     }

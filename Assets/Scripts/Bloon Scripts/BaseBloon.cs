@@ -11,12 +11,13 @@ public abstract class BaseBloon : MonoBehaviour
     [SerializeField] protected int childCount, health, cash;
     [SerializeField] protected SpriteRenderer bloonSpriteRender;
 
-    public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType);
+    private int lastProjectileHitID;
+    private float immunityDuration;
+    public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType, int aProjectileID);
     public static event BaseBloonDelegate bloonDeath;
     private void Awake()
     {
         bloonSpriteRender = GetComponent<SpriteRenderer>();
-        //this.gameObject.AddComponent<BloonMovement>();
     }
     void Start()
     {
@@ -26,19 +27,38 @@ public abstract class BaseBloon : MonoBehaviour
     void Update()
     {
         distance += Time.deltaTime;
+        if(immunityDuration > 0.0f)
+        {
+            immunityDuration -= Time.deltaTime;
+        }
     }
-    public void TakeDamage(int aDamage)
+    public bool TakeDamage(int aDamage, int aProjectileID)
     {
-        Debug.Log($"{aDamage} bloon taken");
+        if(lastProjectileHitID == aProjectileID && immunityDuration > 0f)
+        {
+            //providing immunity
+            return false;
+        }
         health -= aDamage;
         if(health <= 0)
         {
-            Debug.Log("Bloon Dead");
             //TODO: Bloon death animation
+            //TODO: Pop sound
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
-            bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position, childType);
+            bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position, childType, aProjectileID);
             BloonSpawner._instance.ReturnObjectToPool(this.gameObject);           
         }
+        return true;
+    }
+    /// <summary>
+    /// Grants immunity to this bloon from the last projectile that hit it temporarily
+    /// </summary>
+    /// <param name="aProjectileID">ID of the projectile that hit it</param>
+    /// <param name="aImmunityDuration">How long am I immune for</param>
+    public void GrantImmunity(int aProjectileID, float aImmunityDuration)
+    {
+        lastProjectileHitID = aProjectileID;
+        immunityDuration = aImmunityDuration;
     }
     /// <summary>
     /// Sets distance, how far along the path they are
