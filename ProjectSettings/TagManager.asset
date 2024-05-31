@@ -9,6 +9,7 @@ TagManager:
   - Upgrade Panel
   - Bloon
   - Tower Range
+  - Projectile
   layers:
   - Default
   - TransparentFX

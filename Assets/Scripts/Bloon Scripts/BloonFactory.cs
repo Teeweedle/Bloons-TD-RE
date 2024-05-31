@@ -41,7 +41,7 @@ public class BloonFactory : MonoBehaviour
         BaseBloon lCurrentBloonScript = aBloon.GetComponent<BaseBloon>();
         if(lCurrentBloonScript != null)
         {
-            DestroyImmediate(lCurrentBloonScript, true);
+            Destroy(lCurrentBloonScript);
         }
     }
 }

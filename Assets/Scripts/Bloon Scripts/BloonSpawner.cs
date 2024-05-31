@@ -22,12 +22,12 @@ public class BloonSpawner : MonoBehaviour
     private void OnEnable()
     {
         BloonMovement._endOfPath += ReturnObjectToPool;
-        BaseBloon.bloonDeath += SpawnChildren;
+        BaseBloon.bloonDeath += SpawnChildrenHandler;
     }
     private void OnDisable()
     {
         BloonMovement._endOfPath -= ReturnObjectToPool;
-        BaseBloon.bloonDeath -= SpawnChildren;
+        BaseBloon.bloonDeath -= SpawnChildrenHandler;
     }
     private void Awake()
     {
@@ -125,6 +125,10 @@ public class BloonSpawner : MonoBehaviour
             yield return new WaitForSeconds(aSpawnDelay);
         }
     }
+    private void SpawnChildrenHandler(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType)
+    {
+        StartCoroutine(SpawnChildren(aChildCount, aDistance, aPathPosition, aPosition, aBloonType));
+    }
     /// <summary>
     /// Spawns children bloons
     /// </summary>
@@ -135,6 +139,7 @@ public class BloonSpawner : MonoBehaviour
     /// <returns></returns>
     public IEnumerator SpawnChildren(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType)
     {
+        Debug.Log($"Spawning {aChildCount}");
         GameObject lBloon;
         for (int i = 0; i < aChildCount; i++)
         {

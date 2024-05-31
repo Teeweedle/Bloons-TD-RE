@@ -72,18 +72,17 @@ public class BaseTower : MonoBehaviour
         LookAtTarget(aTarget.transform);
         if (Time.time > _nextFireTime)
         {
-            Debug.Log($"Firing @ {Time.time}");
             GameObject lProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
             BaseProjectile lProjectileScript = lProjectile.GetComponent<BaseProjectile>();
             if (lProjectileScript != null)
             {
                 lProjectileScript.speed = 8f;//default for dart monkey
                 lProjectileScript.health = _towerData.pierce;
+                lProjectileScript.damage = _towerData.damage;
                 lProjectileScript.lifeSpan = 0.75f;//default for dart monkey
                 lProjectileScript.SetDirection(-transform.up);
             }
             _nextFireTime = Time.time + _towerData.attackSpeed;
-            Debug.DrawLine(transform.position, aTarget.transform.position);
         }        
     }
     /// <summary>

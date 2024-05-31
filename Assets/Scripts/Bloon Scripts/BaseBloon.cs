@@ -11,7 +11,7 @@ public abstract class BaseBloon : MonoBehaviour
     [SerializeField] protected int childCount, health, cash;
     [SerializeField] protected SpriteRenderer bloonSpriteRender;
 
-    public delegate IEnumerator BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType);
+    public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType);
     public static event BaseBloonDelegate bloonDeath;
     private void Awake()
     {
@@ -29,9 +29,11 @@ public abstract class BaseBloon : MonoBehaviour
     }
     public void TakeDamage(int aDamage)
     {
+        Debug.Log($"{aDamage} bloon taken");
         health -= aDamage;
         if(health <= 0)
         {
+            Debug.Log("Bloon Dead");
             //TODO: Bloon death animation
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
             bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position, childType);
