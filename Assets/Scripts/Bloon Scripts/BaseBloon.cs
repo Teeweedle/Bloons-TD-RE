@@ -38,6 +38,10 @@ public abstract class BaseBloon : MonoBehaviour
             BloonSpawner._instance.ReturnObjectToPool(this.gameObject);           
         }
     }
+    /// <summary>
+    /// Sets distance, how far along the path they are
+    /// </summary>
+    /// <param name="aDistance"></param>
     public void SetDistance (float aDistance)
     {
         distance = aDistance;

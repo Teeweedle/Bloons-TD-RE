@@ -8,20 +8,19 @@ public class BaseTower : MonoBehaviour
     [SerializeField] private Material _outlineShader, _defaultShader;
     [SerializeField] private SpriteRenderer _towerSpriteRenderer;
     [SerializeField] private GameObject _projectile;
-    
+
     private bool _isPlaced, _isSelected;
 
     [SerializeField] private TowerDataObject _towerData = new();
     private string _targetPriority;
 
-    [SerializeField] private SortedSet<BaseBloon> _targetSortedList = new SortedSet<BaseBloon>(new DistanceComparer());
-
+    private SortedSet<BaseBloon> _targetSortedList = new SortedSet<BaseBloon>(new DistanceComparer());
     private GameObject _currentTarget;
     private const float _angleOffset = 90f;
-  
+    private float _nextFireTime;
+
     private Dictionary<string, Action> _getTargetAction;
     private Action _cachedTargetAction;
-
 
     public delegate void TowerSelected(GameObject aTowerSelected);
     public static event TowerSelected _onTowerSelected;
@@ -39,6 +38,7 @@ public class BaseTower : MonoBehaviour
     }
     private void Start()
     {
+        _nextFireTime = 0f;
         _isPlaced = false;
         _getTargetAction = new Dictionary<string, Action> {
             { "First", () => _currentTarget = GetFirstTarget() },
@@ -69,15 +69,22 @@ public class BaseTower : MonoBehaviour
     }
     private void Fire(GameObject aTarget)
     {
-        Debug.Log("Firing");
         LookAtTarget(aTarget.transform);
-        GameObject lProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
-        Rigidbody2D rigidbody = lProjectile.GetComponent<Rigidbody2D>();
-        if (rigidbody != null)
+        if (Time.time > _nextFireTime)
         {
-            rigidbody.velocity = this.transform.forward * 5f;
-        }
-        Debug.DrawLine(transform.position, aTarget.transform.position);
+            Debug.Log($"Firing @ {Time.time}");
+            GameObject lProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
+            BaseProjectile lProjectileScript = lProjectile.GetComponent<BaseProjectile>();
+            if (lProjectileScript != null)
+            {
+                lProjectileScript.speed = 8f;//default for dart monkey
+                lProjectileScript.health = _towerData.pierce;
+                lProjectileScript.lifeSpan = 0.75f;//default for dart monkey
+                lProjectileScript.SetDirection(-transform.up);
+            }
+            _nextFireTime = Time.time + _towerData.attackSpeed;
+            Debug.DrawLine(transform.position, aTarget.transform.position);
+        }        
     }
     /// <summary>
     /// Rotates the current gameObject to "look at" the targeted bloon.
