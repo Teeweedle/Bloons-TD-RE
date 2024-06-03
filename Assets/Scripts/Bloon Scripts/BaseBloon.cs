@@ -8,7 +8,7 @@ public abstract class BaseBloon : MonoBehaviour
     [SerializeField] protected bool isStrong, isCamo, isRegrow, isFortified;
     [SerializeField] protected float speed;
     [SerializeField] protected string childType;
-    [SerializeField] protected int childCount, health, cash;
+    [SerializeField] protected int childCount, health, cash, xp;
     [SerializeField] protected SpriteRenderer bloonSpriteRender;
 
     private int lastProjectileHitID;
@@ -32,7 +32,7 @@ public abstract class BaseBloon : MonoBehaviour
             immunityDuration -= Time.deltaTime;
         }
     }
-    public bool TakeDamage(int aDamage, int aProjectileID)
+    public bool TakeDamage(int aDamage, int aProjectileID, BaseTower aParentTower)
     {
         if(lastProjectileHitID == aProjectileID && immunityDuration > 0f)
         {
@@ -40,6 +40,7 @@ public abstract class BaseBloon : MonoBehaviour
             return false;
         }
         health -= aDamage;
+        aParentTower.GiveXP(xp);
         if(health <= 0)
         {
             //TODO: Bloon death animation

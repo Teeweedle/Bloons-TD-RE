@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,12 +29,14 @@ public class UpgradePanel : MonoBehaviour
         GameManager._updatePanel += InitUpgradePanel;
         UpgradeButton.UpdatePanel += UpdateImage;
         UpgradeButton.SetUpgradeLimit += SetUpgradeLimit;
+        BaseTower._onUpdateTowerXP += UpdateTowerXP;
     }
     private void OnDisable()
     {
         GameManager._updatePanel -= InitUpgradePanel;
         UpgradeButton.UpdatePanel -= UpdateImage;
         UpgradeButton.SetUpgradeLimit -= SetUpgradeLimit;
+        BaseTower._onUpdateTowerXP -= UpdateTowerXP;
     }
     void Start()
     {
@@ -252,5 +255,13 @@ public class UpgradePanel : MonoBehaviour
                 _upgrade[i].MaxUpgradeLevelProp = 2;
             }
         }
+    }
+    /// <summary>
+    /// Updates the towers collected xp during the round, used to upgrade the tower.
+    /// </summary>
+    /// <param name="aTowerXP">XP gained from popping bloons.</param>
+    private void UpdateTowerXP(int aTowerXP)
+    {
+        _towerXP.text = $"{aTowerXP}";
     }
 }

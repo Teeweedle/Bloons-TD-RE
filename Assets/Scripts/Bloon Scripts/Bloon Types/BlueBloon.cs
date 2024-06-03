@@ -15,6 +15,7 @@ public class BlueBloon : BaseBloon
         speed = 1.4f;
         health = 1;
         cash = 2;
+        xp = 1;
         childCount = 1;
         childType = REDBLOON;
         SetSprite();

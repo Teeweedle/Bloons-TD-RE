@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     /// <param name="aHealthChange">Amnount to change the player health</param>
     private void UpdatePlayerHP(int aHealthChange)
     {
-        _playerHP += aHealthChange;
+        _playerHP -= aHealthChange;
         UpdatePlayerHPText();
         if (_playerHP <= 0)
         {

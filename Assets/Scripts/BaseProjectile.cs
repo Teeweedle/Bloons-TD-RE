@@ -8,6 +8,7 @@ public class BaseProjectile : MonoBehaviour
     public int damage { get; set; }
     public int health { get; set; }
     public float lifeSpan { get; set; }
+    public  BaseTower parentTower { get; set; }
 
     private Vector3 direction;
     private const string BLOONTAG = "Bloon";
@@ -35,7 +36,7 @@ public class BaseProjectile : MonoBehaviour
         if (collision.CompareTag(BLOONTAG))
         {
             //if the bloon takes dmg (might have immunity if it was just destroyed
-            if(collision.gameObject.GetComponent<BaseBloon>().TakeDamage(damage, projectileID))
+            if(collision.gameObject.GetComponent<BaseBloon>().TakeDamage(damage, projectileID, parentTower))
             {
                 TakeDamage();
             }            

@@ -28,6 +28,9 @@ public class BaseTower : MonoBehaviour
     public delegate void UpdatePrice(int aPrice);
     public static event UpdatePrice _onUpdatePrice;
 
+    public delegate void UpdateTowerXP(int aTowerXP);
+    public static event UpdateTowerXP _onUpdateTowerXP;
+
     private void OnEnable()
     {
         ChangeTarget.setTargetPriority += SetTargetPriority;
@@ -80,6 +83,7 @@ public class BaseTower : MonoBehaviour
                 lProjectileScript.health = _towerData.pierce;
                 lProjectileScript.damage = _towerData.damage;
                 lProjectileScript.lifeSpan = 0.75f;//default for dart monkey
+                lProjectileScript.parentTower = this;
                 lProjectileScript.SetDirection(-transform.up);
             }
             _nextFireTime = Time.time + _towerData.attackSpeed;
@@ -220,5 +224,17 @@ public class BaseTower : MonoBehaviour
     private void SetDefaultTargetPriority()
     {
         SetTargetPriority("First");
+    }
+    /// <summary>
+    /// Stores XP gained through popping bloons in the TowerData Object.
+    /// </summary>
+    /// <param name="someXP">XP gained for popping a respective bloon.</param>
+    public void GiveXP(int someXP)
+    {
+        _towerData.xp += someXP;
+        if(_isSelected)
+        {
+            _onUpdateTowerXP?.Invoke(_towerData.xp);
+        }
     }
 }

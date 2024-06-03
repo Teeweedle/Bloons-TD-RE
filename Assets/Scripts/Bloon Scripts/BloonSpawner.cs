@@ -122,7 +122,7 @@ public class BloonSpawner : MonoBehaviour
         for(int i = 0; i < aNumBloons;  i++)
         {
             lBloon = GetBloon(aBloonType);
-            Debug.Log($"Parent {i} instance ID {lBloon.GetInstanceID()}");
+            //Debug.Log($"Parent {i} instance ID {lBloon.GetInstanceID()}");
             InitializeBloon(lBloon, _bloonPath[0], Quaternion.identity, 0f, 0);
             yield return new WaitForSeconds(aSpawnDelay);
         }
@@ -147,7 +147,7 @@ public class BloonSpawner : MonoBehaviour
         for (int i = 0; i < aChildCount; i++)
         {
             lBloon = GetBloon(aBloonType);
-            Debug.Log($"Child instance ID {lBloon.GetInstanceID()}");
+            //Debug.Log($"Child instance ID {lBloon.GetInstanceID()}");
             InitializeBloon(lBloon, aPosition, Quaternion.identity, aDistance, aPathPosition);
             lBloon.GetComponent<BaseBloon>().GrantImmunity(aProjectileID, _immunityDuration);
             yield return new WaitForSeconds(0.1f);

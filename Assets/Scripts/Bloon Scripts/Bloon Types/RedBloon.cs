@@ -13,6 +13,7 @@ public class RedBloon : BaseBloon
         speed = 1.0f;
         health = 1;
         cash = 1;
+        xp = 1;
         childCount = 0;
         childType = null;
         SetSprite();
