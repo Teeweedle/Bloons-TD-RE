@@ -23,12 +23,12 @@ public class BloonSpawner : MonoBehaviour
     private void OnEnable()
     {
         BloonMovement._endOfPath += ReturnObjectToPool;
-        BaseBloon.bloonDeath += SpawnChildrenHandler;
+        BaseBloon.spawnChildren += SpawnChildrenHandler;
     }
     private void OnDisable()
     {
         BloonMovement._endOfPath -= ReturnObjectToPool;
-        BaseBloon.bloonDeath -= SpawnChildrenHandler;
+        BaseBloon.spawnChildren -= SpawnChildrenHandler;
     }
     private void Awake()
     {

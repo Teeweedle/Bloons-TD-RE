@@ -16,12 +16,14 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         BaseTower._onTowerSelected += TowerSelected;
+        BaseBloon.bloonRewards += UpdatePlayerMoney;
         UpgradePanel._onCloseWindow += UnselectTower;
         UpgradePanel._changeSprite += ChangeTowerSprite;
     }
     private void OnDisable()
     {
         BaseTower._onTowerSelected -= TowerSelected;
+        BaseBloon.bloonRewards -= UpdatePlayerMoney;
         UpgradePanel._onCloseWindow -= UnselectTower;
         UpgradePanel._changeSprite -= ChangeTowerSprite;
     }

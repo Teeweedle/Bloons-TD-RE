@@ -29,7 +29,7 @@ public class BaseTower : MonoBehaviour
     public static event UpdatePrice _onUpdatePrice;
 
     public delegate void UpdateTowerXP(int aTowerXP);
-    public static event UpdateTowerXP _onUpdateTowerXP;
+    public static event UpdateTowerXP _onUpdateBloonsPopped;
 
     private void OnEnable()
     {
@@ -228,13 +228,13 @@ public class BaseTower : MonoBehaviour
     /// <summary>
     /// Stores XP gained through popping bloons in the TowerData Object.
     /// </summary>
-    /// <param name="someXP">XP gained for popping a respective bloon.</param>
-    public void GiveXP(int someXP)
+    /// <param name="aNumBloonPopped">XP gained for popping a respective bloon.</param>
+    public void NumBloonsPopped(int aNumBloonPopped)
     {
-        _towerData.xp += someXP;
+        _towerData.numBloonsPopped += aNumBloonPopped;
         if(_isSelected)
         {
-            _onUpdateTowerXP?.Invoke(_towerData.xp);
+            _onUpdateBloonsPopped?.Invoke(_towerData.numBloonsPopped);
         }
     }
 }

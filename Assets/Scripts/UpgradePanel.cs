@@ -7,7 +7,7 @@ public class UpgradePanel : MonoBehaviour
 {
     [SerializeField] private Image _towerImg;
     [SerializeField] private TextMeshProUGUI _towerName;
-    [SerializeField] private TextMeshProUGUI _towerXP, _sellPrice;
+    [SerializeField] private TextMeshProUGUI _numBloonsPopped, _sellPrice;
     [SerializeField] private UpgradeButton[] _upgrade = new UpgradeButton[3];
     [SerializeField] private Image[] _pathClosed = new Image[3];
 
@@ -29,14 +29,14 @@ public class UpgradePanel : MonoBehaviour
         GameManager._updatePanel += InitUpgradePanel;
         UpgradeButton.UpdatePanel += UpdateImage;
         UpgradeButton.SetUpgradeLimit += SetUpgradeLimit;
-        BaseTower._onUpdateTowerXP += UpdateTowerXP;
+        BaseTower._onUpdateBloonsPopped += UpdateTowerNumBloonsPopped;
     }
     private void OnDisable()
     {
         GameManager._updatePanel -= InitUpgradePanel;
         UpgradeButton.UpdatePanel -= UpdateImage;
         UpgradeButton.SetUpgradeLimit -= SetUpgradeLimit;
-        BaseTower._onUpdateTowerXP -= UpdateTowerXP;
+        BaseTower._onUpdateBloonsPopped -= UpdateTowerNumBloonsPopped;
     }
     void Start()
     {
@@ -60,7 +60,7 @@ public class UpgradePanel : MonoBehaviour
     {
         _currentTower = aSelectedTower;
         _towerName.text = aTower.name;
-        _towerXP.text = aTower.xp.ToString();
+        _numBloonsPopped.text = $"{aTower.numBloonsPopped}";
         _sellPrice.text = ($"${GetSellPrice(aTower.cost)}");//TODO: Update to scale with difficulty
         SetTowerImage(aTower);
 
@@ -259,9 +259,9 @@ public class UpgradePanel : MonoBehaviour
     /// <summary>
     /// Updates the towers collected xp during the round, used to upgrade the tower.
     /// </summary>
-    /// <param name="aTowerXP">XP gained from popping bloons.</param>
-    private void UpdateTowerXP(int aTowerXP)
+    /// <param name="aNumBloonsPopped">XP gained from popping bloons.</param>
+    private void UpdateTowerNumBloonsPopped(int aNumBloonsPopped)
     {
-        _towerXP.text = $"{aTowerXP}";
+        _numBloonsPopped.text = $"{aNumBloonsPopped}";
     }
 }

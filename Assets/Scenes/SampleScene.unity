@@ -2892,7 +2892,7 @@ GameObject:
   - component: {fileID: 273852943}
   - component: {fileID: 273852942}
   m_Layer: 5
-  m_Name: XP Gained Icon
+  m_Name: Num Bloons Popped
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7802,7 +7802,7 @@ GameObject:
   - component: {fileID: 859676692}
   - component: {fileID: 859676691}
   m_Layer: 5
-  m_Name: Amount of XP
+  m_Name: Number of Bloons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10129,7 +10129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _towerImg: {fileID: 2103665877}
   _towerName: {fileID: 1011509528}
-  _towerXP: {fileID: 859676691}
+  _numBloonsPopped: {fileID: 859676691}
   _sellPrice: {fileID: 709065876}
   _upgrade:
   - {fileID: 1721583532}

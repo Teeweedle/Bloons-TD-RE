@@ -4,7 +4,7 @@ using System;
 public class TowerDataObject
 {
     public string name, description, upgradeLevel;
-    public int damage, pierce, range, cost, xp;
+    public int damage, pierce, range, cost, numBloonsPopped;
     public float attackSpeed;
     public bool hasCamoDetection;
     public int[] upgradeLevelArray = new int[3];

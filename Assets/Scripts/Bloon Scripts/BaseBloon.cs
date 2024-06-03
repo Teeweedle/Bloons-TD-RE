@@ -14,7 +14,10 @@ public abstract class BaseBloon : MonoBehaviour
     private int lastProjectileHitID;
     private float immunityDuration;
     public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType, int aProjectileID);
-    public static event BaseBloonDelegate bloonDeath;
+    public static event BaseBloonDelegate spawnChildren;
+
+    public delegate void BaseBloonDeath(int aCash);
+    public static event BaseBloonDeath bloonRewards;
     private void Awake()
     {
         bloonSpriteRender = GetComponent<SpriteRenderer>();
@@ -40,13 +43,15 @@ public abstract class BaseBloon : MonoBehaviour
             return false;
         }
         health -= aDamage;
-        aParentTower.GiveXP(xp);
-        if(health <= 0)
+        aParentTower.NumBloonsPopped(xp);
+        bloonRewards?.Invoke(cash);
+        if (health <= 0)
         {
             //TODO: Bloon death animation
             //TODO: Pop sound
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
-            bloonDeath?.Invoke(childCount, distance, lPathPosition, transform.position, childType, aProjectileID);
+            //tells bloon spawner to check for children to spawn
+            spawnChildren?.Invoke(childCount, distance, lPathPosition, transform.position, childType, aProjectileID);
             BloonSpawner._instance.ReturnObjectToPool(this.gameObject);           
         }
         return true;
