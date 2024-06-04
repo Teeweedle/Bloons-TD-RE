@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         BaseBloon.bloonRewards -= UpdatePlayerMoney;
         UpgradePanel._onCloseWindow -= UnselectTower;
         UpgradePanel._changeSprite -= ChangeTowerSprite;
-    }
+    }    
     private void Start()
     {
         _playerMoney = 100;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,7 +12,12 @@ public class BloonSpawner : MonoBehaviour
     [SerializeField] private Sprite[] _sprites;
     [SerializeField] private List<GameObject> _bloonScripts;
     [SerializeField] private BloonFactory _factory;
-    
+
+    // TEST INFO
+    public TextMeshProUGUI _time;
+    private bool _roundStarted = false;
+    // TEST INFO
+
     public static BloonSpawner _instance;
     private int _numBloons;
     private float _spawnDelay;
@@ -29,6 +35,11 @@ public class BloonSpawner : MonoBehaviour
     {
         BloonMovement._endOfPath -= ReturnObjectToPool;
         BaseBloon.spawnChildren -= SpawnChildrenHandler;
+    }
+    private void Update()
+    {
+        if (_roundStarted)
+            _time.text = $"{Time.time}";
     }
     private void Awake()
     {
@@ -186,6 +197,7 @@ public class BloonSpawner : MonoBehaviour
         //TODO: Toggle button to increase game speed while round is active (not just bloons).
         //TODO: Change to get info passed from round info
         StartCoroutine(SpawnBloons(_numBloons, _spawnDelay, "Blue Bloon"));
+        _roundStarted = true;
     }
     public void SetSpawnInfo(int aNumOfBloons, float aSpawnDelay)
     {

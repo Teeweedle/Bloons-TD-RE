@@ -43,12 +43,12 @@ public abstract class BaseBloon : MonoBehaviour
             return false;
         }
         health -= aDamage;
-        aParentTower.NumBloonsPopped(xp);
-        bloonRewards?.Invoke(cash);
         if (health <= 0)
         {
             //TODO: Bloon death animation
             //TODO: Pop sound
+            aParentTower.NumBloonsPopped(xp);
+            bloonRewards?.Invoke(cash);//updates UI with cash gain in GameManager
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
             //tells bloon spawner to check for children to spawn
             spawnChildren?.Invoke(childCount, distance, lPathPosition, transform.position, childType, aProjectileID);
