@@ -11,6 +11,17 @@ public abstract class BaseBloon : MonoBehaviour
     [SerializeField] protected int childCount, health, cash, xp;
     [SerializeField] protected SpriteRenderer bloonSpriteRender;
 
+    public float mySpeed {
+        get => speed;
+        set { 
+            if(value != speed)
+            {
+                speed = value;
+                GetComponent<BloonMovement>().SetSpeed(speed);
+            }
+        }
+    }
+
     private int lastProjectileHitID;
     private float immunityDuration;
     public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType, int aProjectileID);

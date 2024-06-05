@@ -12,7 +12,7 @@ public class BlueBloon : BaseBloon
     }
     public override void InitializeBloon()
     {
-        speed = 1.4f;
+        mySpeed = 1.4f;
         health = 1;
         cash = 1;
         xp = 1;

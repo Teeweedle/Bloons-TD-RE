@@ -4,13 +4,13 @@ public class RedBloon : BaseBloon
 {
     private Sprite redBloonSprite;
     private const string REDBLOON = "Red Bloon";
-    void Start()
+    private void Start()
     {
         InitializeBloon();
     }
     public override void InitializeBloon()
     {
-        speed = 1.0f;
+        mySpeed = 1.0f;
         health = 1;
         cash = 1;
         xp = 1;

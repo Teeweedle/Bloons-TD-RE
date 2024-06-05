@@ -4,13 +4,14 @@ using UnityEngine;
 public class BloonMovement : MonoBehaviour
 {
     [SerializeField] private List<Vector2> _path;
-    private float _speed = 1.5f;//TODO: Change to get speed at run time based on the type of bloon
+    private float _speed;//TODO: Change to get speed at run time based on the type of bloon
     private int _currentPathPosition;
 
     public delegate void BloonMovementDelegate(GameObject aGameObject);
     public static event BloonMovementDelegate _endOfPath;
     private void Start()
     {
+        //_speed = GetComponent<BaseBloon>().mySpeed;
         _currentPathPosition = 0;
     }
     void Update()
@@ -42,7 +43,11 @@ public class BloonMovement : MonoBehaviour
     }
     public void SetSpeed(float aSpeedModifier)
     {
-        _speed *= aSpeedModifier;
+        _speed = aSpeedModifier;
+    }
+    public void ModifySpeed(float aModifier)
+    {
+        _speed *= aModifier;
     }
     public void SetPathPosition(int aCurrentPosition)
     {

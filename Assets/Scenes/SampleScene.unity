@@ -9936,6 +9936,8 @@ MonoBehaviour:
   - {fileID: 3272092709094154539, guid: 9ffe3871a96dcf445a568daf8fe765a8, type: 3}
   - {fileID: 3932854047539918003, guid: d5b7680bfd9a4024e98e83b1f8a89a25, type: 3}
   _factory: {fileID: 1034477603}
+  _waveManager: {fileID: 1185092989}
+  _setRoundNumber: 3
   _time: {fileID: 321658520}
 --- !u!4 &1034477602
 Transform:

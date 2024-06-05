@@ -2,7 +2,7 @@
   "rounds": {
     "1": [  
       {
-        "bloonType": "Red",
+        "bloonType": "Red Bloon",
         "count": 20,
         "startTime": 0,
         "endTime": 17.51
@@ -10,7 +10,7 @@
 	],
 	"2": [
 	  {
-        "bloonType": "Red",
+        "bloonType": "Red Bloon",
         "count": 35,
         "startTime": 0,
         "endTime": 19
@@ -18,19 +18,19 @@
 	],
 	"3": [
 	  {
-        "bloonType": "Red",
+        "bloonType": "Red Bloon",
         "count": 10,
         "startTime": 0,
         "endTime": 5.1
       },
 	  {
-        "bloonType": "Blue",
+        "bloonType": "Blue Bloon",
         "count": 5,
         "startTime": 5.7,
         "endTime": 7.95
       },
 	  {
-        "bloonType": "Blue",
+        "bloonType": "Red Bloon",
         "count": 15,
         "startTime": 9.71,
         "endTime": 16.71

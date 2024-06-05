@@ -12,8 +12,10 @@ public class BloonSpawner : MonoBehaviour
     [SerializeField] private Sprite[] _sprites;
     [SerializeField] private List<GameObject> _bloonScripts;
     [SerializeField] private BloonFactory _factory;
+    [SerializeField] private BloonWaveManager _waveManager;
 
     // TEST INFO
+    public int _setRoundNumber;
     public TextMeshProUGUI _time;
     private bool _roundStarted = false;
     // TEST INFO
@@ -123,6 +125,27 @@ public class BloonSpawner : MonoBehaviour
             return null;
         }
     }
+    private IEnumerator StartWave(int aRoundNumber)
+    {
+        if(_waveManager.GetWaveData(aRoundNumber) != null)
+        {
+            float lStartTime = Time.time;
+            foreach (var wave in _waveManager.GetWaveData(aRoundNumber))
+            {
+                float lWaveStartTime = lStartTime + wave.startTime;
+                float lDelay = lWaveStartTime - Time.time;
+
+                if (lDelay > 0)
+                    yield return new WaitForSeconds(lDelay);
+
+                //yield return new WaitForSeconds(wave.startTime);
+                float lSpawnInterval = (wave.endTime - wave.startTime) / wave.count;
+                Debug.Log($"Spawn interval: {lSpawnInterval}");
+                Debug.Log($"Spawning bloons @ {Time.time}");
+                StartCoroutine(SpawnBloons(wave.count, lSpawnInterval, wave.bloonType)); 
+            }
+        }
+    }
     /// <summary>
     /// Spawn bloons at the start of the path
     /// </summary>
@@ -132,11 +155,12 @@ public class BloonSpawner : MonoBehaviour
         GameObject lBloon;
         for(int i = 0; i < aNumBloons;  i++)
         {
+            Debug.Log($"Spawning bloon number {i + 1} @ {Time.time}");
             lBloon = GetBloon(aBloonType);
-            //Debug.Log($"Parent {i} instance ID {lBloon.GetInstanceID()}");
             InitializeBloon(lBloon, _bloonPath[0], Quaternion.identity, 0f, 0);
             yield return new WaitForSeconds(aSpawnDelay);
         }
+        Debug.Log($"Finished spawning bloons @ {Time.time}");
     }
     private void SpawnChildrenHandler(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType,
         int aProjectileID)
@@ -158,7 +182,6 @@ public class BloonSpawner : MonoBehaviour
         for (int i = 0; i < aChildCount; i++)
         {
             lBloon = GetBloon(aBloonType);
-            //Debug.Log($"Child instance ID {lBloon.GetInstanceID()}");
             InitializeBloon(lBloon, aPosition, Quaternion.identity, aDistance, aPathPosition);
             lBloon.GetComponent<BaseBloon>().GrantImmunity(aProjectileID, _immunityDuration);
             yield return new WaitForSeconds(0.1f);
@@ -195,8 +218,8 @@ public class BloonSpawner : MonoBehaviour
     public void StartRound()
     {
         //TODO: Toggle button to increase game speed while round is active (not just bloons).
-        //TODO: Change to get info passed from round info
-        StartCoroutine(SpawnBloons(_numBloons, _spawnDelay, "Blue Bloon"));
+        //TODO: Change to get info passed from round info       
+        StartCoroutine(StartWave(_setRoundNumber));
         _roundStarted = true;
     }
     public void SetSpawnInfo(int aNumOfBloons, float aSpawnDelay)
