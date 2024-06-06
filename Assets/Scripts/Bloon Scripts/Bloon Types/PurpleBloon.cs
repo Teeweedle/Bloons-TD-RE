@@ -30,6 +30,6 @@ public class PurpleBloon : BaseBloon
     }
     private void FindSprite()
     {
-        purpleBloonSprite = BloonSpawner._instance.GetSpriteByName(PURPLEBLOON);
+        purpleBloonSprite = BloonFactory.Instance.GetSpriteByName(PURPLEBLOON);
     }
 }

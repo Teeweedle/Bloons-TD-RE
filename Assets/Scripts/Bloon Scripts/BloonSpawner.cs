@@ -9,8 +9,6 @@ public class BloonSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _gOPath;
     [SerializeField] private GameObject _bloon;
-    [SerializeField] private Sprite[] _sprites;
-    [SerializeField] private List<GameObject> _bloonScripts;
     [SerializeField] private BloonFactory _factory;
     [SerializeField] private BloonWaveManager _waveManager;
 
@@ -21,8 +19,6 @@ public class BloonSpawner : MonoBehaviour
     // TEST INFO
 
     public static BloonSpawner _instance;
-    private Dictionary<string, Sprite> _spritesDictionary;
-    private Dictionary<string, GameObject> _bloonScriptDictionary = new Dictionary<string, GameObject>();
     private List<Vector2> _bloonPath;
     private float _immunityDuration = 0.5f;
     [SerializeField] private Queue<GameObject> _bloonPool = new Queue<GameObject>();
@@ -47,37 +43,7 @@ public class BloonSpawner : MonoBehaviour
     }
     void Start()
     {
-        LoadBloonScripts();
-        LoadSprites();
         _bloonPath = _gOPath.GetComponent<BloonPathCreator>().GetPathVectors();
-    }
-    /// <summary>
-    /// Loads a list of scripts (for bloon type behaviour) into a dictionary for 0(n) look uptime to attach them to
-    /// repurposed game objects.
-    /// </summary>
-    private void LoadBloonScripts()
-    {
-        string lScriptName;
-        foreach (var script in _bloonScripts)
-        {
-            lScriptName = script.name;
-            _bloonScriptDictionary[lScriptName] = script;
-        }
-    }
-    /// <summary>
-    /// Gets the script for the behaviour of the passed Name
-    /// </summary>
-    /// <param name="aScriptName">Name of the script</param>
-    /// <returns>The script.</returns>
-    public MonoBehaviour GetBloonScript(string aScriptName)
-    {
-        if(_bloonScriptDictionary.TryGetValue(aScriptName, out var bloonScript))
-        {
-            var lScriptInstance = bloonScript.GetComponent<MonoBehaviour>();
-            return lScriptInstance;
-        }
-        Debug.LogError($"Script not found{aScriptName}");
-        return null;
     }
     /// <summary>
     /// Gets a bloon from a queue of already instantiated bloons, if there isn't one available it instantiates a new one.
@@ -109,19 +75,6 @@ public class BloonSpawner : MonoBehaviour
         _factory.RemoveBloonScript(aBloon);
         _bloonPool.Enqueue(aBloon);
         aBloon.SetActive(false);
-    }
-
-    public Sprite GetSpriteByName(string aSpriteName)
-    {
-        if (_spritesDictionary.TryGetValue(aSpriteName, out var sprite))
-        {
-            return sprite;
-        }
-        else
-        {
-            Debug.LogWarning($"Sprite not found {aSpriteName}");
-            return null;
-        }
     }
     /// <summary>
     /// Starts the wave which is delayed by the start time of the wave and is completed by the end time of the wave
@@ -205,14 +158,6 @@ public class BloonSpawner : MonoBehaviour
 
         BaseBloon lBaseBloon = aBloon.GetComponent<BaseBloon>();
         lBaseBloon.SetDistance(aDistance);
-    }
-    private void LoadSprites()
-    {
-        _spritesDictionary = new Dictionary<string, Sprite>();
-        foreach(var sprite in _sprites)
-        {
-            _spritesDictionary[sprite.name] = sprite;
-        }
     }
     public void StartRound()
     {

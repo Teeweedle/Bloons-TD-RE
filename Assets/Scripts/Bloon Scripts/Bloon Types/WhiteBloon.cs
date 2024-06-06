@@ -30,6 +30,6 @@ public class WhiteBloon : BaseBloon
     }
     private void FindSprite()
     {
-        whiteBloonSprite = BloonSpawner._instance.GetSpriteByName(WHITEBLOON);
+        whiteBloonSprite = BloonFactory.Instance.GetSpriteByName(WHITEBLOON);
     }
 }

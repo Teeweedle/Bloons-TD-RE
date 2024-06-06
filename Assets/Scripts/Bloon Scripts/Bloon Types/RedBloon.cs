@@ -25,6 +25,6 @@ public class RedBloon : BaseBloon
     }
     private void FindSprite()
     {
-        redBloonSprite = BloonSpawner._instance.GetSpriteByName(REDBLOON);
+        redBloonSprite = BloonFactory.Instance.GetSpriteByName(REDBLOON);
     }
 }

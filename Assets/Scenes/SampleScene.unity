@@ -9932,15 +9932,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 58f487138d87fd148ac70c984c7a6664, type: 3}
   - {fileID: 21300000, guid: 206bacc1daf5dd74eb3c0c589f3de2df, type: 3}
   - {fileID: 21300000, guid: 3a666f31de4bcff4ea8eee7b150c82dc, type: 3}
-  _bloonScripts:
-  - {fileID: 3272092709094154539, guid: 9ffe3871a96dcf445a568daf8fe765a8, type: 3}
-  - {fileID: 3932854047539918003, guid: d5b7680bfd9a4024e98e83b1f8a89a25, type: 3}
-  - {fileID: 3272092709094154539, guid: 42c3cc0bc33a820428a1215e548a5fe8, type: 3}
-  - {fileID: 3272092709094154539, guid: 211289fbbc183754d81ae9cfd2843951, type: 3}
-  - {fileID: 3272092709094154539, guid: 6f80aa3027b438046b64b913ae78d45a, type: 3}
-  - {fileID: 3272092709094154539, guid: ed33858327d3fcd4fa072ad2d6fff7ed, type: 3}
-  - {fileID: 3272092709094154539, guid: 146989a2ef8aaf74f9fdb3f50e54d808, type: 3}
-  - {fileID: 3272092709094154539, guid: 0c7847786c830d946b62cce71eb761dc, type: 3}
   _factory: {fileID: 1034477603}
   _waveManager: {fileID: 1185092989}
   _setRoundNumber: 3
@@ -9972,6 +9963,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7a7e0cbde813d40861dd9ff274a075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: f048fae9a98466d4eb61dc837b0b2fbd, type: 3}
+  - {fileID: 21300000, guid: 042af5dc26378cd4aa0b85f9b393b852, type: 3}
+  - {fileID: 21300000, guid: c641687880876924982ee86a666b5d1d, type: 3}
+  - {fileID: 21300000, guid: 913f35149921e5041aa0d84363660149, type: 3}
+  - {fileID: 21300000, guid: 6b23c0d844caca14d9350239ebdd45a0, type: 3}
+  - {fileID: 21300000, guid: 58f487138d87fd148ac70c984c7a6664, type: 3}
+  - {fileID: 21300000, guid: 206bacc1daf5dd74eb3c0c589f3de2df, type: 3}
+  - {fileID: 21300000, guid: 3a666f31de4bcff4ea8eee7b150c82dc, type: 3}
 --- !u!1 &1044801727
 GameObject:
   m_ObjectHideFlags: 0

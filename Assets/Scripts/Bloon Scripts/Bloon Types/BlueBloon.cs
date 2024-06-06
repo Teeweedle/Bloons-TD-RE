@@ -27,6 +27,6 @@ public class BlueBloon : BaseBloon
     }
     private void FindSprite()
     {
-        blueBloonSprite = BloonSpawner._instance.GetSpriteByName(BLUEBLOON);
+        blueBloonSprite = BloonFactory.Instance.GetSpriteByName(BLUEBLOON);
     }
 }
