@@ -35,7 +35,6 @@ public abstract class BaseBloon : MonoBehaviour
     }
     void Start()
     {
-        GetComponent<BloonMovement>().SetSpeed(speed);
         distance = 0.0f;
     }
     void Update()

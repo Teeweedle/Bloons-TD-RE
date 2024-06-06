@@ -21,8 +21,6 @@ public class BloonSpawner : MonoBehaviour
     // TEST INFO
 
     public static BloonSpawner _instance;
-    private int _numBloons;
-    private float _spawnDelay;
     private Dictionary<string, Sprite> _spritesDictionary;
     private Dictionary<string, GameObject> _bloonScriptDictionary = new Dictionary<string, GameObject>();
     private List<Vector2> _bloonPath;
@@ -49,8 +47,6 @@ public class BloonSpawner : MonoBehaviour
     }
     void Start()
     {
-        //default rnd 1 20, 0.85
-        SetSpawnInfo(20, 0.85f);
         LoadBloonScripts();
         LoadSprites();
         _bloonPath = _gOPath.GetComponent<BloonPathCreator>().GetPathVectors();
@@ -85,7 +81,9 @@ public class BloonSpawner : MonoBehaviour
     }
     /// <summary>
     /// Gets a bloon from a queue of already instantiated bloons, if there isn't one available it instantiates a new one.
+    /// Attaches the passed behavior script to the game object from BloonFactory.
     /// </summary>
+    /// <param name="aBloonType">Bloon type</param>
     /// <returns>A Bloon prefab</returns>
     public GameObject GetBloon(string aBloonType)
     {
@@ -125,6 +123,11 @@ public class BloonSpawner : MonoBehaviour
             return null;
         }
     }
+    /// <summary>
+    /// Starts the wave which is delayed by the start time of the wave and is completed by the end time of the wave
+    /// </summary>
+    /// <param name="aRoundNumber">Current round</param>
+    /// <returns></returns>
     private IEnumerator StartWave(int aRoundNumber)
     {
         if(_waveManager.GetWaveData(aRoundNumber) != null)
@@ -138,10 +141,7 @@ public class BloonSpawner : MonoBehaviour
                 if (lDelay > 0)
                     yield return new WaitForSeconds(lDelay);
 
-                //yield return new WaitForSeconds(wave.startTime);
                 float lSpawnInterval = (wave.endTime - wave.startTime) / wave.count;
-                Debug.Log($"Spawn interval: {lSpawnInterval}");
-                Debug.Log($"Spawning bloons @ {Time.time}");
                 StartCoroutine(SpawnBloons(wave.count, lSpawnInterval, wave.bloonType)); 
             }
         }
@@ -155,7 +155,6 @@ public class BloonSpawner : MonoBehaviour
         GameObject lBloon;
         for(int i = 0; i < aNumBloons;  i++)
         {
-            Debug.Log($"Spawning bloon number {i + 1} @ {Time.time}");
             lBloon = GetBloon(aBloonType);
             InitializeBloon(lBloon, _bloonPath[0], Quaternion.identity, 0f, 0);
             yield return new WaitForSeconds(aSpawnDelay);
@@ -200,11 +199,11 @@ public class BloonSpawner : MonoBehaviour
         aBloon.transform.position = aBloonPosition;
         aBloon.transform.rotation = aRotation;
 
-        var lBloonMovement = aBloon.GetComponent<BloonMovement>();
+        BloonMovement lBloonMovement = aBloon.GetComponent<BloonMovement>();
         lBloonMovement.SetPath(_bloonPath);
         lBloonMovement.SetPathPosition(aPathPosition);
 
-        var lBaseBloon = aBloon.GetComponent<BaseBloon>();
+        BaseBloon lBaseBloon = aBloon.GetComponent<BaseBloon>();
         lBaseBloon.SetDistance(aDistance);
     }
     private void LoadSprites()
@@ -221,10 +220,5 @@ public class BloonSpawner : MonoBehaviour
         //TODO: Change to get info passed from round info       
         StartCoroutine(StartWave(_setRoundNumber));
         _roundStarted = true;
-    }
-    public void SetSpawnInfo(int aNumOfBloons, float aSpawnDelay)
-    {
-        _numBloons = aNumOfBloons;
-        _spawnDelay = aSpawnDelay;
     }
 }

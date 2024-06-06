@@ -35,6 +35,316 @@
         "startTime": 9.71,
         "endTime": 16.71
       }	  
-	]	
+	],
+	"4": [
+	  {
+        "bloonType": "Red Bloon",
+        "count": 25,
+        "startTime": 0,
+        "endTime": 12
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 18,
+        "startTime": 7.9,
+        "endTime": 10.4
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 10,
+        "startTime": 14.51,
+        "endTime": 17.31
+      }	  
+	],
+	"5": [
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 12,
+        "startTime": 0,
+        "endTime": 5.14
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 5,
+        "startTime": 5.7,
+        "endTime": 7.98
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 15,
+        "startTime": 8.6,
+        "endTime": 16.5
+      }	  
+	],
+	"6": [
+	  {
+        "bloonType": "Green Bloon",
+        "count": 4,
+        "startTime": 0,
+        "endTime": 1.71
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 15,
+        "startTime": 5.33,
+        "endTime": 10.33
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 15,
+        "startTime": 10.8,
+        "endTime": 18.7
+      }	  
+	],
+	"7": [
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 10,
+        "startTime": 0,
+        "endTime": 5.14
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 5,
+        "startTime": 5.7,
+        "endTime": 10.65
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 20,
+        "startTime": 11.81,
+        "endTime": 22.63
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 10,
+        "startTime": 22.81,
+        "endTime": 26.8
+      }	  
+	],
+	"8": [
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 20,
+        "startTime": 0,
+        "endTime": 10.84
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 2,
+        "startTime": 11.42,
+        "endTime": 11.99
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 10,
+        "startTime": 14.03,
+        "endTime": 16.0
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 12,
+        "startTime": 18.27,
+        "endTime": 28.87
+      }	  
+	],
+	"9": [
+	  {
+        "bloonType": "Green Bloon",
+        "count": 30,
+        "startTime": 0,
+        "endTime": 18.95
+      }  
+	],
+	"10": [
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 60,
+        "startTime": 0,
+        "endTime": 35
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 20,
+        "startTime": 35,
+        "endTime": 44
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 22,
+        "startTime": 44,
+        "endTime": 47.99
+      } 
+	],
+	"11": [
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 3,
+        "startTime": 0,
+        "endTime": 1
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 12,
+        "startTime": 4.47,
+        "endTime": 10.75
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 10,
+        "startTime": 10.87,
+        "endTime": 14.67
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 10,
+        "startTime": 14.59,
+        "endTime": 19.16
+      }	  
+	],
+	"12": [
+	  {
+        "bloonType": "Green Bloon",
+        "count": 10,
+        "startTime": 0,
+        "endTime": 5.13
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 15,
+        "startTime": 5.7,
+        "endTime": 11.77
+      },
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 5,
+        "startTime": 14.27,
+        "endTime": 17.39
+      }	  
+	],
+	"13": [
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 50,
+        "startTime": 0,
+        "endTime": 30
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 23,
+        "startTime": 2.21,
+        "endTime": 32.21
+      } 
+	],
+	"14": [
+	  {
+        "bloonType": "Red Bloon",
+        "count": 18,
+        "startTime": 0,
+        "endTime": 9.71
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 5,
+        "startTime": 2.85,
+        "endTime": 3.97
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 5,
+        "startTime": 5.71,
+        "endTime": 6.83
+      },
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 4,
+        "startTime": 8.56,
+        "endTime": 9.51
+      },
+	  {
+        "bloonType": "Red Bloon",
+        "count": 31,
+        "startTime": 9.5,
+        "endTime": 26.63
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 10,
+        "startTime": 15.96,
+        "endTime": 17.34
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 5,
+        "startTime": 19.84,
+        "endTime": 21.22
+      },
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 5,
+        "startTime": 23.71,
+        "endTime": 25.26
+      }
+	],
+	"15": [
+	  {
+        "bloonType": "Red Bloon",
+        "count": 20,
+        "startTime": 0,
+        "endTime": 25
+      },
+	  {
+        "bloonType": "Blue Bloon",
+        "count": 15,
+        "startTime": 2.78,
+        "endTime": 22.76
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 12,
+        "startTime": 5.68,
+        "endTime": 20.68
+      },
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 10,
+        "startTime": 8.87,
+        "endTime": 20.87
+      },
+	  {
+        "bloonType": "Pink Bloon",
+        "count": 5,
+        "startTime": 17.55,
+        "endTime": 20.55
+      }	  
+	],
+	"16": [
+	  {
+        "bloonType": "Green Bloon",
+        "count": 20,
+        "startTime": 0,
+        "endTime": 10.85
+      },
+	  {
+        "bloonType": "Green Bloon",
+        "count": 20,
+        "startTime": 0.2,
+        "endTime": 11.05
+      },
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 8,
+        "startTime": 14.59,
+        "endTime": 16.02
+      } 
+	],
+	"17": [
+	  {
+        "bloonType": "Yellow Bloon",
+        "count": 12,
+        "startTime": 0,
+        "endTime": 5
+      }  
+	]
   }
 }

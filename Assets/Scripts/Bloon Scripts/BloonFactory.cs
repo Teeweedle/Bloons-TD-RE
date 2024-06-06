@@ -11,7 +11,13 @@ public class BloonFactory : MonoBehaviour
         bloonScriptDictionary = new Dictionary<string, Type>
         {
             { "Red Bloon", typeof(RedBloon) },
-            { "Blue Bloon", typeof(BlueBloon) }
+            { "Blue Bloon", typeof(BlueBloon) },
+            { "Green Bloon", typeof(GreenBloon) },
+            { "Yellow Bloon", typeof(YellowBloon) },
+            { "Pink Bloon", typeof(PinkBloon) },
+            { "Black Bloon", typeof(BlackBloon) },
+            { "White Bloon", typeof(WhiteBloon) },
+            { "Purple Bloon", typeof(PurpleBloon) }
             //TODO: Add more bloons
         };
     }

@@ -13,18 +13,6 @@ public class BloonWaveManager : MonoBehaviour
     {
         LoadRoundData();
     }
-    private void CheckRound(int aRoundNumber)
-    {
-        if (roundsData.rounds.ContainsKey(aRoundNumber))  // Check if round 3 exists
-        {
-            List<BloonWave> wavesInRound3 = roundsData.rounds[aRoundNumber];
-            foreach (var wave in wavesInRound3)
-            {
-                Debug.Log($"Bloon Type: {wave.bloonType}, Count: {wave.count}");
-                Debug.Log($"Start Time: {wave.startTime}, End Time: {wave.endTime}");
-            }
-        }
-    }
     /// <summary>
     /// Returns a list of bloon waves in the specified round
     /// </summary>
@@ -51,7 +39,6 @@ public class BloonWaveManager : MonoBehaviour
         {
             string jsonString = roundInfoJSONFile.text;
             roundsData = JsonConvert.DeserializeObject<RoundsDictionary>(jsonString);
-            //CheckRound(1);
         }
         else
         {
