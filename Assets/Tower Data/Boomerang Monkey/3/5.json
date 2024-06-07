@@ -1,0 +1,12 @@
+{
+  "name": "MOAB Domination",
+  "cost": 42500,
+  "xp": 28000,
+  "damage": 1,
+  "pierce": 100,
+  "range": 43,
+  "attackSpeed": 0,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Special knockback kylies trigger more often and do lots of extra damage. MODIFY"
+}

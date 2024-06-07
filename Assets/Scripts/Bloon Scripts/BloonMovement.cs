@@ -4,14 +4,13 @@ using UnityEngine;
 public class BloonMovement : MonoBehaviour
 {
     [SerializeField] private List<Vector2> _path;
-    private float _speed;//TODO: Change to get speed at run time based on the type of bloon
+    private float _speed;
     private int _currentPathPosition;
 
     public delegate void BloonMovementDelegate(GameObject aGameObject);
     public static event BloonMovementDelegate _endOfPath;
     private void Start()
     {
-        //_speed = GetComponent<BaseBloon>().mySpeed;
         _currentPathPosition = 0;
     }
     void Update()

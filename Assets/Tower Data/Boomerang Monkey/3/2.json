@@ -1,0 +1,12 @@
+{
+  "name": "Red Hot Rangs",
+  "cost": 255,
+  "xp": 490,
+  "damage": 1,
+  "pierce": 0,
+  "range": 0,
+  "attackSpeed": 0,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Allows boomerangs to pop Frozen and Lead Bloons and do more damage to all. MODIFY"
+}

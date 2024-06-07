@@ -1,0 +1,12 @@
+{
+  "name": "Glaive Ricochet",
+  "cost": 510,
+  "xp": 2500,
+  "damage": 0,
+  "pierce": 17,
+  "range": 0,
+  "attackSpeed": 0,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Glaives will bounce from Bloon to Bloon automatically and aggressively. MODIFY PROJECTILE BEHAVIOR"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Boomerang Monkey",
+  "cost": 265,
+  "damage": 1,
+  "pierce": 4,
+  "range": 43,
+  "attackSpeed": 1.2,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Hurls a boomerang that follows a curved path. Good range and pierce."
+}

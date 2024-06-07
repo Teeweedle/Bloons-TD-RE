@@ -1,0 +1,12 @@
+{
+  "name": "Glaive Lord",
+  "cost": 24990,
+  "xp": 37500,
+  "damage": 7,
+  "pierce": 0,
+  "range": 0,
+  "attackSpeed": 3,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Glaive Lord surrounds itself in 3 special glaives that shred anything that comes near. Glaive Lord's glaives now rip through MOAB-class Bloons, slowly tearing them apart from the inside. MODIFY"
+}

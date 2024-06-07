@@ -1,0 +1,12 @@
+{
+  "name": "Turbo Charge",
+  "cost": 3570,
+  "xp": 9000,
+  "damage": 0,
+  "pierce": 0,
+  "range": 0,
+  "attackSpeed": 5,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Turbo Charge ability: Makes this Monkey attack incredibly fast for 10 seconds. GIVE ABILITY"
+}
