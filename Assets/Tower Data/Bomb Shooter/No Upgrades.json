@@ -1,0 +1,11 @@
+{
+  "name": "Bomb Shooter",
+  "cost": 445,
+  "damage": 1,
+  "pierce": 14,
+  "range": 40,
+  "attackSpeed": 1.5,
+  "upgradeLevel": "000",
+  "hasCamoDetection": false,
+  "description": "Launches a powerful bomb at the Bloons. Slow rate of fire but affects a radius around the explosion."
+}

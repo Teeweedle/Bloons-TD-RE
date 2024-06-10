@@ -1,0 +1,11 @@
+{
+  "name": "MOAB Mauler",
+  "cost": 935,
+  "xp": 2700,
+  "damage": 0,
+  "pierce": 0,
+  "range": 5,
+  "attackspeed": 0.36,
+  "hasCamoDetection": false,
+  "description": "MOAB Maulers do much more damage to MOAB-Class Bloons. MODIFY"
+}

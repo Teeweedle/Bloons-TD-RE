@@ -1,0 +1,11 @@
+{
+  "name": "Frag Bombs",
+  "cost": 255,
+  "xp": 600,
+  "damage": 0,
+  "pierce": 0,
+  "range": 2,
+  "attackspeed": 0,
+  "hasCamoDetection": false,
+  "description": "Explosions throw sharp fragments that can pop more Bloons."
+}

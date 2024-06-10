@@ -1,0 +1,11 @@
+{
+  "name": "MOAB Eliminator",
+  "cost": 21675,
+  "xp": 35000,
+  "damage": 0,
+  "pierce": 0,
+  "range": 5,
+  "attackspeed": 0.36,
+  "hasCamoDetection": false,
+  "description": "Massive damage to MOABs and Assassinate ability deals 6x damage with a short cooldown. MODIFY"
+}

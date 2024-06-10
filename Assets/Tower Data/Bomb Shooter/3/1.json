@@ -1,0 +1,11 @@
+{
+  "name": "Extra Range",
+  "cost": 170,
+  "xp": 150,
+  "damage": 0,
+  "pierce": 0,
+  "range": 7,
+  "attackspeed": 0,
+  "hasCamoDetection": false,
+  "description": "Increases attack range."
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Bomb Blitz",
+  "cost": 23800,
+  "xp": 25000,
+  "damage": 0,
+  "pierce": 0,
+  "range": 0,
+  "attackspeed": 0,
+  "hasCamoDetection": false,
+  "description": "Deals much more damage and gains the passive Bomb Storm Ability - when lives are lost, the Bomb Storm automatically triggers, which destroys all but the biggest of Bloons."
+}
