@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: Triple Shot
+  m_EditorClassIdentifier: 
+  upgradeName: Triple Shot
+  cost: 340
+  xp: 2000
+  damage: 1
+  pierce: 1
+  range: 32
+  attackSpeed: 0.67
+  hasCamoDetection: 0
+  description: Throws 3 darts at a time instead of 1.
+  upgradeSprite: {fileID: 21300000, guid: cc5890b308f51cd408a8cb9e3b24917b, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: adc6083c4186f0a418f17985dcfdb1af, type: 3}
+  GOSprite: {fileID: 21300000, guid: 0376f6a2c7415f142a925bfc0977030e, type: 3}

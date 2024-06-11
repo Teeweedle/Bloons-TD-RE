@@ -9,19 +9,13 @@ public class PlaceTower : MonoBehaviour
     [SerializeField] private GameObject _towerRange;
     [SerializeField] private Collider2D _rangeCollider;
 
-    private const string _DELIMITER = "Prefab";
-    private const string _TOWERTYPE = "No Upgrades";
     private const string _NOBUILDTAG = "No Build";
     private const string _TOWERTAG = "Tower";
 
     private bool _canPlace = true;
-    private BaseTower _baseTower;
-    private TowerDataObject _towerData = new();
 
     private void Start()
     {
-        _towerData = LoadTowerData(GetTowerName(this.gameObject.name, _DELIMITER), _TOWERTYPE);
-        _baseTower = GetComponent<BaseTower>();
         DisplayTowerRange();
     }
     void Update()
@@ -30,7 +24,6 @@ public class PlaceTower : MonoBehaviour
 
         if (_canPlace && Input.GetMouseButtonDown(0))
         {
-            _baseTower.AssignStats(_towerData);
             TowerSelected._towerInstance = null;
             _rangeSpriteRenderer.enabled = false;
             _rangeCollider.enabled = true;
@@ -74,40 +67,6 @@ public class PlaceTower : MonoBehaviour
     }
     private void DisplayTowerRange()
     {
-        _towerRange.transform.localScale *= _towerData.range;
-    }
-    private string GetTowerName(string aPrefabName, string aDelimiter)
-    {
-        int lDelimiterIndex = aPrefabName.IndexOf(aDelimiter);
-        if (lDelimiterIndex != -1)
-        {
-            return aPrefabName.Substring(0, lDelimiterIndex).Trim();
-        }
-        else
-        {
-            return aPrefabName;
-        }
-    }
-    /// <summary>
-    /// Loads a base tower GO based on the tower name
-    /// </summary>
-    /// <param name="aTowerName"></param>
-    /// <param name="aTowerType"></param>
-    /// <returns></returns>
-    private TowerDataObject LoadTowerData(string aTowerName, string aTowerType)
-    {
-        TowerDataObject lTowerObject = new();
-        try
-        {
-            string lTowerPath = Path.Combine(Application.dataPath, $"Tower Data/{aTowerName}/{aTowerType}.json");
-            string lJsonString = File.ReadAllText(lTowerPath);
-
-            lTowerObject = JsonUtility.FromJson<TowerDataObject>(lJsonString);
-        }
-        catch (FileNotFoundException ex)
-        {
-            Debug.LogError($"File not found: {ex.Message}");
-        }
-        return lTowerObject;
+        _towerRange.transform.localScale *= TowerSelected._towerInstance.GetComponent<BaseTower>().GetTowerStats().range;
     }
 }

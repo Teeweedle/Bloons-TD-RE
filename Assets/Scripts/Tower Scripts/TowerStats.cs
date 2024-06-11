@@ -12,6 +12,25 @@ public class TowerStats : ScriptableObject
     public bool hasCamoDetection;
     public string description;
     public Sprite towerSprite;
+    public Sprite towerGOSprite;
+    public int[] upgradeLevelArray;
+    public int numberOfBloonsPopped;
 
-    public TowerUpgrade[] upgdrades;
+    public UpgradePath[] upgradePath;
+
+    private void Start()
+    {
+        upgradeLevelArray = new int[upgradePath.Length];
+    }
+    public bool HasMaxTree()
+    {
+        for (int i = 0; i < upgradeLevelArray.Length; i++)
+        {
+            if (upgradeLevelArray[i] == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }

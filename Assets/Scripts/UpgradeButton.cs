@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,9 +20,11 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private Sprite MaxUpgradeSprite, UpgradeButtonSprite;
 
     private string TowerName;
-    private TowerDataObject UpgradeData = new TowerDataObject();
-    private const string UPGRADEPATH = "Sprites/UI/Tower Upgrade Panel";
     private int MaxUpgradeLevel, Three = 3;
+    private TowerStats CurrentTower;
+    private TowerUpgrade NextUpgrade;
+    private int UpgradePathIndex;
+    private int CurrentUpgradeLevel;
 
     public int MaxUpgradeLevelProp 
     { 
@@ -46,41 +47,61 @@ public class UpgradeButton : MonoBehaviour
 
     public delegate void UpgradeLimit(int aUpgradePath);
     public static event UpgradeLimit SetUpgradeLimit;
-
+  
     private void Start()
     {
         MaxUpgradeLevelProp = 5;
+        UpgradePathIndex = GetUpgradePathIndex();
     }
     public void UpdateUpgradeSection(string aTowerName, int aTowerUpgradeLevel)
     {
         TowerName = aTowerName;
         if(aTowerUpgradeLevel < MaxUpgradeLevelProp)
-            UpgradeData = LoadUpgrade(aTowerName, this.gameObject.name, aTowerUpgradeLevel + 1);
-        UpgradeImage.sprite = LoadUpgradeSprite(aTowerName, aTowerUpgradeLevel);
-        UpgradeName.text = UpgradeData.name;
-        UpgradePrice.text = ($"${UpgradeData.cost}");
+            NextUpgrade = GetNextUpgrade(aTowerUpgradeLevel);
 
-        InfoPanelName.text = UpgradeData.name;
-        InfoPanelDescription.text = UpgradeData.description;
+        UpgradeImage.sprite = NextUpgrade.upgradeSprite;
+        UpgradeName.text = NextUpgrade.name;
+        UpgradePrice.text = ($"${NextUpgrade.cost}");
+
+        InfoPanelName.text = NextUpgrade.name;
+        InfoPanelDescription.text = NextUpgrade.description;
 
         //tell panel to update tower image to update
         UpdatePanel?.Invoke();
+    }
+    /// <summary>
+    /// Gets the next upgrade in the upgrade path.
+    /// </summary>
+    /// <param name="aIndex"></param>
+    /// <returns></returns>
+    public TowerUpgrade GetNextUpgrade(int aIndex)
+    {
+        return CurrentTower.upgradePath[UpgradePathIndex].upgrades[aIndex];
+    }
+    /// <summary>
+    /// Sets the current tower, intialized in UpgradePanel.
+    /// </summary>
+    /// <param name="aTower">Currently selected tower data.</param>
+    public void SetCurrentTower(TowerStats aTower)
+    {
+        CurrentTower = aTower;
+        CurrentUpgradeLevel = aTower.upgradeLevelArray[UpgradePathIndex];
     }
     /// <summary>
     /// Called from UpgradePanel to initialize all potentially owned upgrades in the UI.
     /// </summary>
     /// <param name="aTowerName"></param>
     /// <param name="aTowerUpgradeLevel"></param>
-    public void InitializeOwnedUpgrades(string aTowerName, int aTowerUpgradeLevel)
+    public void InitializeOwnedUpgrades(TowerStats aTower, int aTowerUpgradeLevel)
     {
         ResetUpgradeUI();
 
         if (aTowerUpgradeLevel <= 0) return;
 
         if (aTowerUpgradeLevel >= Three)
-            SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
+            SetUpgradeLimit?.Invoke(UpgradePathIndex);
 
-        LoadAndSetUpgradeSprite(aTowerName, aTowerUpgradeLevel);
+        LoadAndSetUpgradeSprite(CurrentTower);
 
         if (aTowerUpgradeLevel == MaxUpgradeLevelProp)
             DisableUpgradeButton();
@@ -108,17 +129,10 @@ public class UpgradeButton : MonoBehaviour
             Destroy(lChild.gameObject);
         }
     }
-
-    private Sprite LoadUpgradeSprite(string aTowerName, int aTowerUpgradeLevel)
-    {
-        return Resources.Load<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}/" +
-            $"{aTowerUpgradeLevel + 1}_{UpgradeData.name}");
-    }
-
     /// <summary>
     /// When button pressed update the towers stats and show the next available upgrade.
     /// </summary>
-    public void UpgradeSelected()
+    public void UpgradeSelectedOnClick()
     {
         int lUpgradeLevel = GetCurrentUpgradeLevel();
         
@@ -126,10 +140,16 @@ public class UpgradeButton : MonoBehaviour
         UpdateOwnedUpgrade(UpgradeName.text, UpgradeImage.sprite);            
         //creates and array ex. 1-0-0 to add to the existing array (always a 1)
         int[] lUpgradeArray = GetUpgradeArray(this.gameObject.name, 1);
-        UpgradePanel.UpgradeTowerStats(UpgradeData, lUpgradeArray);
+        UpgradePanel.UpgradeTowerStats(NextUpgrade, lUpgradeArray);
         //Add one pip to tracker
         Instantiate(UpgradeLevel, UpgradeContainer.transform);
         int lNewUpgradeLevel = lUpgradeLevel + 1;
+
+        //Disable button at max level available
+        if (lNewUpgradeLevel == MaxUpgradeLevelProp)
+        {
+            DisableUpgradeButton();
+        }
         //Change image/ description to next level
         if (lNewUpgradeLevel != MaxUpgradeLevelProp)
             UpdateUpgradeSection(TowerName, lNewUpgradeLevel);
@@ -138,13 +158,8 @@ public class UpgradeButton : MonoBehaviour
             
         if (lNewUpgradeLevel == Three)
         {
-            SetUpgradeLimit?.Invoke(int.Parse(gameObject.name));
-        }
-        //Disable button at max level available
-        if (lNewUpgradeLevel == MaxUpgradeLevelProp)
-        {
-            DisableUpgradeButton();
-        }
+            SetUpgradeLimit?.Invoke(UpgradePathIndex);
+        }    
     }
     /// <summary>
     /// Updates the owned upgrade section of the UI with the name of the upgade and the image
@@ -158,6 +173,14 @@ public class UpgradeButton : MonoBehaviour
         OwnedUpgradeName.text = aUpgradeName;
         OwnedUpgradeImage.sprite = aUpgradeSprite;
     }
+    private void UpdateOwnedUpgrade(TowerUpgrade aUpgrade)
+    {
+        NotUpgradedText.SetActive(false);
+        OwnedUpgrade.SetActive(true);
+        OwnedUpgradeName.text = aUpgrade.upgradeName;
+        OwnedUpgradeImage.sprite = aUpgrade.upgradeSprite;
+    }
+
 
     /// <summary>
     /// Creates the an upgrade array based on the objects name and current upgrade tier of the selected object.
@@ -176,34 +199,33 @@ public class UpgradeButton : MonoBehaviour
         return lUpgradeArray;
     }
     /// <summary>
-    /// Loads an upgrade from a JSON file based on the name and the upgrade level.
+    /// Gets the current upgrade level of the selected path based on the button this is attached to.
     /// </summary>
-    /// <param name="aTowerName"></param>
-    /// <param name="aUpgradePath"></param>
-    /// <param name="aCurrentUpgrade"></param>
     /// <returns></returns>
-    private TowerDataObject LoadUpgrade(string aTowerName, string aUpgradePath, int aCurrentUpgrade)
+    private int GetCurrentUpgradeLevel()
     {
-        TowerDataObject lTowerObject = new();
-        try
-        {
-            string lTowerPath = Path.Combine(Application.dataPath, $"Tower Data/{aTowerName}/{aUpgradePath}/{aCurrentUpgrade}.json");
-            string lJsonString = File.ReadAllText(lTowerPath);
+        return CurrentTower.upgradeLevelArray[UpgradePathIndex];
+    }
+    private void ResetUpgradeUI()
+    {
+        NotUpgradedText.SetActive(true);
+        OwnedUpgrade.SetActive(false);
+        EnableUpgradeButton();
+        RemoveUpgradePips(UpgradeContainer);
+    }
 
-            lTowerObject = JsonUtility.FromJson<TowerDataObject>(lJsonString);
-        }
-        catch (FileNotFoundException ex)
-        {
-            Debug.LogError($"File not found: {ex.Message}");
-        }
-        return lTowerObject;
-    } 
+    private void LoadAndSetUpgradeSprite(TowerStats aTower)
+    {
+        TowerUpgrade lUpgrade = aTower.upgradePath[UpgradePathIndex].upgrades[CurrentUpgradeLevel-1];
+        UpdateOwnedUpgrade(lUpgrade);
+        AddUpgradePips(UpgradeContainer, CurrentUpgradeLevel);        
+    }
     /// <summary>
     /// Disable upgrade ticks past a certain level, based on the 2/3 rule.
     /// </summary>
     public void DisableUpgradeTicks()
     {
-        foreach(Image tick in UpgradeTicks)
+        foreach (Image tick in UpgradeTicks)
         {
             Color color = tick.color;
             color.a = 0.5f;
@@ -227,7 +249,7 @@ public class UpgradeButton : MonoBehaviour
     /// </summary>
     public void DisableUpgradeButton()
     {
-        if(GetCurrentUpgradeLevel() >= MaxUpgradeLevelProp)
+        if (GetCurrentUpgradeLevel() >= MaxUpgradeLevelProp)
         {
             UpgradeImage.enabled = false;
             UpgradeName.enabled = false;
@@ -249,32 +271,12 @@ public class UpgradeButton : MonoBehaviour
         ButtonImage.sprite = UpgradeButtonSprite;
         GetComponent<Button>().interactable = true;
     }
-    private int GetCurrentUpgradeLevel()
+    private int GetUpgradePathIndex()
     {
-        return UpgradeContainer.transform.childCount;
-    }
-    private void ResetUpgradeUI()
-    {
-        NotUpgradedText.SetActive(true);
-        OwnedUpgrade.SetActive(false);
-        EnableUpgradeButton();
-        RemoveUpgradePips(UpgradeContainer);
-    }
-    private void LoadAndSetUpgradeSprite(string aTowerName, int aTowerUpgradeLevel)
-    {
-        //Loads tower upgrades for this tree (based on GO name)
-        Sprite[] UpgradeSprites = Resources.LoadAll<Sprite>($"{UPGRADEPATH}/{aTowerName}/{this.gameObject.name}");
-
-        foreach (Sprite sprite in UpgradeSprites)
+        if (int.TryParse(this.gameObject.name[0].ToString(), out int lPath))
         {
-            if (sprite.name[0].ToString() == aTowerUpgradeLevel.ToString())
-            {
-                int lDelimiterIndex = sprite.name.IndexOf('_');
-                string lUpgradeName = sprite.name.Substring(lDelimiterIndex + 1);
-                UpdateOwnedUpgrade(lUpgradeName, sprite);
-                AddUpgradePips(UpgradeContainer, aTowerUpgradeLevel);
-                break;
-            }
+            lPath = lPath - 1;
         }
+        return lPath;
     }
 }

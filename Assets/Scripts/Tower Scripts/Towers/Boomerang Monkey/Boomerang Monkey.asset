@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f937a7e96baab6243b08f5df1a9e7f51, type: 3}
-  m_Name: Dart Monkey
+  m_Name: Boomerang Monkey
   m_EditorClassIdentifier: 
   towerName: Dart Monkey
   cost: 170

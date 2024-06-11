@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class TowerFactory : MonoBehaviour
 {
-    [SerializeField] private TowerSO[] towerSO;
+    [SerializeField] private TowerStats[] towerStats;
     [SerializeField] private GameObject towerPrefab;
-    private Dictionary<string, TowerSO> towersDictionary; 
+    private Dictionary<string, TowerStats> towersDictionary; 
     public static TowerFactory Instance { get; private set; }
     private void Awake()
     {
@@ -24,14 +24,14 @@ public class TowerFactory : MonoBehaviour
     /// </summary>
     private void InitializeTowerDictionary()
     {
-        towersDictionary = new Dictionary<string, TowerSO>();
-        foreach (var tower in towerSO)
+        towersDictionary = new Dictionary<string, TowerStats>();
+        foreach (var tower in towerStats)
         {
             towersDictionary.Add(tower.name, tower);
         }
     }
     /// <summary>
-    /// Gets a tower from the dictionary based on towerName.
+    /// Gets a tower from the dictionary based on towerName. Assigns stats to it, assigns sprite, and returns it.
     /// </summary>
     /// <param name="towerName"></param>
     /// <returns></returns>
@@ -41,7 +41,9 @@ public class TowerFactory : MonoBehaviour
         {
             GameObject lTower = Instantiate(towerPrefab, Input.mousePosition, Quaternion.identity);
             lTower.name = towerName;
-            lTower.GetComponent<SpriteRenderer>().sprite = towersDictionary[towerName].towerSprite;
+            TowerStats lNewTowerStats = ScriptableObjectUtility.Clone(towersDictionary[towerName]);
+            lTower.GetComponent<BaseTower>().SetTowerStats(lNewTowerStats);
+            lTower.GetComponent<SpriteRenderer>().sprite = towersDictionary[towerName].towerGOSprite;
             return lTower;
         }
         return null;

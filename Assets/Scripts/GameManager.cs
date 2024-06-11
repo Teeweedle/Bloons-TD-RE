@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private GameObject _selectedTower;
     private int _playerHP, _playerMoney;
 
-    public delegate void UpdatePanel(TowerDataObject aTower, GameObject aCurrentTower);
+    public delegate void UpdatePanel(TowerStats aTower, GameObject aCurrentTower);
     public static event UpdatePanel _updatePanel;
 
     private void OnEnable()
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         //show upgrade panel
         _upgradePanel.SetActive(true);
         //load selected tower into Upgrade Panel UI
-        _updatePanel?.Invoke(aTowerSelected.GetComponent<BaseTower>().GetTowerData(), _selectedTower);
+        _updatePanel?.Invoke(aTowerSelected.GetComponent<BaseTower>().GetTowerStats(), _selectedTower);
         //TODO: upgrade panel animation
     }
     /// <summary>

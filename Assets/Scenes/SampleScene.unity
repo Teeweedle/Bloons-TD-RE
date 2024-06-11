@@ -1280,7 +1280,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118735237}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: UpgradeSelected
+        m_MethodName: UpgradeSelectedOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8380,7 +8380,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 895056375}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: UpgradeSelected
+        m_MethodName: UpgradeSelectedOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11333,13 +11333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae6a7d81d26975a4e9a40a7fe91c2483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerSO:
-  - {fileID: 11400000, guid: d9e6ffde8a3eb574a93cd0b8fa1d1333, type: 2}
-  - {fileID: 11400000, guid: be5cbd9fb5572ab47a0c78c5dbf5763e, type: 2}
-  - {fileID: 11400000, guid: 86fffb14339536a49a1fcb56d98e1d32, type: 2}
-  - {fileID: 11400000, guid: 2fa02762d11deff408327b4fce32105d, type: 2}
-  - {fileID: 11400000, guid: d039c1a492f968f4bbd4e2a7e1d2980e, type: 2}
-  - {fileID: 11400000, guid: 222df81dd1a67a841a498bd460149995, type: 2}
+  towerStats:
+  - {fileID: 11400000, guid: 16fea1662a5565845a29d4871a1fe15a, type: 2}
+  - {fileID: 11400000, guid: 9085ddb2613c82149868106b6092b816, type: 2}
   towerPrefab: {fileID: 4818029962975455510, guid: 1ae27e351a7cf4e4f85524bd4bea3309, type: 3}
 --- !u!4 &1215949273
 Transform:
@@ -17692,7 +17688,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1721583532}
         m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: UpgradeSelected
+        m_MethodName: UpgradeSelectedOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

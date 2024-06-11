@@ -11,9 +11,9 @@ public class BaseTower : MonoBehaviour
 
     private bool _isPlaced, _isSelected;
 
-    [SerializeField] private TowerDataObject _towerData = new();
-    private string _targetPriority;
+    public TowerStats _towerStats;
 
+    private string _targetPriority;
     private SortedSet<BaseBloon> _targetSortedList = new SortedSet<BaseBloon>(new DistanceComparer());
     private GameObject _currentTarget;
     private const float _angleOffset = 90f;
@@ -80,13 +80,13 @@ public class BaseTower : MonoBehaviour
             if (lProjectileScript != null)
             {
                 lProjectileScript.speed = 8f;//default for dart monkey
-                lProjectileScript.health = _towerData.pierce;
-                lProjectileScript.damage = _towerData.damage;
+                lProjectileScript.health = _towerStats.pierce;
+                lProjectileScript.damage = _towerStats.damage;
                 lProjectileScript.lifeSpan = 0.75f;//default for dart monkey
                 lProjectileScript.parentTower = this;
                 lProjectileScript.SetDirection(-transform.up);
             }
-            _nextFireTime = Time.time + _towerData.attackSpeed;
+            _nextFireTime = Time.time + _towerStats.attackSpeed;
         }        
     }
     /// <summary>
@@ -177,31 +177,21 @@ public class BaseTower : MonoBehaviour
     public void SetTowerSprite(Sprite aSprite)
     {
         _towerSpriteRenderer.sprite = aSprite;
-    }
-    /// <summary>
-    /// Assign loaded stats to this tower and make upgrade array an actual array
-    /// </summary>
-    /// <param name="aData"></param>
-    public void AssignStats(TowerDataObject aData)
+    } 
+    public void UpdateStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
     {
-        _towerData = aData;
-
-        _towerData.upgradeLevelArray = _towerData.upgradeLevel.Select(c => int.Parse(c.ToString())).ToArray();
-    }
-    public void UpdateStats(TowerDataObject aUpgradeData, int[] aUpgradeArray)
-    {
-        _towerData.pierce += aUpgradeData.pierce;
-        _towerData.damage += aUpgradeData.damage;
-        _towerData.range += aUpgradeData.range;
-        _towerData.attackSpeed += aUpgradeData.attackSpeed;
-        if (!_towerData.hasCamoDetection)
+        _towerStats.pierce += aTowerUpgrade.pierce;
+        _towerStats.damage += aTowerUpgrade.damage;
+        _towerStats.range += aTowerUpgrade.range;
+        _towerStats.attackSpeed += aTowerUpgrade.attackSpeed;
+        if (!_towerStats.hasCamoDetection)
         {
-            _towerData.hasCamoDetection = aUpgradeData.hasCamoDetection;
+            _towerStats.hasCamoDetection = aTowerUpgrade.hasCamoDetection;
         }
-        _towerData.upgradeLevelArray = UpdateUpgradeArray(_towerData.upgradeLevelArray, aUpgradeArray);
+        _towerStats.upgradeLevelArray = UpdateUpgradeArray(_towerStats.upgradeLevelArray, aUpgradeArray);
 
-        _towerData.cost += aUpgradeData.cost;
-        _onUpdatePrice?.Invoke(_towerData.cost);
+        _towerStats.cost += aTowerUpgrade.cost;
+        _onUpdatePrice?.Invoke(_towerStats.cost);
     }
     private int[] UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
     {
@@ -219,8 +209,12 @@ public class BaseTower : MonoBehaviour
             _onTowerSelected?.Invoke(this.gameObject);
         }
         _isPlaced = true;
-    }    
-    public TowerDataObject GetTowerData() { return _towerData; }
+    }  
+    public TowerStats GetTowerStats() { return _towerStats; }
+    public void SetTowerStats(TowerStats aTowerStats)
+    {
+        _towerStats = aTowerStats;
+    }
     private void SetDefaultTargetPriority()
     {
         SetTargetPriority("First");
@@ -231,10 +225,11 @@ public class BaseTower : MonoBehaviour
     /// <param name="aNumBloonPopped">XP gained for popping a respective bloon.</param>
     public void NumBloonsPopped(int aNumBloonPopped)
     {
-        _towerData.numBloonsPopped += aNumBloonPopped;
+        _towerStats.numberOfBloonsPopped += aNumBloonPopped;
+        //_towerData.numBloonsPopped += aNumBloonPopped;
         if(_isSelected)
         {
-            _onUpdateBloonsPopped?.Invoke(_towerData.numBloonsPopped);
+            _onUpdateBloonsPopped?.Invoke(_towerStats.numberOfBloonsPopped);
         }
     }
 }

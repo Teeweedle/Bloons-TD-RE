@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: Crossbow
+  m_EditorClassIdentifier: 
+  upgradeName: Crossbow
+  cost: 1700
+  xp: 1200
+  damage: 2
+  pierce: 2
+  range: 32
+  attackSpeed: 0.95
+  hasCamoDetection: 1
+  description: Uses a long range Crossbow that can pop 3 layers of Bloon for every
+    hit.
+  upgradeSprite: {fileID: 21300000, guid: 6c5da933be954814987ba01b78f7ab8c, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: f69db190f025b684582c723a2c50726d, type: 3}
+  GOSprite: {fileID: 21300000, guid: 0cbafe852169dfd47ade894da35f6048, type: 3}
