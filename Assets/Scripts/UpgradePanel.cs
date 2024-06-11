@@ -62,11 +62,6 @@ public class UpgradePanel : MonoBehaviour
         SetTowerImage(aTower);
 
         InitializeUpgradeGrid(_upgrade, aTower);
-
-        //if (aTower.maxTree)
-        //{
-        //    DisableUpgradeTree(aTower.upgradeLevelArray);
-        //}
     }
     /// <summary>
     /// Passes the selected upgrade data and the upgrade array to the currently selected tower to upgrade it.

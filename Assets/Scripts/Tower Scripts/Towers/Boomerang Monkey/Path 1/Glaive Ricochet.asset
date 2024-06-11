@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Glaive Ricochet
   m_EditorClassIdentifier: 
   upgradeName: Glaive Ricochet
-  cost: 120
-  xp: 100
+  cost: 510
+  xp: 2500
   damage: 0
-  pierce: 1
+  pierce: 17
   range: 0
   attackSpeed: 0
   hasCamoDetection: 0
-  description: Can pop 1 extra Bloon per shot.
-  upgradeSprite: {fileID: 21300000, guid: db007d75c54e90b47aaf24784078334d, type: 3}
-  towerImageSprite: {fileID: 21300000, guid: 9bfa142229cfeb74f97dd6613d3de9be, type: 3}
-  GOSprite: {fileID: 21300000, guid: 0003c605f92829a4e88c6d47499707c2, type: 3}
+  description: Glaives will bounce from Bloon to Bloon automatically and aggressively.
+  upgradeSprite: {fileID: 21300000, guid: 5d122d90b7931b74992b5d7e5b6c0659, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 9e622a16b8275054aad3ad5d1d7aa74f, type: 3}
+  GOSprite: {fileID: 21300000, guid: c4be35e25422e7d46a696b105a1495b6, type: 3}

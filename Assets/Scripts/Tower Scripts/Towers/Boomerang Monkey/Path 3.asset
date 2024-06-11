@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea58e50a5ac184145bf0b2f69ff8f077, type: 3}
   m_Name: Path 3
   m_EditorClassIdentifier: 
+  upgradeLevel: 0
   upgrades:
-  - {fileID: 11400000, guid: e4c034d7f03dd954491f7ee466d3fe4a, type: 2}
-  - {fileID: 11400000, guid: 438207a108cf4454fbc5544d242c17bf, type: 2}
-  - {fileID: 11400000, guid: 1117f552d553c5b4f9d1c9c108183726, type: 2}
-  - {fileID: 11400000, guid: c7433d8888f1ca549aa36ef33bb9117a, type: 2}
-  - {fileID: 11400000, guid: 90abaf842a07982499aa53a7d714fded, type: 2}
+  - {fileID: 11400000, guid: 01c5eb545642d794e97c85a557756165, type: 2}
+  - {fileID: 11400000, guid: 00042f57a858b0849a85921b7c53f0e0, type: 2}
+  - {fileID: 11400000, guid: 76886fb5b2bf541479e6f8051923df4c, type: 2}
+  - {fileID: 11400000, guid: b93d50a6cb52cfa4b82f7444c973c354, type: 2}
+  - {fileID: 11400000, guid: 729c678b276565f45acf8c81efb48559, type: 2}

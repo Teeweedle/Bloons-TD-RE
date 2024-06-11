@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
-  m_Name: Improved Rangs
+  m_Name: 1_Faster Reload
   m_EditorClassIdentifier: 
-  upgradeName: Improved Rangs
-  cost: 170
-  xp: 100
+  upgradeName: Faster Reload
+  cost: 210
+  xp: 180
   damage: 0
-  pierce: 4
+  pierce: 0
   range: 0
-  attackSpeed: 0
+  attackSpeed: 0.33
   hasCamoDetection: 0
-  description: Can pop up to 8 Bloons per throw.
-  upgradeSprite: {fileID: 21300000, guid: 31d32ee0d09c686458bcbfeeeb14ed00, type: 3}
-  towerImageSprite: {fileID: 21300000, guid: b55124f64b5cc4840b33ecf5b83b981c, type: 3}
-  GOSprite: {fileID: 21300000, guid: 530befc847591c142bd6cad792bc726b, type: 3}
+  description: Reloads faster.
+  upgradeSprite: {fileID: 21300000, guid: 50df9feaad811a24aad903ab5dc0898f, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 4021f769f19004d4da680520ca2e631b, type: 3}
+  GOSprite: {fileID: 21300000, guid: 960be2f1645a1bc4db987a5d9b779402, type: 3}

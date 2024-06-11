@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea58e50a5ac184145bf0b2f69ff8f077, type: 3}
-  m_Name: Path 1
+  m_Name: Path 3
   m_EditorClassIdentifier: 
   upgradeLevel: 0
   upgrades:
-  - {fileID: 11400000, guid: c055aa65e0bb50b48a940bc1c4222fbd, type: 2}
-  - {fileID: 11400000, guid: 2a77d58d12c417845adaf1b23c4ade32, type: 2}
-  - {fileID: 11400000, guid: a776dd0bdc8714d4a83c7e9ffc7d0b95, type: 2}
-  - {fileID: 11400000, guid: b3ff06036ec266c44a5f3e0825306e47, type: 2}
-  - {fileID: 11400000, guid: 2254ccaa4fc55844084218384c53f679, type: 2}
+  - {fileID: 11400000, guid: 8ff3da6717de0dd4c93004a4e9e77fed, type: 2}
+  - {fileID: 11400000, guid: 7de30acaa56142445ae7389209536ba6, type: 2}
+  - {fileID: 11400000, guid: a5d67897fbd85e1479e88341e714dd2f, type: 2}
+  - {fileID: 11400000, guid: 316e92b9755ef264a8cde42166d678eb, type: 2}
+  - {fileID: 11400000, guid: ad43ca1882bf37a4aa273f2b0ccf9e62, type: 2}

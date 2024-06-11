@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 4_Bloon Impact
+  m_EditorClassIdentifier: 
+  upgradeName: Bloon Impact
+  cost: 2720
+  xp: 10000
+  damage: 3
+  pierce: 30
+  range: 3
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: Explosions become so violent Bloons are stunned for a short time when
+    they are hit. Range is increased and frags are even more effective.
+  upgradeSprite: {fileID: 21300000, guid: 184a2408da6ab8e4988681d80db61a84, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 514fa9e49ba0dd84ea7fc80d4bcb21f7, type: 3}
+  GOSprite: {fileID: 21300000, guid: 2650feb9178f0924eb2463c0d9c6556e, type: 3}

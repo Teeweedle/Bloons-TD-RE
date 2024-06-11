@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
-  m_Name: Enhanced Eyesight
+  m_Name: Kylie Boomerang
   m_EditorClassIdentifier: 
-  upgradeName: Enhanced Eyesight
-  cost: 170
-  xp: 450
+  upgradeName: Kylie Boomerang
+  cost: 1100
+  xp: 3000
   damage: 1
-  pierce: 2
-  range: 48
-  attackSpeed: 0.95
-  hasCamoDetection: 1
+  pierce: 14
+  range: 0
+  attackSpeed: 0
+  hasCamoDetection: 0
   description: Shoots even further and can detect Camo bloons.
-  upgradeSprite: {fileID: 21300000, guid: d5b757673b77fd440a29b65b2e0b71e4, type: 3}
-  towerImageSprite: {fileID: 21300000, guid: d826ea68e39cf7841952ac53788a1c79, type: 3}
-  GOSprite: {fileID: 21300000, guid: 5798276aed6525e43a18d244c365372e, type: 3}
+  upgradeSprite: {fileID: 21300000, guid: 8966f440d3ca393468693a2f7351fedb, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: d7b7f399975118c4d8422c7f5ec30e0e, type: 3}
+  GOSprite: {fileID: 21300000, guid: 159d8a9dded27ef45b9a628c1955c6e8, type: 3}

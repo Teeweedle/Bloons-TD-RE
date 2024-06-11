@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeLevel: 0
   upgrades:
-  - {fileID: 11400000, guid: c055aa65e0bb50b48a940bc1c4222fbd, type: 2}
-  - {fileID: 11400000, guid: 2a77d58d12c417845adaf1b23c4ade32, type: 2}
-  - {fileID: 11400000, guid: a776dd0bdc8714d4a83c7e9ffc7d0b95, type: 2}
-  - {fileID: 11400000, guid: b3ff06036ec266c44a5f3e0825306e47, type: 2}
-  - {fileID: 11400000, guid: 2254ccaa4fc55844084218384c53f679, type: 2}
+  - {fileID: 11400000, guid: 96bb2af653914234eb6f8381c7deeb29, type: 2}
+  - {fileID: 11400000, guid: aaf444a416b77ac4eb5f3da430fd8a33, type: 2}
+  - {fileID: 11400000, guid: 1ab8565e29e631c43ba4a8a13b000b54, type: 2}
+  - {fileID: 11400000, guid: 456d8d5569c0ad24d9c62b95f5f8fc51, type: 2}
+  - {fileID: 11400000, guid: 4a28bde493f3c9d4dbe7eab58166991e, type: 2}

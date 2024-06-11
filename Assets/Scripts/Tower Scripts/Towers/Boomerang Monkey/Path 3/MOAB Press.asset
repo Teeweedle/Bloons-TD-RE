@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: MOAB Press
+  m_EditorClassIdentifier: 
+  upgradeName: MOAB Press
+  cost: 2040
+  xp: 9500
+  damage: 1
+  pierce: 14
+  range: 0
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: Heavy Kylie boomerangs hit MOAB-Class Bloons multiple times per throw
+    and sometimes knocks them back a short way along the path.
+  upgradeSprite: {fileID: 21300000, guid: a709243b03d04e34eb698d44e9438d40, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 099bc7f96a11ad34987403910cb23e82, type: 3}
+  GOSprite: {fileID: 21300000, guid: 552c75c85600413418e768a649ce8dc1, type: 3}

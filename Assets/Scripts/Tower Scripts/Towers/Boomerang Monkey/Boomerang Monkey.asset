@@ -12,20 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f937a7e96baab6243b08f5df1a9e7f51, type: 3}
   m_Name: Boomerang Monkey
   m_EditorClassIdentifier: 
-  towerName: Dart Monkey
-  cost: 170
+  towerName: Boomerang Monkey
+  cost: 265
   damage: 1
-  pierce: 2
-  range: 32
-  attackSpeed: 0.95
+  pierce: 4
+  range: 43
+  attackSpeed: 1.2
   hasCamoDetection: 0
-  description: Throws a single dart at nearby bloons. Short range and low pierce
-    but cheap.
-  towerSprite: {fileID: 21300000, guid: 460599df7df0c77418d430405d71778b, type: 3}
-  towerGOSprite: {fileID: 21300000, guid: 0481479e8d8faee46b7fd20f72d6e6dd, type: 3}
+  description: Hurls a boomerang that follows a curved path. Good range and pierce.
+  towerSprite: {fileID: 21300000, guid: ae83d3f0ffe2f444ab4226dc94b396ef, type: 3}
+  towerGOSprite: {fileID: 21300000, guid: 438105666f4ff0343b6f3882f2001ede, type: 3}
   upgradeLevelArray: 000000000000000000000000
   numberOfBloonsPopped: 0
   upgradePath:
-  - {fileID: 11400000, guid: 329c3555538bc874ab1f247ae02f2d3a, type: 2}
-  - {fileID: 11400000, guid: 732f882ef25b36b46be28b66e8591faa, type: 2}
-  - {fileID: 11400000, guid: 43f8fa548ad504d4ba5b611b2c258a9b, type: 2}
+  - {fileID: 11400000, guid: e84f612fb26bb1446ad71f2bbb232c13, type: 2}
+  - {fileID: 11400000, guid: 124c2bf619db3024daec0bc2a513bf47, type: 2}
+  - {fileID: 11400000, guid: 090ddff1fabd5a54aaf2bdd1c9ec006a, type: 2}
