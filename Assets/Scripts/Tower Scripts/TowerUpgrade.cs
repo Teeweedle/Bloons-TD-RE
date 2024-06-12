@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewUpgradePath", menuName = "Tower Upgrade")]
+[CreateAssetMenu(fileName = "NewUpgrade", menuName = "Tower Upgrade")]
 public class TowerUpgrade : ScriptableObject
 {
     public string upgradeName;

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 1_Permafrost
+  m_EditorClassIdentifier: 
+  upgradeName: Perma Frost
+  cost: 125
+  xp: 160
+  damage: 0
+  pierce: 0
+  range: 0
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: Bloons move slowly even after thawing out.
+  upgradeSprite: {fileID: 21300000, guid: d8c000aa9a94b214ea74e5e721583034, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 40acca007c267bb45af3ac0dd895f697, type: 3}
+  GOSprite: {fileID: 21300000, guid: 470a30aa12bf2514b961a4600e81cd3e, type: 3}

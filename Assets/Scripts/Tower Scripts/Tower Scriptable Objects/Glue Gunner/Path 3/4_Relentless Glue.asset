@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 4_Relentless Glue
+  m_EditorClassIdentifier: 
+  upgradeName: Relentless Glue
+  cost: 2890
+  xp: 8000
+  damage: 0
+  pierce: 0
+  range: 0
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: Popped Bloons that were glued stun nearby Bloons.
+  upgradeSprite: {fileID: 21300000, guid: 6339acee393588c40b790cde886c7b78, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 9f0e47a2ef7b13e4f9382d8c0bd01d50, type: 3}
+  GOSprite: {fileID: 21300000, guid: 96cb135e72ebd4c49993dcdea22ff64a, type: 3}

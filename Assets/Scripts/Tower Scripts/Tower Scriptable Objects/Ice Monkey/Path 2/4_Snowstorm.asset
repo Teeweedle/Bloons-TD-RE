@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 4_Snowstorm
+  m_EditorClassIdentifier: 
+  upgradeName: Snowstorm
+  cost: 3230
+  xp: 8500
+  damage: 0
+  pierce: 0
+  range: 10
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: 'Snowstorm Ability: Freezes all regular Bloons on screen, briefly
+    freezes White, Zebra, and Camo, and slows MOAB-class.'
+  upgradeSprite: {fileID: 21300000, guid: 731b2293bf270ab40aec5e2c2383afbe, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: e3534b04cc8b676438d8986ffcf14232, type: 3}
+  GOSprite: {fileID: 21300000, guid: 9221805cb5c8b8444bf3dd9e135d55ad, type: 3}

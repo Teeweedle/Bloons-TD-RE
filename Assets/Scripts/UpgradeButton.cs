@@ -60,7 +60,7 @@ public class UpgradeButton : MonoBehaviour
             NextUpgrade = GetNextUpgrade(aTowerUpgradeLevel);
 
         UpgradeImage.sprite = NextUpgrade.upgradeSprite;
-        UpgradeName.text = NextUpgrade.name;
+        UpgradeName.text = NextUpgrade.upgradeName;
         UpgradePrice.text = ($"${NextUpgrade.cost}");
 
         InfoPanelName.text = NextUpgrade.name;

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 4_Overdrive
+  m_EditorClassIdentifier: 
+  upgradeName: Overdrive
+  cost: 2720
+  xp: 8750
+  damage: 0
+  pierce: 1
+  range: 0
+  attackSpeed: 3
+  hasCamoDetection: 0
+  description: Shoots incredibly fast.
+  upgradeSprite: {fileID: 21300000, guid: 8d7ce4b78e0bd8b45989fe94a6824b0e, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 83c9cb6b696d91142a0295ed19d9e066, type: 3}
+  GOSprite: {fileID: 21300000, guid: 61877190d9390c74d85fea8bd5ec2bf7, type: 3}

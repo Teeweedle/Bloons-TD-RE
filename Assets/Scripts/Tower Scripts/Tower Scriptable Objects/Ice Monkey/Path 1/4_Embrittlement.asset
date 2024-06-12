@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 4_Embrittlement
+  m_EditorClassIdentifier: 
+  upgradeName: Embrittlement
+  cost: 1870
+  xp: 8250
+  damage: 0
+  pierce: 0
+  range: 0
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: Can hit MOAB-class Bloons. All hit Bloons become brittle, take extra
+    damage while frozen, and lose Camo properties.
+  upgradeSprite: {fileID: 21300000, guid: 921d56a3b42662a45a6093f8dc065f91, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: cdc9b597514d45b48a28b9b2154f11c6, type: 3}
+  GOSprite: {fileID: 21300000, guid: 4f41e3a6f656766429ff4e300ad00a0f, type: 3}

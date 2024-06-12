@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6a355e42e9792438b9d0d065f6acce, type: 3}
+  m_Name: 5_Icicle Impale
+  m_EditorClassIdentifier: 
+  upgradeName: Icicle Impale
+  cost: 25500
+  xp: 30000
+  damage: 0
+  pierce: 0
+  range: 0
+  attackSpeed: 0
+  hasCamoDetection: 0
+  description: Shoots huge icicle spikes that do huge damage to MOAB-Class Bloons
+    and freezes them.
+  upgradeSprite: {fileID: 21300000, guid: 30168ad49e3212042a0a7dbf68199d55, type: 3}
+  towerImageSprite: {fileID: 21300000, guid: 3534a868c00408641bdd7e81df3dd347, type: 3}
+  GOSprite: {fileID: 21300000, guid: ec6c06095b3243d47993c790a825e17f, type: 3}
