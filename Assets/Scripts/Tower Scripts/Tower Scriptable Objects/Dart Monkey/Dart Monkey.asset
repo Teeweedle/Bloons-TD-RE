@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f937a7e96baab6243b08f5df1a9e7f51, type: 3}
+  m_Name: Dart Monkey
+  m_EditorClassIdentifier: 
+  towerName: Dart Monkey
+  cost: 170
+  damage: 1
+  pierce: 2
+  range: 32
+  attackSpeed: 0.95
+  hasCamoDetection: 0
+  description: Throws a single dart at nearby bloons. Short range and low pierce
+    but cheap.
+  towerSprite: {fileID: 21300000, guid: 460599df7df0c77418d430405d71778b, type: 3}
+  towerGOSprite: {fileID: 21300000, guid: 0481479e8d8faee46b7fd20f72d6e6dd, type: 3}
+  upgradeLevelArray: 000000000000000000000000
+  numberOfBloonsPopped: 0
+  upgradePath:
+  - {fileID: 11400000, guid: 1d51f188763d9294e9595cd5d0e06286, type: 2}
+  - {fileID: 11400000, guid: 53422e8c4c469a648b1462026cf42c42, type: 2}
+  - {fileID: 11400000, guid: 4972180f463292d4f95db6d96b885ada, type: 2}

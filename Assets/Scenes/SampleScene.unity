@@ -11334,9 +11334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerStats:
-  - {fileID: 11400000, guid: 16fea1662a5565845a29d4871a1fe15a, type: 2}
-  - {fileID: 11400000, guid: f1c3ffd5324f94c4aa81982b95a8cc77, type: 2}
-  - {fileID: 11400000, guid: b06332e4fc6e82442ace1ecac5659766, type: 2}
+  - {fileID: 11400000, guid: 8d2c3a35972cf584a901c9afcdbcc0ed, type: 2}
+  - {fileID: 11400000, guid: 56e13585139145f488a252e9ec873bfe, type: 2}
+  - {fileID: 11400000, guid: 48be4e0eac07c5e40a84fbae66b3ab40, type: 2}
   towerPrefab: {fileID: 4818029962975455510, guid: 1ae27e351a7cf4e4f85524bd4bea3309, type: 3}
 --- !u!4 &1215949273
 Transform:
