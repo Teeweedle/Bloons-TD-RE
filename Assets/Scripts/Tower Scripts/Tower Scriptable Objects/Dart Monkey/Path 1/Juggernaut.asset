@@ -18,7 +18,9 @@ MonoBehaviour:
   damage: 0
   pierce: 28
   range: 48
-  attackSpeed: 1
+  projectileSpeed: 0.1
+  projectileLifeSpan: 0
+  attackSpeed: 0.13
   hasCamoDetection: 0
   description: Hurls a giant spiked ball that pops lead and excels at crushing Ceramic
     and Fortified Bloons.

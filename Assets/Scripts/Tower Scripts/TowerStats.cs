@@ -7,7 +7,9 @@ public class TowerStats : ScriptableObject
     public int cost;
     public int damage;
     public int pierce;
-    public int range;
+    public float range;
+    public float projectileSpeed;
+    public float projectileLifeSpan;
     public float attackSpeed;
     public bool hasCamoDetection;
     public string description;

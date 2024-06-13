@@ -8,7 +8,9 @@ public class TowerUpgrade : ScriptableObject
     public int xp;
     public int damage;
     public int pierce;
-    public int range;
+    public float range;
+    public float projectileSpeed;
+    public float projectileLifeSpan;
     public float attackSpeed;
     public bool hasCamoDetection;
     public string description;

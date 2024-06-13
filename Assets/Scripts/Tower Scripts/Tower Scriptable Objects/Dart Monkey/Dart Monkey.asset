@@ -17,6 +17,8 @@ MonoBehaviour:
   damage: 1
   pierce: 2
   range: 32
+  projectileSpeed: 8
+  projectileLifeSpan: 0.75
   attackSpeed: 0.95
   hasCamoDetection: 0
   description: Throws a single dart at nearby bloons. Short range and low pierce

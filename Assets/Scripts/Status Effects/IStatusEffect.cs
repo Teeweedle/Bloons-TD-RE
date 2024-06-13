@@ -1,5 +1,4 @@
 
-
 public interface IStatusEffect 
 {    
     void Apply(BaseBloon aBloon, BaseTower aParentTower);

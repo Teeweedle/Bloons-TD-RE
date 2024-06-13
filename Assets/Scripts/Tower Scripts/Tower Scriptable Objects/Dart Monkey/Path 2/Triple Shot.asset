@@ -15,9 +15,11 @@ MonoBehaviour:
   upgradeName: Triple Shot
   cost: 340
   xp: 2000
-  damage: 1
-  pierce: 1
-  range: 32
+  damage: 0
+  pierce: 0
+  range: 0
+  projectileSpeed: 0
+  projectileLifeSpan: 0
   attackSpeed: 0.67
   hasCamoDetection: 0
   description: Throws 3 darts at a time instead of 1.

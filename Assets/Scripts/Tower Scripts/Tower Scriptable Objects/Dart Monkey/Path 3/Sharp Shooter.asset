@@ -18,6 +18,7 @@ MonoBehaviour:
   damage: 8
   pierce: 2
   range: 32
+  projectileSpeed: 0.1
   attackSpeed: 0.6
   hasCamoDetection: 1
   description: Sharp Shooter attacks faster and does powerful Crit shots every few

@@ -16,6 +16,15 @@ public class BaseProjectile : MonoBehaviour
     {
         projectileID = GetInstanceID();
     }
+    public void IntializeProjectile(BaseTower aParentTower)
+    {
+        parentTower = aParentTower;
+        speed = aParentTower._towerStats.projectileSpeed;
+        damage = aParentTower._towerStats.damage;
+        health = aParentTower._towerStats.pierce;
+        lifeSpan = aParentTower._towerStats.projectileLifeSpan;
+        SetDirection(-aParentTower.transform.up);
+    }
     // Update is called once per frame
     void Update()
     {

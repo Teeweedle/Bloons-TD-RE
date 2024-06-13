@@ -15,10 +15,12 @@ MonoBehaviour:
   upgradeName: Plasma Monkey Fan Club
   cost: 38250
   xp: 30000
-  damage: 1
-  pierce: 1
-  range: 32
-  attackSpeed: 0.67
+  damage: 2
+  pierce: 5
+  range: 0
+  projectileSpeed: 0
+  projectileLifeSpan: 0
+  attackSpeed: 2
   hasCamoDetection: 0
   description: Elite membership of this club grants the Dart Monkeys even more power.
   upgradeSprite: {fileID: 21300000, guid: 11e9a8c45003ed944870ef41f4d476ee, type: 3}

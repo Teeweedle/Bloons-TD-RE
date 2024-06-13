@@ -17,8 +17,10 @@ MonoBehaviour:
   xp: 2100
   damage: 1
   pierce: 17
-  range: 0
-  attackSpeed: 1.15
+  range: 0.15
+  projectileSpeed: 0
+  projectileLifeSpan: 0
+  attackSpeed: -17
   hasCamoDetection: 0
   description: Converts the Dart Monkey into a slower attacking Spike-o-pult that
     hurls large spiked balls. Each ball can pop lots of Bloons and rebounds off obstacles.

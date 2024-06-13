@@ -15,10 +15,12 @@ MonoBehaviour:
   upgradeName: Long Range Darts
   cost: 75
   xp: 50
-  damage: 1
-  pierce: 2
-  range: 40
-  attackSpeed: 0.95
+  damage: 0
+  pierce: 0
+  range: 0.25
+  projectileSpeed: 0
+  projectileLifeSpan: 0.15
+  attackSpeed: 0
   hasCamoDetection: 0
   description: Makes the Dart Monkey shoot further than normal.
   upgradeSprite: {fileID: 21300000, guid: 71c5ce9e517d4814cb31de793b96e060, type: 3}

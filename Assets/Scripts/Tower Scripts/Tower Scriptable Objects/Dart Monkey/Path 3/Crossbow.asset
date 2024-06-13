@@ -15,10 +15,12 @@ MonoBehaviour:
   upgradeName: Crossbow
   cost: 1700
   xp: 1200
-  damage: 2
-  pierce: 2
-  range: 32
-  attackSpeed: 0.95
+  damage: 6
+  pierce: 0
+  range: 0.1
+  projectileSpeed: 0.1
+  projectileLifeSpan: 0
+  attackSpeed: 0.37
   hasCamoDetection: 1
   description: Uses a long range Crossbow that can pop 3 layers of Bloon for every
     hit.

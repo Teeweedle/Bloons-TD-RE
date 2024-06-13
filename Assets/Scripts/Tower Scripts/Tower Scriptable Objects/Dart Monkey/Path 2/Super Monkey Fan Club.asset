@@ -15,10 +15,12 @@ MonoBehaviour:
   upgradeName: Super Monkey Fan Club
   cost: 6800
   xp: 7500
-  damage: 1
-  pierce: 1
-  range: 32
-  attackSpeed: 0.67
+  damage: 0
+  pierce: 0
+  range: 0
+  projectileSpeed: 0
+  projectileLifeSpan: 0
+  attackSpeed: 1.5
   hasCamoDetection: 0
   description: 'Super Monkey Fan Club Ability: Converts up to 10 nearby Dart Monkeys
     including itself into Super Monkeys for 15 seconds. Regular attack speed also

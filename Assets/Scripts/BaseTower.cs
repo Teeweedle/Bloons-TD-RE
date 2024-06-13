@@ -7,7 +7,7 @@ public class BaseTower : MonoBehaviour
 {
     [SerializeField] private Material _outlineShader, _defaultShader;
     [SerializeField] private SpriteRenderer _towerSpriteRenderer;
-    [SerializeField] private GameObject _projectile;
+    [SerializeField] public GameObject _projectile;
 
     private bool _isPlaced, _isSelected;
 
@@ -16,8 +16,9 @@ public class BaseTower : MonoBehaviour
     private string _targetPriority;
     private SortedSet<BaseBloon> _targetSortedList = new SortedSet<BaseBloon>(new DistanceComparer());
     private GameObject _currentTarget;
-    private const float _angleOffset = 90f;
-    private float _nextFireTime;
+    private const float angleOffset = 90f;
+    public float NextFireTime { get; set; }
+    public ITowerBehavior towerBehavior;
 
     private Dictionary<string, Action> _getTargetAction;
     private Action _cachedTargetAction;
@@ -41,7 +42,7 @@ public class BaseTower : MonoBehaviour
     }
     private void Start()
     {
-        _nextFireTime = 0f;
+        NextFireTime = 0f;
         _isPlaced = false;
         _getTargetAction = new Dictionary<string, Action> {
             { "First", () => _currentTarget = GetFirstTarget() },
@@ -51,6 +52,7 @@ public class BaseTower : MonoBehaviour
 
         };
         SetDefaultTargetPriority();
+        towerBehavior = new NormalShot(new MultiShot(3, 15f));
     }
     private void Update()
     {
@@ -58,46 +60,19 @@ public class BaseTower : MonoBehaviour
         {
             if (_currentTarget != null)
             {
-                Fire(_currentTarget);
+                towerBehavior.Fire(_currentTarget, this);
             }
         }
-    }
-    private void Fire(GameObject aProjectile, int aAmount)
-    {
-        //TODO: Implement
-        for (int i = 0; i < aAmount; i++)
-        {
-            Instantiate(aProjectile, this.transform.position, Quaternion.identity);
-        }
-    }
-    private void Fire(GameObject aTarget)
-    {
-        if (Time.time > _nextFireTime)
-        {
-            LookAtTarget(aTarget.transform);
-            GameObject lProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
-            BaseProjectile lProjectileScript = lProjectile.GetComponent<BaseProjectile>();
-            if (lProjectileScript != null)
-            {
-                lProjectileScript.speed = 8f;//default for dart monkey
-                lProjectileScript.health = _towerStats.pierce;
-                lProjectileScript.damage = _towerStats.damage;
-                lProjectileScript.lifeSpan = 0.75f;//default for dart monkey
-                lProjectileScript.parentTower = this;
-                lProjectileScript.SetDirection(-transform.up);
-            }
-            _nextFireTime = Time.time + _towerStats.attackSpeed;
-        }        
     }
     /// <summary>
     /// Rotates the current gameObject to "look at" the targeted bloon.
     /// </summary>
     /// <param name="aTarget">The target transform</param>
-    private void LookAtTarget(Transform aTarget)
+    public void LookAtTarget(Transform aTarget)
     {
         Vector3 lDirection = aTarget.position - transform.position;
         float lAngle = Mathf.Atan2(lDirection.y, lDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, lAngle + _angleOffset));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, lAngle + angleOffset));
     }
     /// <summary>
     /// Gets the bloon at the end of the sorted list.
@@ -180,18 +155,57 @@ public class BaseTower : MonoBehaviour
     } 
     public void UpdateStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
     {
-        _towerStats.pierce += aTowerUpgrade.pierce;
-        _towerStats.damage += aTowerUpgrade.damage;
-        _towerStats.range += aTowerUpgrade.range;
-        _towerStats.attackSpeed += aTowerUpgrade.attackSpeed;
-        if (!_towerStats.hasCamoDetection)
-        {
-            _towerStats.hasCamoDetection = aTowerUpgrade.hasCamoDetection;
-        }
+        UpdatePierce(aTowerUpgrade.pierce);
+        UpdateDamage(aTowerUpgrade.damage);
+        UpdateRange(aTowerUpgrade.range);
+        UpdateProjectileSpeed(aTowerUpgrade.projectileSpeed);
+        UpdateAttackSpeed(aTowerUpgrade.attackSpeed);
+        UpdateProjectileLifeSpan(aTowerUpgrade.projectileLifeSpan);
+        UpdateCamoDetection(aTowerUpgrade.hasCamoDetection);
+        UpdateCost(aTowerUpgrade.cost);
+ 
         _towerStats.upgradeLevelArray = UpdateUpgradeArray(_towerStats.upgradeLevelArray, aUpgradeArray);
 
-        _towerStats.cost += aTowerUpgrade.cost;
         _onUpdatePrice?.Invoke(_towerStats.cost);
+    }
+    private void UpdatePierce(int aPierce) 
+    { 
+        _towerStats.pierce += aPierce;
+    }
+    private void UpdateDamage(int aDamage) 
+    { 
+        _towerStats.damage += aDamage; 
+    }
+    private void UpdateRange(float aRange) 
+    { 
+        if(aRange != 0)
+            _towerStats.range *= (1.0f * aRange); 
+    }
+    private void UpdateProjectileSpeed(float aProjectileSpeed) 
+    { 
+        if(aProjectileSpeed != 0)
+            _towerStats.projectileSpeed *= (1.0f + aProjectileSpeed); 
+    }
+    private void UpdateAttackSpeed(float aAttackSpeed) 
+    { 
+        if(aAttackSpeed != 0)
+            _towerStats.attackSpeed *= (1.0f - aAttackSpeed); 
+    }
+    private void UpdateProjectileLifeSpan(float aProjectileLifeSpan) 
+    { 
+        if(aProjectileLifeSpan != 0)
+            _towerStats.projectileLifeSpan *= (1.0f + aProjectileLifeSpan); 
+    }
+    private void UpdateCamoDetection(bool aCamoDetection) 
+    {
+        if (!_towerStats.hasCamoDetection)
+        {
+            _towerStats.hasCamoDetection = aCamoDetection;
+        }
+    }
+    private void UpdateCost(int aCost) 
+    { 
+        _towerStats.cost += aCost; 
     }
     private int[] UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
     {
@@ -211,14 +225,8 @@ public class BaseTower : MonoBehaviour
         _isPlaced = true;
     }  
     public TowerStats GetTowerStats() { return _towerStats; }
-    public void SetTowerStats(TowerStats aTowerStats)
-    {
-        _towerStats = aTowerStats;
-    }
-    private void SetDefaultTargetPriority()
-    {
-        SetTargetPriority("First");
-    }
+    public void SetTowerStats(TowerStats aTowerStats){ _towerStats = aTowerStats; }
+    private void SetDefaultTargetPriority(){ SetTargetPriority("First"); }
     /// <summary>
     /// Stores XP gained through popping bloons in the TowerData Object.
     /// </summary>
@@ -226,7 +234,6 @@ public class BaseTower : MonoBehaviour
     public void NumBloonsPopped(int aNumBloonPopped)
     {
         _towerStats.numberOfBloonsPopped += aNumBloonPopped;
-        //_towerData.numBloonsPopped += aNumBloonPopped;
         if(_isSelected)
         {
             _onUpdateBloonsPopped?.Invoke(_towerStats.numberOfBloonsPopped);

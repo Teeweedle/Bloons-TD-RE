@@ -15,10 +15,12 @@ MonoBehaviour:
   upgradeName: Crossbow Master
   cost: 18275
   xp: 35000
-  damage: 8
+  damage: 0
   pierce: 1
-  range: 32
-  attackSpeed: 0.16
+  range: 0.33
+  projectileSpeed: 0.15
+  projectileLifeSpan: 0
+  attackSpeed: 0.73
   hasCamoDetection: 1
   description: Crossbow Master shoots really fast and devastates most Bloon types
     with ease.
