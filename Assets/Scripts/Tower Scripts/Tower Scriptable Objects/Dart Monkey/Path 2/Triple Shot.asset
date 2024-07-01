@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Triple Shot
   m_EditorClassIdentifier: 
   upgradeName: Triple Shot
+  projectileBehaviorName: 
   cost: 340
   xp: 2000
   damage: 0
   pierce: 0
+  numberOfProjectiles: 3
+  projectileOffset: 15
   range: 0
   projectileSpeed: 0
   projectileLifeSpan: 0

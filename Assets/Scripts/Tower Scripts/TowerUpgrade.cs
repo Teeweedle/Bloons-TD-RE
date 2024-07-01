@@ -4,10 +4,13 @@ using UnityEngine;
 public class TowerUpgrade : ScriptableObject
 {
     public string upgradeName;
+    public string projectileBehaviorName;
     public int cost;
     public int xp;
     public int damage;
     public int pierce;
+    public int numberOfProjectiles;
+    public float projectileOffset;
     public float range;
     public float projectileSpeed;
     public float projectileLifeSpan;

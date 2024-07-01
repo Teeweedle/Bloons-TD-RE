@@ -19,6 +19,7 @@ public class BaseTower : MonoBehaviour
     private const float angleOffset = 90f;
     public float NextFireTime { get; set; }
     public ITowerBehavior towerBehavior;
+    public CompositeProjectileBehavior compositeProjectileBehavior;
 
     private Dictionary<string, Action> _getTargetAction;
     private Action _cachedTargetAction;
@@ -52,7 +53,11 @@ public class BaseTower : MonoBehaviour
 
         };
         SetDefaultTargetPriority();
-        towerBehavior = new NormalShot(new MultiShot(3, 15f));
+
+        compositeProjectileBehavior = new CompositeProjectileBehavior();
+        compositeProjectileBehavior.AddBehavior(new SingleShot());
+        //TODO: This isn't working right now. FIX IT
+        towerBehavior = new NormalShot(compositeProjectileBehavior);
     }
     private void Update()
     {
@@ -163,11 +168,17 @@ public class BaseTower : MonoBehaviour
         UpdateProjectileLifeSpan(aTowerUpgrade.projectileLifeSpan);
         UpdateCamoDetection(aTowerUpgrade.hasCamoDetection);
         UpdateCost(aTowerUpgrade.cost);
- 
+        UpdateProjectileBehavior(aTowerUpgrade);
         _towerStats.upgradeLevelArray = UpdateUpgradeArray(_towerStats.upgradeLevelArray, aUpgradeArray);
 
         _onUpdatePrice?.Invoke(_towerStats.cost);
     }
+
+    private void UpdateProjectileBehavior(TowerUpgrade aTowerUpgrade)
+    {
+        compositeProjectileBehavior.AddBehavior(ProjectileBehaviorFactory.CreateBehavior(aTowerUpgrade));
+    }
+
     private void UpdatePierce(int aPierce) 
     { 
         _towerStats.pierce += aPierce;
