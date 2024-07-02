@@ -13,4 +13,9 @@ public class CompositeProjectileBehavior : IProjectileBehavior
     {        
         projectileBehavior.IntializeProjectile(aTarget, aParentTower);
     }
+
+    public void SetProjectileProperties(GameObject aProjectile, BaseTower aParentTower)
+    {
+        throw new System.NotImplementedException();
+    }
 }

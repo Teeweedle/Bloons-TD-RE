@@ -23,7 +23,7 @@ MonoBehaviour:
   range: 0
   projectileSpeed: 0
   projectileLifeSpan: 0
-  attackSpeed: 0.67
+  attackSpeed: 0
   hasCamoDetection: 0
   description: Throws 3 darts at a time instead of 1.
   upgradeSprite: {fileID: 21300000, guid: cc5890b308f51cd408a8cb9e3b24917b, type: 3}

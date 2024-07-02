@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: Very Quick Shots
   m_EditorClassIdentifier: 
   upgradeName: Very Quick Shots
+  projectileBehaviorName: 
   cost: 160
   xp: 400
   damage: 0
   pierce: 0
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 0
   projectileSpeed: 0
   projectileLifeSpan: 0
-  attackSpeed: 0.5
+  attackSpeed: 0.33
   hasCamoDetection: 0
   description: Shoots 33% faster!
   upgradeSprite: {fileID: 21300000, guid: dc4bdada4ba5f5242b1c7bc7a992f6be, type: 3}

@@ -31,7 +31,7 @@ public class BaseProjectile : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
         if ((lifeSpan -= Time.deltaTime) <= 0)
         {
-            Destroy(gameObject);
+            ProjectilePool.ReturnToPool(gameObject);
         }
     }
     public void SetDirection(Vector3 aDirection)
@@ -54,7 +54,7 @@ public class BaseProjectile : MonoBehaviour
         health -= 1;
         if (health <= 0) 
         {
-            Destroy(gameObject);
+            ProjectilePool.ReturnToPool(gameObject);
         }
     }    
 }

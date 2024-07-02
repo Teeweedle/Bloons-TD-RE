@@ -9,11 +9,13 @@ public class MultiShot : IProjectileBehavior
         numberOfProjectiles = aNumberOfProjectiles;
         offset = aOffset;
     }
+    //TODO: Setup gameobject pooling for projectiles
     public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            GameObject lProjectile = Object.Instantiate(aParentTower._projectile, aParentTower.transform.position, Quaternion.identity);
+            GameObject lProjectile = ProjectilePool.GetProjectile(aParentTower._projectile);
+            ((IProjectileBehavior)this).SetProjectileProperties(lProjectile, aParentTower);
             BaseProjectile lBaseProjectile = lProjectile.GetComponent<BaseProjectile>();
             if (lBaseProjectile != null)
             {

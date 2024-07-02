@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: Plasma Monkey Fan Club
   m_EditorClassIdentifier: 
   upgradeName: Plasma Monkey Fan Club
+  projectileBehaviorName: 
   cost: 38250
   xp: 30000
   damage: 2
   pierce: 5
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 0
   projectileSpeed: 0
   projectileLifeSpan: 0
-  attackSpeed: 2
+  attackSpeed: 0
   hasCamoDetection: 0
   description: Elite membership of this club grants the Dart Monkeys even more power.
   upgradeSprite: {fileID: 21300000, guid: 11e9a8c45003ed944870ef41f4d476ee, type: 3}
