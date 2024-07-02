@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SingleShot : IProjectileBehavior
 {
-    public void IntializeProjectile(GameObject aProjectile, GameObject aTarget, BaseTower aParentTower)
+    public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
     {
-        BaseProjectile lBaseProjectile = aProjectile.GetComponent<BaseProjectile>();
-        if(lBaseProjectile != null)
+        GameObject lProjectile = Object.Instantiate(aParentTower._projectile, aParentTower.transform.position, Quaternion.identity);
+        BaseProjectile lBaseProjectile = lProjectile.GetComponent<BaseProjectile>();
+        if (lBaseProjectile != null)
         {
-            lBaseProjectile.IntializeProjectile(aParentTower);
+            lBaseProjectile.SetProjectileStats(aParentTower);
         }
     }
 }

@@ -1,20 +1,16 @@
 
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CompositeProjectileBehavior : IProjectileBehavior
 {
-    private List<IProjectileBehavior> projectileBehaviors = new List<IProjectileBehavior>();
+    private IProjectileBehavior projectileBehavior;
 
-    public void AddBehavior(IProjectileBehavior aBehavior)
+    public void SetProjectileBehavior(IProjectileBehavior aBehavior)
     {
-        projectileBehaviors.Add(aBehavior);
+        projectileBehavior = aBehavior;
     }
-    public void IntializeProjectile(GameObject aProjectile, GameObject aTarget, BaseTower aParentTower)
-    {
-        foreach (IProjectileBehavior lBehavior in projectileBehaviors)
-        {
-            lBehavior.IntializeProjectile(aProjectile, aTarget, aParentTower);
-        }
+    public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
+    {        
+        projectileBehavior.IntializeProjectile(aTarget, aParentTower);
     }
 }

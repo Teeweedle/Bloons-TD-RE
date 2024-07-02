@@ -1,13 +1,7 @@
-
 using UnityEngine;
 
 public class NormalShot : ITowerBehavior
 {
-    //private IProjectileBehavior projectileBehavior;
-    //public NormalShot(IProjectileBehavior aProjectileBehavior)
-    //{
-    //    projectileBehavior = aProjectileBehavior;
-    //}
     private CompositeProjectileBehavior projectileBehavior;
     public NormalShot(CompositeProjectileBehavior aProjectileBehavior)
     {
@@ -18,9 +12,9 @@ public class NormalShot : ITowerBehavior
         if (Time.time > aParentTower.NextFireTime)
         {
             aParentTower.LookAtTarget(aTarget.transform);
-            GameObject lProjectile = Object.Instantiate(aParentTower._projectile, aParentTower.transform.position, Quaternion.identity);
-            projectileBehavior.IntializeProjectile(lProjectile, aTarget, aParentTower);
-   
+            //instantiate projectile
+            projectileBehavior.IntializeProjectile(aTarget, aParentTower);
+            //set next fire time
             aParentTower.NextFireTime = Time.time + aParentTower._towerStats.attackSpeed;
         }
     }

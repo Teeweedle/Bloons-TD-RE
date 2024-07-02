@@ -9,15 +9,15 @@ public class MultiShot : IProjectileBehavior
         numberOfProjectiles = aNumberOfProjectiles;
         offset = aOffset;
     }
-    public void IntializeProjectile(GameObject aProjectile, GameObject aTarget, BaseTower aParentTower)
+    public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            GameObject lNewProjectile = GameObject.Instantiate(aProjectile, aParentTower.transform.position, Quaternion.identity);
-            BaseProjectile lBaseProjectile = lNewProjectile.GetComponent<BaseProjectile>();
+            GameObject lProjectile = Object.Instantiate(aParentTower._projectile, aParentTower.transform.position, Quaternion.identity);
+            BaseProjectile lBaseProjectile = lProjectile.GetComponent<BaseProjectile>();
             if (lBaseProjectile != null)
             {
-                lBaseProjectile.IntializeProjectile(aParentTower);
+                lBaseProjectile.SetProjectileStats(aParentTower);
 
                 float lAngle = (i - (numberOfProjectiles / 2)) * offset;
                 Vector3 lDirection = Quaternion.Euler(0f, 0f, lAngle) * -aParentTower.transform.up;

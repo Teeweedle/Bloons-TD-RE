@@ -2,5 +2,10 @@ using UnityEngine;
 
 public interface IProjectileBehavior
 {
-    void IntializeProjectile(GameObject aProjectile, GameObject aTarget, BaseTower aParentTower);
+    /// <summary>
+    /// Initializes and instantiates the projectile
+    /// </summary>
+    /// <param name="aTarget">Target of the projectile</param>
+    /// <param name="aParentTower">The tower that fired the projectile</param>
+    void IntializeProjectile(GameObject aTarget, BaseTower aParentTower);
 }

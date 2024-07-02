@@ -55,7 +55,7 @@ public class BaseTower : MonoBehaviour
         SetDefaultTargetPriority();
 
         compositeProjectileBehavior = new CompositeProjectileBehavior();
-        compositeProjectileBehavior.AddBehavior(new SingleShot());
+        compositeProjectileBehavior.SetProjectileBehavior(new SingleShot());
         //TODO: This isn't working right now. FIX IT
         towerBehavior = new NormalShot(compositeProjectileBehavior);
     }
@@ -158,6 +158,11 @@ public class BaseTower : MonoBehaviour
     {
         _towerSpriteRenderer.sprite = aSprite;
     } 
+    /// <summary>
+    /// Updates the stats of the tower based on the associated Scriptable Object
+    /// </summary>
+    /// <param name="aTowerUpgrade">The Scriptable Object that contains the new stats</param>
+    /// <param name="aUpgradeArray">Current upgrade level of the tower</param>
     public void UpdateStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
     {
         UpdatePierce(aTowerUpgrade.pierce);
@@ -176,7 +181,8 @@ public class BaseTower : MonoBehaviour
 
     private void UpdateProjectileBehavior(TowerUpgrade aTowerUpgrade)
     {
-        compositeProjectileBehavior.AddBehavior(ProjectileBehaviorFactory.CreateBehavior(aTowerUpgrade));
+        if(!string.IsNullOrEmpty(aTowerUpgrade.projectileBehaviorName))
+            compositeProjectileBehavior.SetProjectileBehavior(ProjectileBehaviorFactory.CreateBehavior(aTowerUpgrade));
     }
 
     private void UpdatePierce(int aPierce) 

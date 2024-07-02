@@ -16,7 +16,7 @@ public class BaseProjectile : MonoBehaviour
     {
         projectileID = GetInstanceID();
     }
-    public void IntializeProjectile(BaseTower aParentTower)
+    public void SetProjectileStats(BaseTower aParentTower)
     {
         parentTower = aParentTower;
         speed = aParentTower._towerStats.projectileSpeed;
