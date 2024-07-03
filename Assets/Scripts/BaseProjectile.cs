@@ -7,6 +7,7 @@ public class BaseProjectile : MonoBehaviour
     public int health { get; set; }
     public float lifeSpan { get; set; }
     public  BaseTower parentTower { get; set; }
+    public SpriteRenderer projectileSprite { get; set; }
 
     private Vector3 direction;
     private const string BLOONTAG = "Bloon";
@@ -15,6 +16,7 @@ public class BaseProjectile : MonoBehaviour
     private void Start()
     {
         projectileID = GetInstanceID();
+        projectileSprite = GetComponent<SpriteRenderer>();
     }
     public void SetProjectileStats(BaseTower aParentTower)
     {
@@ -37,6 +39,9 @@ public class BaseProjectile : MonoBehaviour
     public void SetDirection(Vector3 aDirection)
     {
         direction = aDirection;
+        //rotate the sprite to match the direction
+        float lAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, lAngle);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

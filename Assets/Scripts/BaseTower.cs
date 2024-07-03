@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class BaseTower : MonoBehaviour
 {
     [SerializeField] private Material _outlineShader, _defaultShader;
     [SerializeField] private SpriteRenderer _towerSpriteRenderer;
     [SerializeField] public GameObject _projectile;
-
+    public Sprite _currrentProjectileSprite { get; private set; }
     private bool _isPlaced, _isSelected;
 
     public TowerStats _towerStats;
@@ -53,11 +54,11 @@ public class BaseTower : MonoBehaviour
 
         };
         SetDefaultTargetPriority();
-
+        SetDefaultProjectileTexture();
         compositeProjectileBehavior = new CompositeProjectileBehavior();
         compositeProjectileBehavior.SetProjectileBehavior(new SingleShot());
-        //TODO: This isn't working right now. FIX IT
-        towerBehavior = new NormalShot(compositeProjectileBehavior);
+        
+        towerBehavior = new DefaultShot(compositeProjectileBehavior);
     }
     private void Update()
     {
@@ -169,6 +170,7 @@ public class BaseTower : MonoBehaviour
         UpdateDamage(aTowerUpgrade.damage);
         UpdateRange(aTowerUpgrade.range);
         UpdateProjectileSpeed(aTowerUpgrade.projectileSpeed);
+        UpdateProjectileSprite(aTowerUpgrade.upgradeName);
         UpdateAttackSpeed(aTowerUpgrade.attackSpeed);
         UpdateProjectileLifeSpan(aTowerUpgrade.projectileLifeSpan);
         UpdateCamoDetection(aTowerUpgrade.hasCamoDetection);
@@ -177,6 +179,18 @@ public class BaseTower : MonoBehaviour
         _towerStats.upgradeLevelArray = UpdateUpgradeArray(_towerStats.upgradeLevelArray, aUpgradeArray);
 
         _onUpdatePrice?.Invoke(_towerStats.cost);
+    }
+    /// <summary>
+    /// Updates the sprite of the tower based on the name of the upgrade. Only changes if there is a sprite associated with the upgrade
+    /// </summary>
+    /// <param name="aUpgradeName"></param>
+    private void UpdateProjectileSprite(string aUpgradeName)
+    {
+        Sprite lSprite = _towerStats.projectileSpriteAtlas.GetSprite(aUpgradeName);
+        if (lSprite != null)
+        {
+            _currrentProjectileSprite = lSprite;
+        }
     }
 
     private void UpdateProjectileBehavior(TowerUpgrade aTowerUpgrade)
@@ -244,6 +258,10 @@ public class BaseTower : MonoBehaviour
     public TowerStats GetTowerStats() { return _towerStats; }
     public void SetTowerStats(TowerStats aTowerStats){ _towerStats = aTowerStats; }
     private void SetDefaultTargetPriority(){ SetTargetPriority("First"); }
+    private void SetDefaultProjectileTexture()
+    {
+        _currrentProjectileSprite = _towerStats.projectileSpriteAtlas.GetSprite("Base");
+    }
     /// <summary>
     /// Stores XP gained through popping bloons in the TowerData Object.
     /// </summary>

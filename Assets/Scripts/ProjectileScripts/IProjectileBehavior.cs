@@ -11,7 +11,10 @@ public interface IProjectileBehavior
 
     void SetProjectileProperties(GameObject aProjectile, BaseTower aParentTower)
     {
-        //Default implementation
+        //set projectile sprite
+        aProjectile.GetComponent<SpriteRenderer>().sprite = aParentTower._currrentProjectileSprite;
+        //set orientation of projectile
+        //TODO: Set rotation of sprite
         aProjectile.transform.position = aParentTower.transform.position;
         aProjectile.transform.rotation = Quaternion.identity;
     }

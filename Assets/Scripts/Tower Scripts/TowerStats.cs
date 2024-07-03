@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.U2D;
 
 [CreateAssetMenu(fileName = "NewTowerStats", menuName = "Tower Stats")]
 public class TowerStats : ScriptableObject
@@ -15,6 +16,7 @@ public class TowerStats : ScriptableObject
     public string description;
     public Sprite towerSprite;
     public Sprite towerGOSprite;
+    public SpriteAtlas projectileSpriteAtlas;
     public int[] upgradeLevelArray;
     public int numberOfBloonsPopped;
 

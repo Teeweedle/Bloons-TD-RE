@@ -25,6 +25,7 @@ MonoBehaviour:
     but cheap.
   towerSprite: {fileID: 21300000, guid: 460599df7df0c77418d430405d71778b, type: 3}
   towerGOSprite: {fileID: 21300000, guid: 0481479e8d8faee46b7fd20f72d6e6dd, type: 3}
+  projectileSpriteAtlas: {fileID: 100100200, guid: 82950fe179fbeab48a3bc3167e212fe4, type: 3}
   upgradeLevelArray: 000000000000000000000000
   numberOfBloonsPopped: 0
   upgradePath:

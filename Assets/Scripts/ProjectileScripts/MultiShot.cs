@@ -9,7 +9,6 @@ public class MultiShot : IProjectileBehavior
         numberOfProjectiles = aNumberOfProjectiles;
         offset = aOffset;
     }
-    //TODO: Setup gameobject pooling for projectiles
     public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
     {
         for (int i = 0; i < numberOfProjectiles; i++)
@@ -20,7 +19,7 @@ public class MultiShot : IProjectileBehavior
             if (lBaseProjectile != null)
             {
                 lBaseProjectile.SetProjectileStats(aParentTower);
-
+                //set projectile spread
                 float lAngle = (i - (numberOfProjectiles / 2)) * offset;
                 Vector3 lDirection = Quaternion.Euler(0f, 0f, lAngle) * -aParentTower.transform.up;
                 lBaseProjectile.SetDirection(lDirection);

@@ -16,6 +16,7 @@ public static class ScriptableObjectUtility
         clone.hasCamoDetection = source.hasCamoDetection;
         clone.description = source.description;
         clone.towerSprite = source.towerSprite;
+        clone.projectileSpriteAtlas = source.projectileSpriteAtlas;
         clone.numberOfBloonsPopped = source.numberOfBloonsPopped;
         clone.upgradePath = source.upgradePath;
 

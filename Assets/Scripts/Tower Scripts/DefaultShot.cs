@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class NormalShot : ITowerBehavior
+public class DefaultShot : ITowerBehavior
 {
     private CompositeProjectileBehavior projectileBehavior;
-    public NormalShot(CompositeProjectileBehavior aProjectileBehavior)
+    public DefaultShot(CompositeProjectileBehavior aProjectileBehavior)
     {
         projectileBehavior = aProjectileBehavior;
     }
@@ -12,7 +12,7 @@ public class NormalShot : ITowerBehavior
         if (Time.time > aParentTower.NextFireTime)
         {
             aParentTower.LookAtTarget(aTarget.transform);
-            //instantiate projectile
+            //initialize projectile behavior
             projectileBehavior.IntializeProjectile(aTarget, aParentTower);
             //set next fire time
             aParentTower.NextFireTime = Time.time + aParentTower._towerStats.attackSpeed;
