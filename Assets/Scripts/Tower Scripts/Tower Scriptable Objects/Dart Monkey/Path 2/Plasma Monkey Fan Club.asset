@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Plasma Monkey Fan Club
   projectileBehaviorName: 
+  projectileType: Base
   cost: 38250
   xp: 30000
   damage: 2

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Very Quick Shots
   projectileBehaviorName: 
+  projectileType: Base
   cost: 160
   xp: 400
   damage: 0

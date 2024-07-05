@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Juggernaut
   m_EditorClassIdentifier: 
   upgradeName: Juggernaut
+  projectileBehaviorName: 
+  projectileType: Bounce
   cost: 1530
   xp: 7500
   damage: 0
   pierce: 28
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 48
   projectileSpeed: 0.1
   projectileLifeSpan: 0

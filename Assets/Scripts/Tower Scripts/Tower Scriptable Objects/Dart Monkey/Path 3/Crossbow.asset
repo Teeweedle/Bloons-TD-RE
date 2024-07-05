@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Crossbow
   m_EditorClassIdentifier: 
   upgradeName: Crossbow
+  projectileBehaviorName: 
+  projectileType: Base
   cost: 1700
   xp: 1200
   damage: 6
   pierce: 0
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 0.1
   projectileSpeed: 0.1
   projectileLifeSpan: 0

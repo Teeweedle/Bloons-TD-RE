@@ -13,7 +13,7 @@ public class MultiShot : IProjectileBehavior
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            GameObject lProjectile = ProjectilePool.GetProjectile(aParentTower._projectile);
+            GameObject lProjectile = ProjectilePool.Instance.GetProjectile(aParentTower._projectile, aParentTower._towerStats.projectileType);
             ((IProjectileBehavior)this).SetProjectileProperties(lProjectile, aParentTower);
             BaseProjectile lBaseProjectile = lProjectile.GetComponent<BaseProjectile>();
             if (lBaseProjectile != null)

@@ -168,6 +168,7 @@ public class BaseTower : MonoBehaviour
     {
         UpdatePierce(aTowerUpgrade.pierce);
         UpdateDamage(aTowerUpgrade.damage);
+        UpdateProjectileType(aTowerUpgrade.projectileType);
         UpdateRange(aTowerUpgrade.range);
         UpdateProjectileSpeed(aTowerUpgrade.projectileSpeed);
         UpdateProjectileSprite(aTowerUpgrade.upgradeName);
@@ -180,6 +181,12 @@ public class BaseTower : MonoBehaviour
 
         _onUpdatePrice?.Invoke(_towerStats.cost);
     }
+
+    private void UpdateProjectileType(string aProjectileType)
+    {
+        _towerStats.projectileType = aProjectileType;
+    }
+
     /// <summary>
     /// Updates the sprite of the tower based on the name of the upgrade. Only changes if there is a sprite associated with the upgrade
     /// </summary>

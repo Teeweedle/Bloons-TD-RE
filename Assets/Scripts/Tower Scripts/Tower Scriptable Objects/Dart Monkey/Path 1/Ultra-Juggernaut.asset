@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Ultra-Juggernaut
   m_EditorClassIdentifier: 
   upgradeName: Ultra-Juggernaut
+  projectileBehaviorName: 
+  projectileType: Bounce
   cost: 12750
   xp: 22000
   damage: 5
   pierce: 200
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 32
   projectileSpeed: 0.1
   projectileLifeSpan: 0

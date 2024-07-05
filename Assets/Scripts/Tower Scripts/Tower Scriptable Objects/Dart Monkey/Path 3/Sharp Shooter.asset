@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: Sharp Shooter
   m_EditorClassIdentifier: 
   upgradeName: Sharp Shooter
+  projectileBehaviorName: 
+  projectileType: Base
   cost: 1700
   xp: 12000
   damage: 8
   pierce: 2
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 32
   projectileSpeed: 0.1
+  projectileLifeSpan: 0
   attackSpeed: 0.6
   hasCamoDetection: 1
   description: Sharp Shooter attacks faster and does powerful Crit shots every few

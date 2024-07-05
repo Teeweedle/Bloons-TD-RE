@@ -10,6 +10,8 @@ TagManager:
   - Bloon
   - Tower Range
   - Projectile
+  - Wall
+  - Edge
   layers:
   - Default
   - TransparentFX

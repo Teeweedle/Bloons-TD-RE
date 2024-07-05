@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Long Range Darts
   m_EditorClassIdentifier: 
   upgradeName: Long Range Darts
+  projectileBehaviorName: 
+  projectileType: Base
   cost: 75
   xp: 50
   damage: 0
   pierce: 0
+  numberOfProjectiles: 0
+  projectileOffset: 0
   range: 0.25
   projectileSpeed: 0
   projectileLifeSpan: 0.15
