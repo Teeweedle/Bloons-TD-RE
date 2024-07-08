@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Sharp Shots
   projectileBehaviorName: 
-  projectileType: Base
+  collisionType: Base
   cost: 120
   xp: 100
   damage: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Crossbow Master
   projectileBehaviorName: 
-  projectileType: Base
+  collisionType: Base
   cost: 18275
   xp: 35000
   damage: 0

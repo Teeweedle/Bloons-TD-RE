@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Juggernaut
   projectileBehaviorName: 
-  projectileType: Bounce
+  collisionType: Bounce
   cost: 1530
   xp: 7500
   damage: 0

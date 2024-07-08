@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Sharp Shooter
   projectileBehaviorName: 
-  projectileType: Base
+  collisionType: Base
   cost: 1700
   xp: 12000
   damage: 8

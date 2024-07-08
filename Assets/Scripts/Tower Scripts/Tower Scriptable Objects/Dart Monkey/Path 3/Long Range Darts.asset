@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Long Range Darts
   projectileBehaviorName: 
-  projectileType: Base
+  collisionType: Base
   cost: 75
   xp: 50
   damage: 0

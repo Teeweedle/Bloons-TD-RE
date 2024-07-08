@@ -168,7 +168,7 @@ public class BaseTower : MonoBehaviour
     {
         UpdatePierce(aTowerUpgrade.pierce);
         UpdateDamage(aTowerUpgrade.damage);
-        UpdateProjectileType(aTowerUpgrade.projectileType);
+        UpdateProjectileType(aTowerUpgrade.collisionType);
         UpdateRange(aTowerUpgrade.range);
         UpdateProjectileSpeed(aTowerUpgrade.projectileSpeed);
         UpdateProjectileSprite(aTowerUpgrade.upgradeName);
@@ -184,7 +184,7 @@ public class BaseTower : MonoBehaviour
 
     private void UpdateProjectileType(string aProjectileType)
     {
-        _towerStats.projectileType = aProjectileType;
+        _towerStats.collisionType = aProjectileType;
     }
 
     /// <summary>

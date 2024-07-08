@@ -1,22 +1,18 @@
 using UnityEngine;
-public class SingleShot : IProjectileBehavior
-{
+
+public class SingleShot : IProjectileBehavior{
+
     public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
     {
-        GameObject lProjectile = ProjectilePool.Instance.GetProjectile(aParentTower._projectile, aParentTower._towerStats.projectileType);
-        ((IProjectileBehavior)this).SetProjectileProperties(lProjectile, aParentTower);
-        //BaseProjectile lBaseProjectile = lProjectile.GetComponent<BaseProjectile>();
-        var lComponents = lProjectile.GetComponents<MonoBehaviour>();
-        if (lComponents != null)
+        GameObject lProjectileGO = ProjectilePool.Instance.GetProjectile(aParentTower._projectile, aParentTower._towerStats.collisionType);
+        ((IProjectileBehavior)this).SetProjectileProperties(lProjectileGO, aParentTower);
+        BaseProjectile lBaseProjectile = lProjectileGO.GetComponent<BaseProjectile>();
+        if (lBaseProjectile != null)
         {
-            foreach (var script in lComponents)
-            {
-                if (script is IProjectile projectile)
-                {
-                    projectile.SetProjectileStats(aParentTower);
-                }
-            }               
-            //lProjectileScript.SetProjectileStats(aParentTower);
+            lBaseProjectile.SetProjectileStats(aParentTower);
+            //assign collision behavior
+            lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
+            
         }
     }
 }

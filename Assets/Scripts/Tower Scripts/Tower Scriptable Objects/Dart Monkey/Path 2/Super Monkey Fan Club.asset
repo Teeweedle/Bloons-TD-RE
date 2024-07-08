@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Super Monkey Fan Club
   projectileBehaviorName: 
-  projectileType: Base
+  collisionType: Base
   cost: 6800
   xp: 7500
   damage: 0

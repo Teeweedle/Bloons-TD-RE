@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Enhanced Eyesight
   projectileBehaviorName: 
-  projectileType: Base
+  collisionType: Base
   cost: 170
   xp: 450
   damage: 0

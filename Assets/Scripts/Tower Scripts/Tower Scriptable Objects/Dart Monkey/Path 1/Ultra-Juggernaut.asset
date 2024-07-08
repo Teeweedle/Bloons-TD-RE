@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Ultra-Juggernaut
   projectileBehaviorName: 
-  projectileType: Bounce
+  collisionType: Bounce
   cost: 12750
   xp: 22000
   damage: 5

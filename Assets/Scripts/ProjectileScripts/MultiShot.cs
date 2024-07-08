@@ -13,12 +13,13 @@ public class MultiShot : IProjectileBehavior
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            GameObject lProjectile = ProjectilePool.Instance.GetProjectile(aParentTower._projectile, aParentTower._towerStats.projectileType);
-            ((IProjectileBehavior)this).SetProjectileProperties(lProjectile, aParentTower);
-            BaseProjectile lBaseProjectile = lProjectile.GetComponent<BaseProjectile>();
+            GameObject lProjectileGO = ProjectilePool.Instance.GetProjectile(aParentTower._projectile, aParentTower._towerStats.collisionType);
+            ((IProjectileBehavior)this).SetProjectileProperties(lProjectileGO, aParentTower);
+            BaseProjectile lBaseProjectile = lProjectileGO.GetComponent<BaseProjectile>();
             if (lBaseProjectile != null)
             {
                 lBaseProjectile.SetProjectileStats(aParentTower);
+                lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
                 //set projectile spread
                 float lAngle = (i - (numberOfProjectiles / 2)) * offset;
                 Vector3 lDirection = Quaternion.Euler(0f, 0f, lAngle) * -aParentTower.transform.up;

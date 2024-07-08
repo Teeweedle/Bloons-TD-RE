@@ -5,7 +5,7 @@ using UnityEngine.U2D;
 public class TowerStats : ScriptableObject
 {
     public string towerName;
-    public string projectileType;
+    public string collisionType;
     public int cost;
     public int damage;
     public int pierce;

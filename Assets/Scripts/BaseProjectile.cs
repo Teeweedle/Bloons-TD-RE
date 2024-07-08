@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseProjectile : MonoBehaviour, IProjectile
@@ -9,12 +10,17 @@ public class BaseProjectile : MonoBehaviour, IProjectile
     public int childCount { get; set; }
     public  BaseTower parentTower { get; set; }
     public SpriteRenderer projectileSprite { get; set; }
+    public int projectileID { get; private set; }
+    public Vector3 direction { get; private set; }
+    public IProjectileCollisionBehavior collisionBehavior { get; private set; }
 
-    private Vector3 direction;
-    private const string BLOONTAG = "Bloon";
-    private const string WALLTAG = "Wall";
-    private int projectileID;
 
+    private readonly Dictionary<string, IProjectileCollisionBehavior> projectileCollisionDictionary 
+        = new Dictionary<string, IProjectileCollisionBehavior>
+    {
+            { "Base", new BaseProjectileCollision() },
+            { "Bounce", new BounceProjectileCollision() }
+    };
     private void Start()
     {
         projectileID = GetInstanceID();
@@ -53,18 +59,18 @@ public class BaseProjectile : MonoBehaviour, IProjectile
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(BLOONTAG))
+        //call current collision behavior
+        collisionBehavior?.OnTriggerEnter2D(this, collision);
+    }
+    public void SetCollisionType(string aCollisionType)
+    {
+        if(projectileCollisionDictionary.TryGetValue(aCollisionType, out IProjectileCollisionBehavior lCollisionBehavior))
         {
-            //if the bloon takes dmg (might have immunity if it was just destroyed
-            if(collision.gameObject.GetComponent<BaseBloon>().TakeDamage(damage, projectileID, parentTower))
-            {
-                TakeDamage();
-            }            
-        }else if(collision.CompareTag(WALLTAG) || collision.CompareTag("Edge"))
+            collisionBehavior = lCollisionBehavior;
+        }
+        else
         {
-            Debug.Log("Hit Wall");
-            //if hit wall or edge of screen, return to pool 
-            ProjectilePool.Instance.ReturnToPool(gameObject);
+            Debug.LogError("Collision type not found");
         }
     }
     public void TakeDamage()

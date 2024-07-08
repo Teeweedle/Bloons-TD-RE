@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Triple Shot
   projectileBehaviorName: MultiShot
-  projectileType: Base
+  collisionType: Base
   cost: 340
   xp: 2000
   damage: 0
