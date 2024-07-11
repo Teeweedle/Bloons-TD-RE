@@ -6,6 +6,7 @@ public class TowerUpgrade : ScriptableObject
     public string upgradeName;
     public string projectileBehaviorName;
     public string collisionType;
+    public StatusEffectSO projectileStatusEffect;
     public int cost;
     public int xp;
     public int damage;

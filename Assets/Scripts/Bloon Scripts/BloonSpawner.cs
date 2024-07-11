@@ -110,7 +110,6 @@ public class BloonSpawner : MonoBehaviour
             InitializeBloon(lBloon, _bloonPath[0], Quaternion.identity, 0f, 0);
             yield return new WaitForSeconds(aSpawnDelay);
         }
-        Debug.Log($"Finished spawning bloons @ {Time.time}");
     }
     private void SpawnChildrenHandler(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType,
         int aProjectileID)

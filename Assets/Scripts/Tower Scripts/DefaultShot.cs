@@ -13,7 +13,7 @@ public class DefaultShot : ITowerBehavior
         {
             aParentTower.LookAtTarget(aTarget.transform);
             //initialize projectile behavior
-            projectileBehavior.IntializeProjectile(aTarget, aParentTower);
+            projectileBehavior.IntializeProjectile(aTarget, aParentTower, projectileBehavior.GetStatusEffects());
             //set next fire time
             aParentTower.NextFireTime = Time.time + aParentTower._towerStats.attackSpeed;
         }

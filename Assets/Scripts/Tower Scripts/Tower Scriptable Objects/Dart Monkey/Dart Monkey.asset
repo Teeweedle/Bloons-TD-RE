@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Dart Monkey
   collisionType: Base
+  statusEffect: {fileID: 0}
   cost: 170
   damage: 1
   pierce: 2

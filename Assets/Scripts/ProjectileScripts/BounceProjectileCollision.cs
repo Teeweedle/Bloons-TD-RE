@@ -8,12 +8,14 @@ public class BounceProjectileCollision : IProjectileCollisionBehavior
     {
         if (aCollider.CompareTag(BLOONTAG))
         {
+            BaseBloon lBloon = aCollider.gameObject.GetComponent<BaseBloon>();
             //if the bloon takes dmg (might have immunity if it was just destroyed
-            if (aCollider.gameObject.GetComponent<BaseBloon>().TakeDamage(aProjectile.damage, aProjectile.projectileID, aProjectile.parentTower))
+            if (lBloon.TakeDamage(aProjectile.damage, aProjectile.projectileID, aProjectile.parentTower))
             {
                 aProjectile.TakeDamage();
+                aProjectile.ApplyStatusEffects(lBloon);
             }
-        }//else if bloon hits a wall or edge of screen, bounce
+        }//else if projectile hits a wall or edge of screen, bounce
         else if (aCollider.CompareTag(WALLTAG) || aCollider.CompareTag("Edge"))
         {
             Bounce(aProjectile);

@@ -6,6 +6,7 @@ public class TowerStats : ScriptableObject
 {
     public string towerName;
     public string collisionType;
+    public StatusEffectSO statusEffect;
     public int cost;
     public int damage;
     public int pierce;

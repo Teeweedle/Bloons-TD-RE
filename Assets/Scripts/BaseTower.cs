@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.U2D;
 
 public class BaseTower : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class BaseTower : MonoBehaviour
     private GameObject _currentTarget;
     private const float angleOffset = 90f;
     public float NextFireTime { get; set; }
+    public TowerUpgradeHandler upgradeHandler = new TowerUpgradeHandler();
     public ITowerBehavior towerBehavior;
     public CompositeProjectileBehavior compositeProjectileBehavior;
 
@@ -160,29 +160,17 @@ public class BaseTower : MonoBehaviour
         _towerSpriteRenderer.sprite = aSprite;
     } 
     /// <summary>
-    /// Updates the stats of the tower based on the associated Scriptable Object
+    /// Updates the stats of the tower based on the associated Scriptable Object based on the upgrade selected
     /// </summary>
     /// <param name="aTowerUpgrade">The Scriptable Object that contains the new stats</param>
     /// <param name="aUpgradeArray">Current upgrade level of the tower</param>
     public void UpdateStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
     {
-        UpdatePierce(aTowerUpgrade.pierce);
-        UpdateDamage(aTowerUpgrade.damage);
-        UpdateProjectileType(aTowerUpgrade.collisionType);
-        UpdateRange(aTowerUpgrade.range);
-        UpdateProjectileSpeed(aTowerUpgrade.projectileSpeed);
-        UpdateProjectileSprite(aTowerUpgrade.upgradeName);
-        UpdateAttackSpeed(aTowerUpgrade.attackSpeed);
-        UpdateProjectileLifeSpan(aTowerUpgrade.projectileLifeSpan);
-        UpdateCamoDetection(aTowerUpgrade.hasCamoDetection);
-        UpdateCost(aTowerUpgrade.cost);
-        UpdateProjectileBehavior(aTowerUpgrade);
-        _towerStats.upgradeLevelArray = UpdateUpgradeArray(_towerStats.upgradeLevelArray, aUpgradeArray);
+        upgradeHandler.UpdateStats(this, aTowerUpgrade, aUpgradeArray);
 
         _onUpdatePrice?.Invoke(_towerStats.cost);
     }
-
-    private void UpdateProjectileType(string aProjectileType)
+    public void UpdateProjectileCollisionType(string aProjectileType)
     {
         _towerStats.collisionType = aProjectileType;
     }
@@ -191,7 +179,7 @@ public class BaseTower : MonoBehaviour
     /// Updates the sprite of the tower based on the name of the upgrade. Only changes if there is a sprite associated with the upgrade
     /// </summary>
     /// <param name="aUpgradeName"></param>
-    private void UpdateProjectileSprite(string aUpgradeName)
+    public void UpdateProjectileSprite(string aUpgradeName)
     {
         Sprite lSprite = _towerStats.projectileSpriteAtlas.GetSprite(aUpgradeName);
         if (lSprite != null)
@@ -200,58 +188,65 @@ public class BaseTower : MonoBehaviour
         }
     }
 
-    private void UpdateProjectileBehavior(TowerUpgrade aTowerUpgrade)
+    public void UpdateProjectileBehavior(TowerUpgrade aTowerUpgrade)
     {
         if(!string.IsNullOrEmpty(aTowerUpgrade.projectileBehaviorName))
             compositeProjectileBehavior.SetProjectileBehavior(ProjectileBehaviorFactory.CreateBehavior(aTowerUpgrade));
     }
+    public void UpdateStatusEffects(IStatusEffect aStatusEffect)
+    {
+        if (aStatusEffect != null)
+        {
+            compositeProjectileBehavior.AddStatusEffect(aStatusEffect);
+        }
+    }
 
-    private void UpdatePierce(int aPierce) 
+    public void UpdatePierce(int aPierce) 
     { 
         _towerStats.pierce += aPierce;
     }
-    private void UpdateDamage(int aDamage) 
+    public void UpdateDamage(int aDamage) 
     { 
         _towerStats.damage += aDamage; 
     }
-    private void UpdateRange(float aRange) 
+    public void UpdateRange(float aRange) 
     { 
         if(aRange != 0)
             _towerStats.range *= (1.0f * aRange); 
     }
-    private void UpdateProjectileSpeed(float aProjectileSpeed) 
+    public void UpdateProjectileSpeed(float aProjectileSpeed) 
     { 
         if(aProjectileSpeed != 0)
             _towerStats.projectileSpeed *= (1.0f + aProjectileSpeed); 
     }
-    private void UpdateAttackSpeed(float aAttackSpeed) 
+    public void UpdateAttackSpeed(float aAttackSpeed) 
     { 
         if(aAttackSpeed != 0)
             _towerStats.attackSpeed *= (1.0f - aAttackSpeed); 
     }
-    private void UpdateProjectileLifeSpan(float aProjectileLifeSpan) 
+    public void UpdateProjectileLifeSpan(float aProjectileLifeSpan) 
     { 
         if(aProjectileLifeSpan != 0)
             _towerStats.projectileLifeSpan *= (1.0f + aProjectileLifeSpan); 
     }
-    private void UpdateCamoDetection(bool aCamoDetection) 
+    public void UpdateCamoDetection(bool aCamoDetection) 
     {
         if (!_towerStats.hasCamoDetection)
         {
             _towerStats.hasCamoDetection = aCamoDetection;
         }
     }
-    private void UpdateCost(int aCost) 
+    public void UpdateCost(int aCost) 
     { 
         _towerStats.cost += aCost; 
     }
-    private int[] UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
+    public void UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
     {
         for (int i = 0; i < aOriginalArray.Length; i++)
         {
             aOriginalArray[i] += aUpdatedArray[i];
         }
-        return aOriginalArray;
+        _towerStats.upgradeLevelArray = aOriginalArray;
     }
     public void OnMouseDown()
     {

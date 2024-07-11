@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MultiShot : IProjectileBehavior
@@ -9,7 +10,7 @@ public class MultiShot : IProjectileBehavior
         numberOfProjectiles = aNumberOfProjectiles;
         offset = aOffset;
     }
-    public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower)
+    public void IntializeProjectile(GameObject aTarget, BaseTower aParentTower, List<IStatusEffect> aStatusEffectList)
     {
         for (int i = 0; i < numberOfProjectiles; i++)
         {
@@ -20,6 +21,10 @@ public class MultiShot : IProjectileBehavior
             {
                 lBaseProjectile.SetProjectileStats(aParentTower);
                 lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
+                if (aStatusEffectList != null)
+                {
+                    lBaseProjectile.SetStatusEffectList(aStatusEffectList);
+                }
                 //set projectile spread
                 float lAngle = (i - (numberOfProjectiles / 2)) * offset;
                 Vector3 lDirection = Quaternion.Euler(0f, 0f, lAngle) * -aParentTower.transform.up;

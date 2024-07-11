@@ -15,6 +15,7 @@ MonoBehaviour:
   upgradeName: Juggernaut
   projectileBehaviorName: 
   collisionType: Bounce
+  projectileStatusEffect: {fileID: 11400000, guid: f7dc985323b770b4daae4fda29dfc27c, type: 2}
   cost: 1530
   xp: 7500
   damage: 0

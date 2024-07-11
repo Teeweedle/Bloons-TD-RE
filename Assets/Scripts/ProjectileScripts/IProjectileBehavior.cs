@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public interface IProjectileBehavior
@@ -7,8 +8,7 @@ public interface IProjectileBehavior
     /// </summary>
     /// <param name="aTarget">Target of the projectile</param>
     /// <param name="aParentTower">The tower that fired the projectile</param>
-    void IntializeProjectile(GameObject aTarget, BaseTower aParentTower);
-
+    void IntializeProjectile(GameObject aTarget, BaseTower aParentTower, List<IStatusEffect> aStatusEffectList);
     void SetProjectileProperties(GameObject aProjectile, BaseTower aParentTower)
     {
         //set projectile sprite

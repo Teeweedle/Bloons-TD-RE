@@ -7,6 +7,7 @@ public static class ScriptableObjectUtility
         T clone = ScriptableObject.CreateInstance<T>();
         clone.towerName = source.towerName;
         clone.collisionType = source.collisionType;
+        clone.statusEffect = source.statusEffect;
         clone.cost = source.cost;
         clone.damage = source.damage;
         clone.pierce = source.pierce;

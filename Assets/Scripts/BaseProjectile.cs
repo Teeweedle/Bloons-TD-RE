@@ -13,7 +13,7 @@ public class BaseProjectile : MonoBehaviour, IProjectile
     public int projectileID { get; private set; }
     public Vector3 direction { get; private set; }
     public IProjectileCollisionBehavior collisionBehavior { get; private set; }
-
+    public List<IStatusEffect> projectileStatusEffects { get; private set; }
 
     private readonly Dictionary<string, IProjectileCollisionBehavior> projectileCollisionDictionary 
         = new Dictionary<string, IProjectileCollisionBehavior>
@@ -49,7 +49,10 @@ public class BaseProjectile : MonoBehaviour, IProjectile
     {
         transform.position += direction * speed * Time.deltaTime;
     }
-
+    /// <summary>
+    /// Set the direction of the projectile and the sprite
+    /// </summary>
+    /// <param name="aDirection"></param>
     public void SetDirection(Vector3 aDirection)
     {
         direction = aDirection;
@@ -62,6 +65,10 @@ public class BaseProjectile : MonoBehaviour, IProjectile
         //call current collision behavior
         collisionBehavior?.OnTriggerEnter2D(this, collision);
     }
+    /// <summary>
+    /// Set collistion type based on a name from a dictionary
+    /// </summary>
+    /// <param name="aCollisionType"> Collision type </param>
     public void SetCollisionType(string aCollisionType)
     {
         if(projectileCollisionDictionary.TryGetValue(aCollisionType, out IProjectileCollisionBehavior lCollisionBehavior))
@@ -72,6 +79,25 @@ public class BaseProjectile : MonoBehaviour, IProjectile
         {
             Debug.LogError("Collision type not found");
         }
+    }
+    /// <summary>
+    /// Apply all status effects
+    /// </summary>
+    /// <param name="aTargetBloon">Bloon to apply status effect</param>
+    public void ApplyStatusEffects(BaseBloon aTargetBloon)
+    {
+        foreach(IStatusEffect lStatusEffect in projectileStatusEffects)
+        {
+            lStatusEffect.Apply(aTargetBloon, parentTower);
+        }
+    }
+    /// <summary>
+    /// Assugn a list of status effects to this projectile
+    /// </summary>
+    /// <param name="aStatusEffects">Current list of status effects</param>
+    public void SetStatusEffectList(List<IStatusEffect> aStatusEffects)
+    {
+        projectileStatusEffects = aStatusEffects;
     }
     public void TakeDamage()
     {

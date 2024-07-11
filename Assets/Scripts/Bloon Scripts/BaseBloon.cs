@@ -23,7 +23,6 @@ public abstract class BaseBloon : MonoBehaviour
 
     private int lastProjectileHitID;
     private float immunityDuration;
-    private List<IStatusEffect> activeStatusEffects;
     public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType, int aProjectileID);
     public static event BaseBloonDelegate spawnChildren;
 
@@ -52,7 +51,7 @@ public abstract class BaseBloon : MonoBehaviour
             //providing immunity
             return false;
         }
-        health -= aDamage;
+        //health -= aDamage;  ////////////  UN-COMMENT THIS LATER  ////////////
         if (health <= 0)
         {
             //TODO: Bloon death animation
@@ -65,16 +64,6 @@ public abstract class BaseBloon : MonoBehaviour
             BloonSpawner._instance.ReturnObjectToPool(this.gameObject);           
         }
         return true;
-    }
-    public void ApplyStatusEffect (IStatusEffect aStatusEffect, BaseTower aParentTower)
-    {
-        activeStatusEffects.Add(aStatusEffect);
-        aStatusEffect.Apply(this, aParentTower);
-    }
-    public void RemoveStatusEffect (IStatusEffect aStatusEffect)
-    {
-        aStatusEffect.Remove(this);
-        activeStatusEffects.Remove(aStatusEffect);
     }
     /// <summary>
     /// Grants immunity to this bloon from the last projectile that hit it temporarily
