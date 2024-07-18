@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class BloonSpawner : MonoBehaviour
@@ -112,9 +113,9 @@ public class BloonSpawner : MonoBehaviour
         }
     }
     private void SpawnChildrenHandler(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType,
-        int aProjectileID)
+        int aProjectileID, int aLeftOverDmg, BaseTower aParentTower)
     {
-        StartCoroutine(SpawnChildren(aChildCount, aDistance, aPathPosition, aPosition, aBloonType, aProjectileID));
+        SpawnChildren(aChildCount, aDistance, aPathPosition, aPosition, aBloonType, aProjectileID, aLeftOverDmg, aParentTower);
     }
     /// <summary>
     /// Spawns children bloons
@@ -124,17 +125,41 @@ public class BloonSpawner : MonoBehaviour
     /// <param name="aPathPosition">What position on that path is the bloon</param>
     /// <param name="aPosition">Game world position</param>
     /// <returns></returns>
-    public IEnumerator SpawnChildren(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType, 
-        int aProjectileID)
+    public void SpawnChildren(int aChildCount, float aDistance, int aPathPosition, Vector3 aPosition, string aBloonType, 
+        int aProjectileID, int aLeftOverDmg, BaseTower aParentTower)
     {
         GameObject lBloon;
         for (int i = 0; i < aChildCount; i++)
         {
             lBloon = GetBloon(aBloonType);
+
             InitializeBloon(lBloon, aPosition, Quaternion.identity, aDistance, aPathPosition);
-            lBloon.GetComponent<BaseBloon>().GrantImmunity(aProjectileID, _immunityDuration);
-            yield return new WaitForSeconds(0.1f);
+            BaseBloon lChildBloon = lBloon.GetComponent<BaseBloon>();
+            lChildBloon.GrantImmunity(aProjectileID, _immunityDuration);
+            
+            if(aLeftOverDmg > 0)
+            {
+                //carries over left over damage to the next child
+                aLeftOverDmg = ApplyLeftOverDamage(aLeftOverDmg, lChildBloon, aParentTower);
+            }
         }
+    }
+    /// <summary>
+    /// Applies left over damage to the next child. Calculates how much damage was left over and returns the remaining damage 
+    /// that should be dealt to the next child
+    /// </summary>
+    /// <param name="aLeftOverDmg">How much damage was left over</param>
+    /// <param name="aChildBloon">Target bloon</param>
+    /// <param name="aParentTower">Tower that is doing the dmg</param>
+    /// <returns>Remaining damage</returns>
+    private int ApplyLeftOverDamage(int aLeftOverDmg, BaseBloon aChildBloon, BaseTower aParentTower)
+    {
+        int lInitialBloonHP = aChildBloon.GetHealth();
+        //Need to get reference to the tower that this dmg comes from
+        //pass 0 to ignore immunity for left over dmg
+        aChildBloon.TakeDamage(aLeftOverDmg, 0, aParentTower);
+        int lDmgApplied = lInitialBloonHP - aChildBloon.GetHealth();
+        return aLeftOverDmg - lDmgApplied;
     }
     /// <summary>
     /// Initializes a newly spawned bloon.

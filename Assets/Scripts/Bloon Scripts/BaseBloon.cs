@@ -23,7 +23,8 @@ public abstract class BaseBloon : MonoBehaviour
 
     private int lastProjectileHitID;
     private float immunityDuration;
-    public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType, int aProjectileID);
+    public delegate void BaseBloonDelegate(int aChildCount, float aDistance, int aPathPositon, Vector3 aBloonPosition, string aBloonType, 
+        int aProjectileID, int aLeftOverDmg, BaseTower aParentTower);
     public static event BaseBloonDelegate spawnChildren;
 
     public delegate void BaseBloonDeath(int aCash);
@@ -51,16 +52,17 @@ public abstract class BaseBloon : MonoBehaviour
             //providing immunity
             return false;
         }
-        //health -= aDamage;  ////////////  UN-COMMENT THIS LATER  ////////////
+        health -= aDamage;  ////////////  UN-COMMENT THIS LATER  ////////////
         if (health <= 0)
         {
+            int leftOverDmg = -health;
             //TODO: Bloon death animation
             //TODO: Pop sound
             aParentTower.NumBloonsPopped(xp);
             bloonRewards?.Invoke(cash);//updates UI with cash gain in GameManager
             int lPathPosition = GetComponent<BloonMovement>().GetPathPostion();
             //tells bloon spawner to check for children to spawn
-            spawnChildren?.Invoke(childCount, distance, lPathPosition, transform.position, childType, aProjectileID);
+            spawnChildren?.Invoke(childCount, distance, lPathPosition, transform.position, childType, aProjectileID, leftOverDmg, aParentTower);
             BloonSpawner._instance.ReturnObjectToPool(this.gameObject);           
         }
         return true;
@@ -98,6 +100,10 @@ public abstract class BaseBloon : MonoBehaviour
     public bool GetIsStrong()
     {
         return isStrong;
+    }
+    public int GetHealth()
+    {
+        return health;
     }
 }
 /// <summary>
