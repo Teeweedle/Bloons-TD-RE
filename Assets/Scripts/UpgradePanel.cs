@@ -64,13 +64,15 @@ public class UpgradePanel : MonoBehaviour
         InitializeUpgradeGrid(_upgrade, aTower);
     }
     /// <summary>
-    /// Passes the selected upgrade data and the upgrade array to the currently selected tower to upgrade it.
+    /// Passes the selected upgrade data and the upgrade array to the currently selected towers projectile.
+    /// Upgraded in ProjectileStatsSO.
     /// </summary>
     /// <param name="aTowerUpgrade"></param>
     /// <param name="aUpgradeArray"></param>
     public void UpgradeTowerStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
     {
-        _currentTower.GetComponent<BaseTower>().UpdateStats(aTowerUpgrade, aUpgradeArray);
+        _currentTower.GetComponent<BaseTower>().UpdateTowerStats(aTowerUpgrade, aUpgradeArray);
+        _currentTower.GetComponent<BaseTower>()._towerStats.projectileStats.UpdateProjectileStats(aTowerUpgrade);
     }
     /// <summary>
     /// Iterates through an array of scripts (UpgradeButton) to update the UI based on the tower data

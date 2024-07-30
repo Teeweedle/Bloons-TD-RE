@@ -12,6 +12,8 @@ public class SingleShot : IProjectileBehavior
             lBaseProjectile.SetProjectileStats(aParentTower);
             //assign collision behavior
             lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
+            //set projectile movement type
+            //lBaseProjectile.SetProjectileMovement(aParentTower._towerStats.movementType);
             if (aStatusEffectList != null)
             {
                 lBaseProjectile.SetStatusEffectList(aStatusEffectList);

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class BaseTower : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class BaseTower : MonoBehaviour
 
         };
         SetDefaultTargetPriority();
-        SetDefaultProjectileTexture();
+        _towerStats.projectileStats.SetDefaultSprite();
         compositeProjectileBehavior = new CompositeProjectileBehavior();
         compositeProjectileBehavior.SetProjectileBehavior(new SingleShot());
         
@@ -164,30 +165,16 @@ public class BaseTower : MonoBehaviour
     /// </summary>
     /// <param name="aTowerUpgrade">The Scriptable Object that contains the new stats</param>
     /// <param name="aUpgradeArray">Current upgrade level of the tower</param>
-    public void UpdateStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
+    public void UpdateTowerStats(TowerUpgrade aTowerUpgrade, int[] aUpgradeArray)
     {
         upgradeHandler.UpdateStats(this, aTowerUpgrade, aUpgradeArray);
-
+        //UpdateUpgradeArray(_towerStats.upgradeLevelArray, aUpgradeArray);
         _onUpdatePrice?.Invoke(_towerStats.cost);
     }
     public void UpdateProjectileCollisionType(string aProjectileType)
     {
         _towerStats.collisionType = aProjectileType;
     }
-
-    /// <summary>
-    /// Updates the sprite of the tower based on the name of the upgrade. Only changes if there is a sprite associated with the upgrade
-    /// </summary>
-    /// <param name="aUpgradeName"></param>
-    public void UpdateProjectileSprite(string aUpgradeName)
-    {
-        Sprite lSprite = _towerStats.projectileSpriteAtlas.GetSprite(aUpgradeName);
-        if (lSprite != null)
-        {
-            _currrentProjectileSprite = lSprite;
-        }
-    }
-
     public void UpdateProjectileBehavior(TowerUpgrade aTowerUpgrade)
     {
         if(!string.IsNullOrEmpty(aTowerUpgrade.projectileBehaviorName))
@@ -200,34 +187,15 @@ public class BaseTower : MonoBehaviour
             compositeProjectileBehavior.AddStatusEffect(aStatusEffect);
         }
     }
-
-    public void UpdatePierce(int aPierce) 
-    { 
-        _towerStats.pierce += aPierce;
-    }
-    public void UpdateDamage(int aDamage) 
-    { 
-        _towerStats.damage += aDamage; 
-    }
     public void UpdateRange(float aRange) 
     { 
         if(aRange != 0)
             _towerStats.range *= (1.0f * aRange); 
     }
-    public void UpdateProjectileSpeed(float aProjectileSpeed) 
-    { 
-        if(aProjectileSpeed != 0)
-            _towerStats.projectileSpeed *= (1.0f + aProjectileSpeed); 
-    }
     public void UpdateAttackSpeed(float aAttackSpeed) 
     { 
         if(aAttackSpeed != 0)
             _towerStats.attackSpeed *= (1.0f - aAttackSpeed); 
-    }
-    public void UpdateProjectileLifeSpan(float aProjectileLifeSpan) 
-    { 
-        if(aProjectileLifeSpan != 0)
-            _towerStats.projectileLifeSpan *= (1.0f + aProjectileLifeSpan); 
     }
     public void UpdateCamoDetection(bool aCamoDetection) 
     {
@@ -240,6 +208,11 @@ public class BaseTower : MonoBehaviour
     { 
         _towerStats.cost += aCost; 
     }
+    /// <summary>
+    /// Updates the upgrade array based on the new array passed in
+    /// </summary>
+    /// <param name="aOriginalArray">Orginal upgrade array</param>
+    /// <param name="aUpdatedArray">Modification array</param>
     public void UpdateUpgradeArray(int[] aOriginalArray, int[] aUpdatedArray)
     {
         for (int i = 0; i < aOriginalArray.Length; i++)
@@ -258,12 +231,16 @@ public class BaseTower : MonoBehaviour
         _isPlaced = true;
     }  
     public TowerStats GetTowerStats() { return _towerStats; }
-    public void SetTowerStats(TowerStats aTowerStats){ _towerStats = aTowerStats; }
-    private void SetDefaultTargetPriority(){ SetTargetPriority("First"); }
-    private void SetDefaultProjectileTexture()
-    {
-        _currrentProjectileSprite = _towerStats.projectileSpriteAtlas.GetSprite("Base");
+    /// <summary>
+    /// Sets the stats of the tower based on the Scriptable Object in TowerFactory
+    /// </summary>
+    /// <param name="aTowerStats"></param>
+    public void SetTowerStats(TowerStats aTowerStats)
+    { 
+        _towerStats = aTowerStats; 
     }
+    public Sprite GetProjectileSprite() { return _towerStats.projectileStats.currentSprite; }
+    private void SetDefaultTargetPriority(){ SetTargetPriority("First"); } 
     /// <summary>
     /// Stores XP gained through popping bloons in the TowerData Object.
     /// </summary>

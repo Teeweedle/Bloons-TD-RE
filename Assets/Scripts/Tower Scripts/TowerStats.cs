@@ -7,6 +7,7 @@ public class TowerStats : ScriptableObject
     public string towerName;
     public string collisionType;
     public StatusEffectSO statusEffect;
+    public ProjectileStatsSO projectileStats;
     public int cost;
     public int damage;
     public int pierce;
@@ -18,7 +19,6 @@ public class TowerStats : ScriptableObject
     public string description;
     public Sprite towerSprite;
     public Sprite towerGOSprite;
-    public SpriteAtlas projectileSpriteAtlas;
     public int[] upgradeLevelArray;
     public int numberOfBloonsPopped;
 

@@ -15,9 +15,10 @@ MonoBehaviour:
   upgradeName: Crossbow
   projectileBehaviorName: 
   collisionType: Base
+  projectileStatusEffect: {fileID: 0}
   cost: 1700
   xp: 1200
-  damage: 6
+  damage: 2
   pierce: 0
   numberOfProjectiles: 0
   projectileOffset: 0

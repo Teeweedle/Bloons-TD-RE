@@ -8,6 +8,7 @@ public static class ScriptableObjectUtility
         clone.towerName = source.towerName;
         clone.collisionType = source.collisionType;
         clone.statusEffect = source.statusEffect;
+        clone.projectileStats = source.projectileStats;
         clone.cost = source.cost;
         clone.damage = source.damage;
         clone.pierce = source.pierce;
@@ -18,7 +19,6 @@ public static class ScriptableObjectUtility
         clone.hasCamoDetection = source.hasCamoDetection;
         clone.description = source.description;
         clone.towerSprite = source.towerSprite;
-        clone.projectileSpriteAtlas = source.projectileSpriteAtlas;
         clone.numberOfBloonsPopped = source.numberOfBloonsPopped;
         clone.upgradePath = source.upgradePath;
 

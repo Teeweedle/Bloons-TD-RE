@@ -14,6 +14,8 @@ public class BaseProjectile : MonoBehaviour, IProjectile
     public Vector3 direction { get; private set; }
     public IProjectileCollisionBehavior collisionBehavior { get; private set; }
     public List<IStatusEffect> projectileStatusEffects { get; private set; }
+    public IProjectileMovement projectileMovement { get; private set; }
+    public IProjectileOnDeath projectileOnDeath { get; private set; }
 
     private readonly Dictionary<string, IProjectileCollisionBehavior> projectileCollisionDictionary 
         = new Dictionary<string, IProjectileCollisionBehavior>
@@ -41,7 +43,7 @@ public class BaseProjectile : MonoBehaviour, IProjectile
         MoveProjectile();
         if ((lifeSpan -= Time.deltaTime) <= 0)
         {
-            ProjectilePool.Instance.ReturnToPool(gameObject);
+            DestroyProjectile();
         }
     }
 
@@ -99,12 +101,33 @@ public class BaseProjectile : MonoBehaviour, IProjectile
     {
         projectileStatusEffects = aStatusEffects;
     }
+    /// <summary>
+    /// Set the movement type
+    /// </summary>
+    /// <param name="aProjectileMovement">A type of movement behavior</param>
+    public void SetProjectileMovement(IProjectileMovement aProjectileMovement)
+    {
+        projectileMovement = aProjectileMovement;
+    }
+    public void SetOnDeathEffect(IProjectileOnDeath aOnDeathEffect)
+    {
+        projectileOnDeath = aOnDeathEffect;
+    }
     public void TakeDamage()
     {
         health -= 1;
         if (health <= 0) 
         {
-            ProjectilePool.Instance.ReturnToPool(gameObject);
+            DestroyProjectile();            
         }
-    }    
+    }
+    private void DestroyProjectile()
+    {
+        ProjectilePool.Instance.ReturnToPool(gameObject);
+        OnDeath();
+    }
+    private void OnDeath()
+    {
+        projectileOnDeath?.TriggerOnDeath(this.gameObject, parentTower);
+    }
 }

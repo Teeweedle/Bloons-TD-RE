@@ -155,7 +155,6 @@ public class BloonSpawner : MonoBehaviour
     private int ApplyLeftOverDamage(int aLeftOverDmg, BaseBloon aChildBloon, BaseTower aParentTower)
     {
         int lInitialBloonHP = aChildBloon.GetHealth();
-        //Need to get reference to the tower that this dmg comes from
         //pass 0 to ignore immunity for left over dmg
         aChildBloon.TakeDamage(aLeftOverDmg, 0, aParentTower);
         int lDmgApplied = lInitialBloonHP - aChildBloon.GetHealth();

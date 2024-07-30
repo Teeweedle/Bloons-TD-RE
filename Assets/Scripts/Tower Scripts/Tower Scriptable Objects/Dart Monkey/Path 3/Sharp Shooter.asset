@@ -15,9 +15,10 @@ MonoBehaviour:
   upgradeName: Sharp Shooter
   projectileBehaviorName: 
   collisionType: Base
+  projectileStatusEffect: {fileID: 0}
   cost: 1700
   xp: 12000
-  damage: 8
+  damage: 3
   pierce: 2
   numberOfProjectiles: 0
   projectileOffset: 0
