@@ -15,15 +15,13 @@ MonoBehaviour:
   upgradeName: Ultra-Juggernaut
   projectileBehaviorName: 
   collisionType: Bounce
+  projectileStatusEffect: {fileID: 0}
+  projectileStats: {fileID: 11400000, guid: bd7a0eee0d0dde042b9d641d506a7e26, type: 2}
   cost: 12750
   xp: 22000
-  damage: 5
-  pierce: 200
   numberOfProjectiles: 0
   projectileOffset: 0
   range: 32
-  projectileSpeed: 0.1
-  projectileLifeSpan: 0
   attackSpeed: 0
   hasCamoDetection: 0
   description: Gigantic spiked ball splits twice into 6 Juggernaut balls for even

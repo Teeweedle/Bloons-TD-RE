@@ -7,15 +7,12 @@ public class TowerUpgrade : ScriptableObject
     public string projectileBehaviorName;
     public string collisionType;
     public StatusEffectSO projectileStatusEffect;
+    public ProjectileUpgradeSO projectileStats;
     public int cost;
     public int xp;
-    public int damage;
-    public int pierce;
     public int numberOfProjectiles;
     public float projectileOffset;
     public float range;
-    public float projectileSpeed;
-    public float projectileLifeSpan;
     public float attackSpeed;
     public bool hasCamoDetection;
     public string description;

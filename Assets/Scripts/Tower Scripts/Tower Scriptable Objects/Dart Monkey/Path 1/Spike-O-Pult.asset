@@ -15,15 +15,13 @@ MonoBehaviour:
   upgradeName: Spike-O-Pult
   projectileBehaviorName: 
   collisionType: Bounce
+  projectileStatusEffect: {fileID: 0}
+  projectileStats: {fileID: 11400000, guid: 50c39e387dfd07b439909b105974e603, type: 2}
   cost: 255
   xp: 2100
-  damage: 1
-  pierce: 17
   numberOfProjectiles: 0
   projectileOffset: 0
   range: 0.15
-  projectileSpeed: 0
-  projectileLifeSpan: 0
   attackSpeed: -0.21
   hasCamoDetection: 0
   description: Converts the Dart Monkey into a slower attacking Spike-o-pult that

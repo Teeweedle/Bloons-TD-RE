@@ -15,15 +15,13 @@ MonoBehaviour:
   upgradeName: Razor Sharp Shots
   projectileBehaviorName: 
   collisionType: Base
+  projectileStatusEffect: {fileID: 0}
+  projectileStats: {fileID: 11400000, guid: 3c83341b599fddf4f96e632a44b3ba6e, type: 2}
   cost: 185
   xp: 500
-  damage: 0
-  pierce: 2
   numberOfProjectiles: 0
   projectileOffset: 0
   range: 0
-  projectileSpeed: 0
-  projectileLifeSpan: 0
   attackSpeed: 0
   hasCamoDetection: 0
   description: Can pop 2 more bloons per shot.

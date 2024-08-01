@@ -19,7 +19,7 @@ public class MultiShot : IProjectileBehavior
             BaseProjectile lBaseProjectile = lProjectileGO.GetComponent<BaseProjectile>();
             if (lBaseProjectile != null)
             {
-                lBaseProjectile.SetProjectileStats(aParentTower);
+                lBaseProjectile.SetProjectileStats(aParentTower, aParentTower._towerStats.projectileStats);
                 lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
                 if (aStatusEffectList != null)
                 {

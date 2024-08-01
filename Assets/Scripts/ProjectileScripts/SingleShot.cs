@@ -9,7 +9,7 @@ public class SingleShot : IProjectileBehavior
         BaseProjectile lBaseProjectile = lProjectileGO.GetComponent<BaseProjectile>();
         if (lBaseProjectile != null)
         {
-            lBaseProjectile.SetProjectileStats(aParentTower);
+            lBaseProjectile.SetProjectileStats(aParentTower, aParentTower._towerStats.projectileStats);
             //assign collision behavior
             lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
             //set projectile movement type

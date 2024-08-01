@@ -28,13 +28,15 @@ public class BaseProjectile : MonoBehaviour, IProjectile
         projectileID = GetInstanceID();
         projectileSprite = GetComponent<SpriteRenderer>();
     }
-    public void SetProjectileStats(BaseTower aParentTower)
+    public void SetProjectileStats(BaseTower aParentTower, ProjectileStatsSO aProjectileStats)
     {
         parentTower = aParentTower;
-        speed = aParentTower._towerStats.projectileSpeed;
-        damage = aParentTower._towerStats.damage;
-        health = aParentTower._towerStats.pierce;
-        lifeSpan = aParentTower._towerStats.projectileLifeSpan;
+        //TODO: changed to accept stats from ProjectileStatsSO ---
+        //ALSO: Update TowerUpgrade to include a ProjectileStatsSO to copy from ---
+        speed = aProjectileStats.speed;
+        damage = aProjectileStats.damage;
+        health = aProjectileStats.pierce;
+        lifeSpan = aProjectileStats.lifeSpan;
         SetDirection(-aParentTower.transform.up);
     }
     // Update is called once per frame

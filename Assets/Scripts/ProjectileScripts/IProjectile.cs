@@ -9,7 +9,7 @@ public interface IProjectile
     int childCount { get; set; }
     BaseTower parentTower { get; set; }
     SpriteRenderer projectileSprite { get; set; }
-    void SetProjectileStats(BaseTower aParentTower);
+    void SetProjectileStats(BaseTower aParentTower, ProjectileStatsSO aProjectileStats);
     void SetDirection(Vector3 aDirection);
     //TODO: Change to take in dmg amount
     void TakeDamage();

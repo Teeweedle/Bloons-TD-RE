@@ -1,13 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
 
-[CreateAssetMenu(fileName = "ProjectileStats", menuName = "ProjectileStats")]
+[CreateAssetMenu(fileName = "NewProjectileStats", menuName = "ProjectileStats")]
 public class ProjectileStatsSO : ScriptableObject
 {
     public string collisionType;
     public int damage;
-    public float pierce;
+    public int pierce;
     public float speed;
     public float lifeSpan;
     public StatusEffectSO statusEffect;
@@ -16,11 +15,11 @@ public class ProjectileStatsSO : ScriptableObject
 
     public void UpdateProjectileStats(TowerUpgrade aTowerUpgrade)
     {
-        UpdatePierce(aTowerUpgrade.pierce);
-        UpdateDamage(aTowerUpgrade.damage);
-        UpdateProjectileSpeed(aTowerUpgrade.projectileSpeed);
-        UpdateProjectileLifeSpan(aTowerUpgrade.projectileLifeSpan);
-        UpdateProjectileSprite(aTowerUpgrade.upgradeName);
+        UpdatePierce(aTowerUpgrade.projectileStats.pierce);
+        UpdateDamage(aTowerUpgrade.projectileStats.damage);
+        UpdateProjectileSpeed(aTowerUpgrade.projectileStats.speed);
+        UpdateProjectileLifeSpan(aTowerUpgrade.projectileStats.lifeSpan);
+        UpdateProjectileSprite(aTowerUpgrade.projectileStats.sprite);
     }
     private void UpdatePierce(int aPierce)
     {
@@ -40,21 +39,9 @@ public class ProjectileStatsSO : ScriptableObject
         if (aProjectileLifeSpan != 0)
             lifeSpan *= (1.0f + aProjectileLifeSpan);
     }
-    /// <summary>
-    /// Updates the sprite of the tower based on the name of the upgrade. Only changes if there is a sprite associated with the upgrade.
-    /// Gets sprite from projectileSpriteAtlas
-    /// </summary>
-    /// <param name="aUpgradeName">Name of the upgrade</param>
-    private void UpdateProjectileSprite(string aUpgradeName)
+    private void UpdateProjectileSprite(Sprite aSprite)
     {
-        Sprite lSprite = projectileSpriteAtlas.GetSprite(aUpgradeName);
-        if (lSprite != null)
-        {
-            currentSprite = lSprite;
-        }
-    }
-    public void SetDefaultSprite()
-    {
-        currentSprite = projectileSpriteAtlas.GetSprite("Base");
+        if(aSprite != null)
+            currentSprite = aSprite;
     }
 }

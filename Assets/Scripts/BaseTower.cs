@@ -55,7 +55,7 @@ public class BaseTower : MonoBehaviour
 
         };
         SetDefaultTargetPriority();
-        _towerStats.projectileStats.SetDefaultSprite();
+        //_towerStats.projectileStats.SetDefaultSprite();
         compositeProjectileBehavior = new CompositeProjectileBehavior();
         compositeProjectileBehavior.SetProjectileBehavior(new SingleShot());
         

@@ -9,12 +9,9 @@ public static class ScriptableObjectUtility
         clone.collisionType = source.collisionType;
         clone.statusEffect = source.statusEffect;
         clone.projectileStats = source.projectileStats;
+        clone.projectileStats = source.projectileStats;
         clone.cost = source.cost;
-        clone.damage = source.damage;
-        clone.pierce = source.pierce;
         clone.range = source.range;
-        clone.projectileSpeed = source.projectileSpeed;
-        clone.projectileLifeSpan = source.projectileLifeSpan;
         clone.attackSpeed = source.attackSpeed;
         clone.hasCamoDetection = source.hasCamoDetection;
         clone.description = source.description;

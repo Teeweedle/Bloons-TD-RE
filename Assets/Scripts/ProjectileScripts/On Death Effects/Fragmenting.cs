@@ -23,7 +23,7 @@ public class Fragmenting : MonoBehaviour, IProjectileOnDeath
             if (lBaseProjectile != null)
             {
                 //change to get child stats
-                lBaseProjectile.SetProjectileStats(aParentTower);
+                lBaseProjectile.SetProjectileStats(aParentTower, aParentTower._towerStats.projectileStats);
                 lBaseProjectile.SetCollisionType(aParentTower._towerStats.collisionType);
 
                 float lAngle = (i - (numberOfProjectiles / 2)) * lOffSet;

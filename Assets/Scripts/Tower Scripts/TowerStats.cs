@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.U2D;
 
 [CreateAssetMenu(fileName = "NewTowerStats", menuName = "Tower Stats")]
 public class TowerStats : ScriptableObject
@@ -9,11 +8,7 @@ public class TowerStats : ScriptableObject
     public StatusEffectSO statusEffect;
     public ProjectileStatsSO projectileStats;
     public int cost;
-    public int damage;
-    public int pierce;
     public float range;
-    public float projectileSpeed;
-    public float projectileLifeSpan;
     public float attackSpeed;
     public bool hasCamoDetection;
     public string description;
